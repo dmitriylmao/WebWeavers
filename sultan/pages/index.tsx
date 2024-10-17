@@ -1,9 +1,11 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { GetStaticProps } from 'next';
-import HelloWorld from '../components/HelloWorld';
+import Translate from '../components/Translate';
+
+
 
 const HomePage = () => {
-  return <HelloWorld />;
+  return <Translate />;
 };
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
