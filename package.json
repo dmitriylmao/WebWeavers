@@ -1,15 +1,15 @@
 {
-  "name": "sultan",
+  "name": "my-app-next",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write ."
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^2.3.0",
     "i18next": "^23.16.0",
     "next": "14.2.15",
     "next-i18next": "^15.3.1",
@@ -19,15 +19,13 @@
     "react-redux": "^9.1.2"
   },
   "devDependencies": {
-    "@eslint/js": "^9.12.0",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
     "eslint": "^8.57.1",
-    "eslint-config-next": "14.2.15",
+    "eslint-config-next": "^14.2.15",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.37.1",
-    "globals": "^15.11.0",
-    "typescript": "^5",
-    "typescript-eslint": "^8.9.0"
+    "prettier": "^3.3.3"
   }
 }

@@ -1,11 +1,10 @@
 import { useTranslation } from 'next-i18next';
 
-
 const Translate = () => {
   const { t, i18n } = useTranslation('common');
 
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng); 
   };
 
   return (
