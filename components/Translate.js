@@ -1,3 +1,4 @@
+//Оставлю это тут для примера работы с i18n
 import { useTranslation } from 'next-i18next';
 
 const Translate = () => {

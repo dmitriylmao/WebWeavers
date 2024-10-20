@@ -1,34 +1,28 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --yellow: rgb(255,200,94); 
+  --blue: rgb(63,78,101); 
+  --gray: rgb(237,237,237); 
+  --white: #fff; 
+  --black: rgb(17,17,17); 
+  --green: rgb(31,215,93); 
+
+    /* адаптивчик */
+  --breakpoint-tablets: 480px;
+  --breakpoint-tablets: 768px;
+  --breakpoint-laptops: 1024px;
+  --breakpoint-desktop: 1280px;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  height: 100vh; /*по гайдику расставляем)*/
+  font-family: var(--font-roboto);
+  color: var(--blue);
+  background: var(--white);
+}
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  font-family: Arial, Helvetica, sans-serif;
-
-  color: var(--background);
-  background: var(--foreground);
-}
-div {
-  display: flex;
-  flex-direction: column;
-}
-h1 {
-  font-size: 70px;
-}
-button {
-  font-size: 30px;
-  color: rgb(65, 65, 65);
-  background-color: antiquewhite;
-  transition: 0.3s;
-}
-button:hover {
-  scale: 1.04;
-  background-color: rgb(252, 227, 195);
-}

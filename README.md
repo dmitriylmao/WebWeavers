@@ -1,7 +1,7 @@
 # WebWeavers
 
 
-## Стек:
+# Стек:
 
 - **React**
 - **Next.js**
@@ -11,13 +11,14 @@
 - **Prettier**
 
 
-### Установка и запуск
+# Установка и запуск
     
 - ***git clone*** *url*
 - ***cd*** *клонированный репозиторий*
 - ***npm install***
 - ***npm run dev***
-- *http://localhost:3000.*
+- *http://localhost:3000*
 
-Использование **Prettier**
+# Использование **Prettier**
+
 ***npm run format***
