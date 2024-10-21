@@ -5,7 +5,7 @@ const Translate = () => {
   const { t, i18n } = useTranslation('common');
 
   const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng); 
+    i18n.changeLanguage(lng);
   };
 
   return (
