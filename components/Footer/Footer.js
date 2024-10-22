@@ -8,12 +8,15 @@ const Footer = () => {
       <div className={styles.footerContainer}>
 
         <div className={styles.footerColumn}>
-          <Image src="/images/Footer/sultan_logo.svg" alt="Логотип" width={150} height={50} className={styles.logo} />
+          <Image src="/images/Footer/sultan_logo.svg" alt="Логотип" width={150} height={50} />
           <p>Компания «Султан» — снабжает розничные магазины товарами "под ключ" в Кокшетау и Акмолинской области.</p>
+
+          <p className={styles.subscribeText}>Подпишись на скидки и акции</p>
+
+
           <form className={styles.subscribeForm}>
             <input type="email" placeholder="Введите ваш E-mail" />
             <button type="submit"></button>
-            {/* Знак "больше" */}
           </form>
         </div>
 
@@ -40,7 +43,15 @@ const Footer = () => {
 
         <div className={styles.footerColumn}>
           <h3>Скачать прайс-лист:</h3>
-          <button className={styles.downloadButton}>Прайс-лист</button>
+
+
+          <button className={styles.downloadButton}>
+            Прайс-лист
+            <img src="/images/Footer/download_icon.svg" alt="Download Icon" width="16" height="16" />
+          </button>
+
+          <div className="myDiv">Содержимое div</div>
+
           <p>Связь в мессенджерах:</p>
           <div className={styles.messengers}>
             <Image src="/images/Footer/whatsapp_logo.svg" alt="WhatsApp" width={40} height={40} />
@@ -51,15 +62,27 @@ const Footer = () => {
         <div className={styles.footerColumn}>
           <h3>Контакты:</h3>
           <p>+7 (777) 490-00-91</p>
-          <p>время работы: 9:00-20:00</p>
-          <p>opt.sultan@mail.ru</p>
+          <p className={styles.workTime}>
+          время работы: 9:00-20:00
+          </p>
+
+          <p className={styles.orderCall}>
+            Заказать звонок
+          </p>
+
+
+          <p className={styles.mail} >opt.sultan@mail.ru</p>
+          <p className={styles.alwaysOnContact}>
+            На связи в любое время
+          </p>
+
           <div className={styles.paymentMethods}>
             <Image src="/images/Footer/visa_logo.svg" alt="Visa" width={60} height={40} />
             <Image src="/images/Footer/mastercard_logo.svg" alt="MasterCard" width={60} height={40} />
           </div>
         </div>
-      </div>
 
+      </div>
     </footer>
   );
 };
