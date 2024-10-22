@@ -6,6 +6,7 @@
   color: var(--white);
   background-color: var(--yellow);
   transition: background-color 0.3s ease;
+  font-family: var(--font-inter);
 }
 .button:hover {
   background-color: rgb(255, 190, 59);

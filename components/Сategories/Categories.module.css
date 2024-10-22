@@ -1,6 +1,6 @@
 .container {
-  margin: 0 auto;
-  width: 70%;
+  margin: 0 auto 80px;
+  max-width: 1366px;
   padding: 10px 0;
   display: flex;
   flex-direction: column;
@@ -29,7 +29,7 @@
 .grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   gap: 10px;
 }
