@@ -10,7 +10,7 @@ const roboto = Roboto({
     variable: '--font-roboto',
   });
 
-  
+
 const MyApp = ({ Component, pageProps }) => {
   return (
     <div className={roboto.className}>

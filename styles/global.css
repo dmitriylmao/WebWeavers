@@ -9,7 +9,7 @@
   --green: rgb(31,215,93); 
 
     /* адаптивчик */
-  --breakpoint-tablets: 480px;
+  --breakpoint-mobile: 480px;
   --breakpoint-tablets: 768px;
   --breakpoint-laptops: 1024px;
   --breakpoint-desktop: 1280px;
