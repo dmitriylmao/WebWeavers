@@ -6,28 +6,28 @@ export default function Categories() {
   const categories = [
     {
       title: 'Бытовая химия',
-      imgSrc: '/images/pavel.png',
-      link: '#',
+      imgSrc: '/images/categories/cat1.png',
+      link: '/himiya',
     },
     {
       title: 'Косметика и гигиена',
-      imgSrc: '/images/pavel.png',
-      link: '#',
+      imgSrc: '/images/categories/cat2.png',
+      link: '/kosmetika',
     },
     {
       title: 'Товары для дома',
-      imgSrc: '/images/pavel.png',
-      link: '#',
+      imgSrc: '/images/categories/cat3.png',
+      link: '/tovary_dlya_doma',
     },
     {
       title: 'Товары для детей и мам',
-      imgSrc: '/images/pavel.png',
-      link: '#',
+      imgSrc: '/images/categories/cat4.png',
+      link: '/tovary_dlya_detey',
     },
     {
       title: 'Посуда',
-      imgSrc: '/images/pavel.png',
-      link: '#',
+      imgSrc: '/images/categories/cat5.png',
+      link: '/posuda',
     },
   ];
 

@@ -87,6 +87,9 @@
   .imageWrapper {
     height: 240px;
   }
+  .cardTitle {
+    margin-top: 16px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -113,6 +116,9 @@
   .imageWrapper img {
     width: 200px;
     height: 200px;
+  }
+  .cardTitle {
+    margin-top: 14px;
   }
 }
 
@@ -147,5 +153,8 @@
   .imageWrapper img {
     width: 140px;
     height: 140px;
+  }
+  .cardTitle {
+    margin-top: 12px;
   }
 }
