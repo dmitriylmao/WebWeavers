@@ -1,0 +1,17 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--yellow);
+  transition: background-color 0.3s ease;
+}
+.button:hover {
+  background-color: rgb(255, 190, 59);
+}
+.buttonImage {
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}

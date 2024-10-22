@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google';
 import { appWithTranslation } from 'next-i18next';
 import '../styles/global.css';
 
+
 const inter = Inter({
   weight: ['100', '300', '400', '500', '700', '900'],
   style: ['normal', 'italic'],
