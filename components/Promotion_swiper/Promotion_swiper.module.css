@@ -1,7 +1,7 @@
 .container {
   max-width: 1432px;
   height: 500px;
-  margin: 0 auto;
+  margin: 0 auto 80px;
   position: relative;
   font-family: var(--font-inter);
 }
@@ -141,55 +141,97 @@
   border-radius: 6px;
 }
 
+@media (max-width: 1024px) {
+  .container {
+    height: 320px;
+    margin: 0 auto 60px;
+    width: 95%;
+  }
+  .mySwiper {
+    padding: 0 18px;
+  }
+  .slideContent {
+    padding-left: 45px;
+  }
+  .slideDuration {
+    font-size: 12px;
+    margin: 40px 0 24px;
+  }
+  .slideTitle {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  .slideDescription {
+    font-size: 18px;
+    max-width: 50%;
+    margin-bottom: 20px;
+  }
+  .slideButton {
+    width: 200px;
+    height: 60px;
+    font-size: 14px;
+  }
+  .container :global(.swiper-button-next),
+  .container :global(.swiper-button-prev) {
+    width: 44px;
+    height: 44px;
+    top: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    height: 280px;
+    margin: 0 auto 60px;
+  }
+  .slideContent {
+    padding-left: 45px;
+  }
+  .slideDuration {
+    font-size: 10px;
+    margin: 40px 0 24px;
+  }
+  .slideTitle {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  .slideDescription {
+    font-size: 14px;
+    max-width: 50%;
+    margin-bottom: 20px;
+  }
+  .slideButton {
+    width: 180px;
+    height: 50px;
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 480px) {
   .container {
     width: 100%;
     height: 240px;
   }
-
-  .mySwiper {
-    padding: 0 18px;
-  }
-
   .slideContent {
     padding-left: 25px;
   }
-
-  .slideImage {
-    height: 100%;
-  }
-
   .slideDuration {
     font-size: 8px;
     margin: 30px 0 20px;
   }
-
   .slideTitle {
     font-size: 20px;
     margin-bottom: 20px;
   }
-
   .slideDescription {
     font-size: 12px;
     max-width: 50%;
     margin-bottom: 20px;
   }
-
   .slideButton {
     width: 161px;
     height: 43px;
     font-size: 12px;
-  }
-
-  .container :global(.swiper-button-next),
-  .container :global(.swiper-button-prev) {
-    width: 39px;
-    height: 39px;
-    top: 50%;
-  }
-
-  .container :global(.swiper-button-next::after),
-  .container :global(.swiper-button-prev::after) {
-    font-size: 10px;
   }
 }
