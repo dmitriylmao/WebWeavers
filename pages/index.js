@@ -7,7 +7,6 @@ import Categories from '../components/Сategories/Сategories';
 const HomePage = () => {
   return (
     <>
-      
       <Categories />
       <Promotion_swiper />
       <Logo_swiper />

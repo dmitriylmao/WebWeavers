@@ -69,21 +69,24 @@
   .grid {
     justify-content: space-around;
   }
+  .container {
+    width: 95%;
+  }
 }
 
 @media (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
   .title {
     font-size: 34px;
   }
-
   .subtitle {
     font-size: 18px;
   }
-
   .card {
     width: 240px;
   }
-
   .imageWrapper {
     height: 240px;
   }
@@ -95,24 +98,20 @@
 @media (max-width: 768px) {
   .container {
     width: 85%;
+    margin: 0 auto 60px;
   }
-
   .title {
     font-size: 32px;
   }
-
   .subtitle {
     font-size: 18px;
   }
-
   .card {
     width: 200px;
   }
-
   .imageWrapper {
     height: 200px;
   }
-
   .imageWrapper img {
     width: 200px;
     height: 200px;
@@ -125,36 +124,35 @@
 @media (max-width: 480px) {
   .container {
     width: 90%;
+    margin: 0 auto 10px;
   }
-
   .title {
     font-size: 20px;
   }
-
   .subtitle {
     font-size: 14px;
     margin: 12px 0 24px;
   }
-
+  .highlight {
+    font-weight: 600;
+  }
   .card {
     width: 140px;
     height: 182px;
     margin-bottom: 20px;
   }
-
   .card:nth-child(5) {
     flex-basis: 100%;
   }
-
   .imageWrapper {
     height: 140px;
   }
-
   .imageWrapper img {
     width: 140px;
     height: 140px;
   }
   .cardTitle {
     margin-top: 12px;
+    font-size: 12px;
   }
 }
