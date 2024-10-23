@@ -35,10 +35,32 @@
     justify-content: center;
     align-items: center;
   }
+  .card {
+    background-color: var(--white);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 77px;
+    width: 120px; 
+    padding: 10px;
+    box-sizing: border-box; 
+    overflow: hidden; 
+  }
   
+  .logoImage {
+    max-height: 77px;
+    max-width: 100%;
+    object-fit: contain; 
+    transition: transform 0.3s ease-in; 
+  }
+  
+  .card:hover .logoImage {
+    transform: scale(1.1); 
+  }
   
   .swiper-pagination-bullet {
-    background-color: var(--yellow); /* Adjust to your color */
+    background-color: var(--yellow); 
   }
   
   .container :global(.swiper-pagination) {
