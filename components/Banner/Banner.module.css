@@ -1,0 +1,108 @@
+.bannerContainer {
+    width: 1920px;
+    height: 796px;
+    position: relative;
+    top:170px;
+    left: 1920px;
+}
+
+
+
+.rect424, .rect426 {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 662px;
+}
+.rect424 {
+    left: 278px;
+}
+
+.rect426 {
+    left: 528px;
+}
+
+.plus {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top:  670px;
+    left: 290px;
+    font-family: Inter; 
+    font-size: 20px; 
+    font-weight: 700; 
+    line-height: 24.2px; 
+    letter-spacing: 0.3em; 
+    text-align: center;
+    color: white;
+    letter-spacing: 240px; 
+}
+
+
+
+.greatDeals {
+    width: 166px;
+    height: 42px;
+    top: 660px;
+    position: absolute;
+    left: 326px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: white;
+}
+
+.DeliveryInfo {
+    width: 178px;
+    height: 42px;
+    position: absolute;
+    top: 660px;
+    left: 576px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    color: white;
+}
+.DeliveryInfo strong {
+    font-weight: 700;
+} 
+
+.OptomDelivery {
+    width: 550px;
+    height: 45px;
+    position: absolute;
+    top: 370px;
+    left: 278px;
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 45px;
+    text-align: left;
+    color:white;
+}
+
+.OptomDelivery strong {
+    font-weight: 700;
+}
+
+.TypeOfProducts {
+    width: 570px;
+    height: 230px;
+    position: absolute;
+    top: 98px;
+    left: 272px;
+    font-family: Inter;
+    font-size: 70px;
+    font-weight: 500;
+    line-height: 77px;
+    text-align: left;
+    color:white;
+}
