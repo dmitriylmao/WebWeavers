@@ -6,8 +6,10 @@ import Image from 'next/image';
 export default function Banner() {
     return (
         <section className={styles.bannerContainer}>
-            <img src="images/image19.png"></img> 
-               
+            <div className={styles.Img}>
+                <div className={styles.Blur}></div> 
+            </div>
+            
             <img src='images/rectangle424.png' className={styles.rect424}></img>
             <img src='images/rectangle426.png' className={styles.rect426}></img>
             <p className={styles.plus}>++</p>

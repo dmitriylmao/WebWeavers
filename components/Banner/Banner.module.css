@@ -106,3 +106,20 @@
     text-align: left;
     color:white;
 }
+
+.Img {
+    width: 1920px;
+    height: 796px;
+    background-image: url("../../public/images/image19.png");
+}
+
+.Blur {
+    width: 920px;
+    height: 796px;
+    position: relative;
+    background-image: url("../../public/images/image19.png");
+    background: linear-gradient(89.86deg, #8A94AB 0.13%, rgba(138, 148, 171, 0) 99.89%);
+    backdrop-filter: blur(13px)
+}
+
+
