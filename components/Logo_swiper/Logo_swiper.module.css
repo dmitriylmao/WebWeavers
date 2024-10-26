@@ -119,6 +119,7 @@
 @media (max-width: 480px) {
   .container {
     width: 90%;
+    margin: 0 auto 40px;
   }
   .title {
     font-size: 20px;
