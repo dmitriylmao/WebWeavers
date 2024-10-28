@@ -5,9 +5,41 @@
     padding: 20px;
   }
   
-  @media (max-width: var(--breakpoint-mobile)) {
+  @media (max-width: 480px) {
     .productsList {
       grid-template-columns: 1fr;
+      padding: 10px;
+      margin-left: 5%;
+      margin-right: 5%;
     }
   }
   
+  /* Настройки для планшетов */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .productsList {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 15px;
+      margin-left: 7%;
+      margin-right: 7%;
+    }
+  }
+  
+  /* Настройки для ноутбуков */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .productsList {
+      grid-template-columns: repeat(3, 1fr);
+      padding: 20px;
+      margin-left: 9%;
+      margin-right: 9%;
+    }
+  }
+  
+  /* Настройки для десктопов */
+  @media (min-width: 1025px) {
+    .productsList {
+      grid-template-columns: repeat(4, 1fr);
+      padding: 20px;
+      margin-left: 12%;
+      margin-right: 12%;
+    }
+  }
