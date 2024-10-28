@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Footer.module.css';
 import Image from 'next/image';
+import LanguageSwitcher from '@/components/Footer/LanguageSwitcher';
 
 const Footer = () => {
   return (
@@ -80,6 +81,11 @@ const Footer = () => {
             <Image src="/images/Footer/visa_logo.svg" alt="Visa" width={60} height={40} />
             <Image src="/images/Footer/mastercard_logo.svg" alt="MasterCard" width={60} height={40} />
           </div>
+
+          <LanguageSwitcher /> {/* TODO реализация смены языка */}
+
+
+
         </div>
 
       </div>
