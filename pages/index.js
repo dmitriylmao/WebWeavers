@@ -7,13 +7,11 @@ import Logo_swiper from '../components/Logo_swiper/Logo_swiper';
 import Categories from '../components/Сategories/Сategories';
 import Map from '../components/Map/Map';
 
-
 const HomePage = () => {
   return (
     <>
-
       {/*<Translate /> */}
-      <ProductsList/>
+      <ProductsList />
       <Categories />
       <Promotion_swiper />
       <Logo_swiper />

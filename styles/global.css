@@ -8,7 +8,7 @@
   --black: rgb(17, 17, 17);
   --green: rgb(31, 215, 93);
 
-    /* адаптивчик */
+  /* адаптивчик */
   --breakpoint-mobile: 480px;
   --breakpoint-tablets: 768px;
   --breakpoint-laptops: 1024px;
