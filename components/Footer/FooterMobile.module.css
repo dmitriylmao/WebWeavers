@@ -1,0 +1,131 @@
+/* FooterMobile.module.css */
+
+.footer {
+    background-color: #3F4E65;
+    padding: 20px;
+}
+
+.footerContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footerRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footerColumn {
+    flex: 1;
+    padding: 10px;
+    text-align: left;
+}
+
+.footerColumn h3 {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footerColumn p,
+.footerColumn ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 1.6;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.footerColumn ul li {
+    margin-bottom: 5px;
+}
+
+.footerColumn a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footerColumn a:hover {
+    text-decoration: underline;
+}
+
+.messengers img {
+    margin-right: 10px;
+    margin-bottom: 70px;
+}
+
+.paymentMethods {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.language_switcher {
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.downloadButton {
+    background-color: #fec85e;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.text {
+    color: white;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.subscribeText {
+    font-size: 14px;
+    color: white;
+    margin: 15px 0 5px;
+    text-align: left;
+}
+
+.subscribeForm {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.subscribeForm input {
+    padding: 10px;
+    border-radius: 30px 0 0 30px;
+    border: 1px solid #C4C4C4;
+    flex: 1;
+    font-size: 14px;
+    color: #333333;
+}
+
+.subscribeForm button {
+    padding: 10px 15px;
+    border-radius: 0 30px 30px 0;
+    border: none;
+    background-color: #FFCE3E;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.subscribeForm button::before {
+    content: '>';
+    font-size: 18px;
+    color: white;
+}
