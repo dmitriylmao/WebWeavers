@@ -1,45 +1,72 @@
+.container {
+    max-width: 1366px;
+    margin: 0 auto 80px;
+}
 .productsList {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    padding: 20px;
+    font-family: var(--font-inter);
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .title {
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--black);
+    margin-bottom: 36px;
   }
   
+  .highlight {
+    color: var(--yellow);
+    font-weight: 800;
+  }
+
   @media (max-width: 480px) {
+    .container {
+      width: 90%;
+      margin: 0 auto 40px;
+    }
     .productsList {
       grid-template-columns: 1fr;
-      padding: 10px;
-      margin-left: 5%;
-      margin-right: 5%;
+    }
+    .title {
+      font-size: 20px;
+      margin-bottom: 24px;
     }
   }
   
-  /* Настройки для планшетов */
   @media (min-width: 481px) and (max-width: 768px) {
+    .container {
+      width: 85%;
+      margin: 0 auto 60px;
+    }
     .productsList {
       grid-template-columns: repeat(2, 1fr);
-      padding: 15px;
-      margin-left: 7%;
-      margin-right: 7%;
+    }
+    .title {
+      font-size: 32px;
     }
   }
   
-  /* Настройки для ноутбуков */
   @media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+      width: 90%;
+    }
     .productsList {
       grid-template-columns: repeat(3, 1fr);
-      padding: 20px;
-      margin-left: 9%;
-      margin-right: 9%;
+    }
+    .title {
+      font-size: 34px;
     }
   }
   
-  /* Настройки для десктопов */
   @media (min-width: 1025px) {
+    .container {
+      width: 95%;
+    }
     .productsList {
       grid-template-columns: repeat(4, 1fr);
-      padding: 20px;
-      margin-left: 12%;
-      margin-right: 12%;
     }
   }

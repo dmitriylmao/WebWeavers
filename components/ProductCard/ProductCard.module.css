@@ -1,6 +1,8 @@
 .productCard {
   background-color: var(--white);
   border: 1px solid var(--gray);
+  box-shadow: 0px 14px 39px -11px rgba(0, 0, 0, 0.06);
+
   border-radius: 10px;
   padding: 15px;
   text-align: left;
@@ -10,6 +12,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  object-fit: cover;
 }
 
 .productCard:hover {
@@ -29,7 +32,9 @@
 }
 
 .productImage {
-  margin:auto;
+  height: 194px;
+  width: auto;
+  margin: 10px auto;
   margin-bottom: 10px;
 }
 
@@ -38,11 +43,20 @@
   color: var(--black);
   margin-bottom: 5px;
 }
+.volumeType {
+  opacity: 0.3;
+}
 
 .productTitle {
   font-size: 16px;
   color: var(--black);
   margin-bottom: 15px;
+  line-height: 20px;
+}
+.productBrand {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--black);
 }
 
 .details {
