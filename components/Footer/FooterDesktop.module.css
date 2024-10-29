@@ -180,3 +180,31 @@
 }
 
 
+.menuCategoriesContainer {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.footerColumn {
+    flex: 1 1 200px;
+}
+
+.footerTopContainer {
+    display: flex;
+    gap: 20px;
+}
+
+.contactAndPaymentContainer {
+    display: flex;
+    gap: 20px;
+}
+
+.paymentColumn,
+.contactColumn {
+    flex: 1;
+}
+
+
+
+

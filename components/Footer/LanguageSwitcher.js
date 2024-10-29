@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import styles from './Footer.module.css';
+import styles from './FooterDesktop.module.css';
 
 const LanguageSwitcher = () => {
   const [language, setLanguage] = useState('RU');
