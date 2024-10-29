@@ -9,7 +9,7 @@ export default function Banner() {
             <div className={styles.overlay}>
                 <div className={styles.content}>
                     <h2 className={styles.mainTitle}>Бытовая химия, косметика и хозтовары</h2>
-                    <h3 className={styles.subTitle}>ОПТОМ ПО КОКЧЕТАВУ И ОБЛАСТИ</h3>
+                    <h3 className={styles.subTitle}>ОПТОМ <span>ПО КОКЧЕТАВУ И ОБЛАСТИ</span></h3>
                     <button className={styles.catalogButton}>В КАТАЛОГ</button>
                     <div className={styles.features}>
                         <div className={styles.feature}>
