@@ -1,19 +1,18 @@
-import { Roboto } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import { appWithTranslation } from 'next-i18next';
 import '../styles/global.css';
 
-const roboto = Roboto({
-    weight: ['100','300','400','500','700','900'],
-    style: ['normal', 'italic'],
-    subsets: ['latin'],
-    display: 'swap',
-    variable: '--font-roboto',
-  });
-
+const inter = Inter({
+  weight: ['100', '300', '400', '500', '700', '900'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
 
 const MyApp = ({ Component, pageProps }) => {
   return (
-    <div className={roboto.className}>
+    <div className={inter.className}>
       <Component {...pageProps} />
     </div>
   );
