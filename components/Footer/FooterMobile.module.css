@@ -2,35 +2,33 @@
 
 .footer {
     background-color: #3F4E65;
+    padding: 20px;
 }
 
 .footerContainer {
     display: flex;
-    flex-direction: column; /* Начальное вертикальное расположение */
+    flex-direction: column;
     gap: 20px;
-    padding: 0 10px;
 }
 
 .footerRow {
     display: flex;
-    flex-direction: row; /* Горизонтальное расположение */
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center; /* Центрирование по вертикали */
+    align-items: center;
     width: 100%;
 }
 
-
-/* Пример стиля для колонок в горизонтальном ряду */
 .footerColumn {
     flex: 1;
     padding: 10px;
-    text-align: center;
+    text-align: left;
 }
 
 .footerColumn h3 {
     color: #FFFFFF;
-    font-size: 18px;
-    margin-bottom: 15px;
+    font-size: 16px;
+    margin-bottom: 10px;
     font-weight: bold;
 }
 
@@ -41,13 +39,16 @@
     list-style: none;
     line-height: 1.6;
     color: #FFFFFF;
+    font-size: 14px;
+}
+
+.footerColumn ul li {
+    margin-bottom: 5px;
 }
 
 .footerColumn a {
     color: #FFFFFF;
     text-decoration: none;
-    margin-bottom: 10px;
-    display: block;
 }
 
 .footerColumn a:hover {
@@ -55,23 +56,21 @@
 }
 
 .messengers img {
-    padding-top: 8px;
     margin-right: 10px;
-}
-
-.paymentMethods img {
-    width: 60px;
-    height: auto;
+    margin-bottom: 70px;
 }
 
 .paymentMethods {
     display: flex;
     gap: 10px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
-.language_switcher{
-    justify-content:center;
+.language_switcher {
+    display: flex;
+    justify-content: center;
+
+
 }
 
 .downloadButton {
@@ -79,42 +78,35 @@
     border: none;
     border-radius: 20px;
     color: #fff;
-    padding: 20px 32px;
-    font-size: 16px;
+    padding: 10px 20px;
+    font-size: 14px;
     font-weight: bold;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 8px;
     cursor: pointer;
 }
 
-.downloadIcon {
-    display: inline-block;
-    vertical-align: middle;
-    color: #fff;
+.text {
+    color: white;
+    font-size: 14px;
+    line-height: 1.4;
 }
 
 .subscribeText {
-    font-size: 12px;
-    margin-top: 40px !important;
+    font-size: 14px;
     color: white;
-    text-align: left;
-}
-
-.text{
-    font-size: 32px;
-    color: white;
+    margin: 15px 0 5px;
     text-align: left;
 }
 
 .subscribeForm {
     display: flex;
-    margin-top: 10px;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .subscribeForm input {
-    padding: 15px;
+    padding: 10px;
     border-radius: 30px 0 0 30px;
     border: 1px solid #C4C4C4;
     flex: 1;
@@ -123,7 +115,7 @@
 }
 
 .subscribeForm button {
-    padding: 15px 20px;
+    padding: 10px 15px;
     border-radius: 0 30px 30px 0;
     border: none;
     background-color: #FFCE3E;

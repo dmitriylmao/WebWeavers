@@ -67,10 +67,6 @@ const FooterMobile = () => {
 
         </div>
 
-        <div className={styles.text}>
-          <p> Контакты</p>
-        </div>
-
 
         <div className={styles.footerRow}>
 
@@ -96,23 +92,20 @@ const FooterMobile = () => {
 
           </div>
 
-            {/* Прайс лист */}
-            <div className={styles.footerColumn}>
-
-              <div className={styles.language_switcher}>
-                <LanguageSwitcher /> {/* TODO реализация смены языка */}
-              </div>
-
-              <p>Связь в мессенджерах:</p>
-              <div className={styles.messengers}>
-                <Image src="/images/Footer/whatsapp_logo.svg" alt="WhatsApp" width={40} height={40} />
-                <Image src="/images/Footer/telegram_logo.svg" alt="Telegram" width={40} height={40} />
-              </div>
+          {/* Прайс лист */}
+          <div className={styles.footerColumn}>
 
 
+            <p>Связь в мессенджерах:</p>
+            <div className={styles.messengers}>
+              <Image src="/images/Footer/whatsapp_logo.svg" alt="WhatsApp" width={40} height={40} />
+              <Image src="/images/Footer/telegram_logo.svg" alt="Telegram" width={40} height={40} />
+            </div>
+            <div className={styles.language_switcher}>
+              <LanguageSwitcher /> {/* TODO реализация смены языка */}
             </div>
 
-
+          </div>
 
 
         </div>
