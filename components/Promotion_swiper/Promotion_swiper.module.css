@@ -1,0 +1,237 @@
+.container {
+  max-width: 1432px;
+  height: 500px;
+  margin: 0 auto 80px;
+  position: relative;
+  font-family: var(--font-inter);
+}
+
+.mySwiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 0 28px;
+}
+
+.swiper-slide {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slideContent {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 110px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+.slideImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.slideDuration {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--white);
+  margin: 80px 0 20px;
+}
+
+.slideTitle {
+  font-family: var(--font-inter);
+  font-size: 70px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 50px;
+  z-index: 1;
+}
+
+.slideDescription {
+  font-size: 20px;
+  font-weight: 300;
+  max-width: 60%;
+  color: var(--white);
+  margin-bottom: 70px;
+  z-index: 1;
+}
+
+.slideButton {
+  width: 300px;
+  height: 80px;
+  border-radius: 79px;
+  padding: 10px 19px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.container :global(.swiper-button-next),
+.container :global(.swiper-button-prev) {
+  background-color: white;
+  border-radius: 50%;
+  width: 67px;
+  height: 67px;
+  color: var(--yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+  position: absolute;
+  top: 48%;
+  z-index: 10;
+}
+
+.container :global(.swiper-button-next) {
+  right: 0;
+}
+
+.container :global(.swiper-button-prev) {
+  left: 0;
+}
+
+.container :global(.swiper-button-next:hover),
+.container :global(.swiper-button-prev:hover) {
+  background-color: var(--yellow);
+}
+
+.container :global(.swiper-button-next::after),
+.container :global(.swiper-button-prev::after) {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--yellow);
+}
+
+.container :global(.swiper-button-next:hover::after),
+.container :global(.swiper-button-prev:hover::after) {
+  color: white;
+}
+
+.container :global(.swiper-pagination) {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.container :global(.swiper-pagination-bullet) {
+  background-color: gray;
+  width: 16px;
+  height: 6px;
+  border-radius: 4px;
+  margin: 0 4px;
+  transition: all 0.3s ease;
+}
+
+.container :global(.swiper-pagination-bullet-active) {
+  background-color: var(--white);
+  width: 26px;
+  height: 6px;
+  border-radius: 6px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    height: 320px;
+    margin: 0 auto 60px;
+    width: 95%;
+  }
+  .mySwiper {
+    padding: 0 18px;
+  }
+  .slideContent {
+    padding-left: 45px;
+  }
+  .slideDuration {
+    font-size: 12px;
+    margin: 40px 0 24px;
+  }
+  .slideTitle {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  .slideDescription {
+    font-size: 18px;
+    max-width: 50%;
+    margin-bottom: 20px;
+  }
+  .slideButton {
+    width: 200px;
+    height: 60px;
+    font-size: 14px;
+  }
+  .container :global(.swiper-button-next),
+  .container :global(.swiper-button-prev) {
+    width: 44px;
+    height: 44px;
+    top: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    height: 280px;
+    margin: 0 auto 60px;
+  }
+  .slideContent {
+    padding-left: 45px;
+  }
+  .slideDuration {
+    font-size: 10px;
+    margin: 40px 0 24px;
+  }
+  .slideTitle {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  .slideDescription {
+    font-size: 14px;
+    max-width: 50%;
+    margin-bottom: 20px;
+  }
+  .slideButton {
+    width: 180px;
+    height: 50px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    height: 240px;
+  }
+  .slideContent {
+    padding-left: 25px;
+  }
+  .slideDuration {
+    font-size: 8px;
+    margin: 30px 0 20px;
+  }
+  .slideTitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .slideDescription {
+    font-size: 12px;
+    max-width: 50%;
+    margin-bottom: 20px;
+  }
+  .slideButton {
+    width: 161px;
+    height: 43px;
+    font-size: 12px;
+  }
+}
