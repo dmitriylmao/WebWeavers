@@ -1,19 +1,18 @@
 @import './reset.css';
 
 :root {
-  --yellow: rgb(255,200,94); 
-  --blue: rgb(63,78,101); 
-  --gray: rgb(237,237,237); 
-  --white: #fff; 
-  --black: rgb(17,17,17); 
-  --green: rgb(31,215,93); 
+  --yellow: rgb(255, 200, 94);
+  --blue: rgb(63, 78, 101);
+  --gray: rgb(237, 237, 237);
+  --white: #fff;
+  --black: rgb(17, 17, 17);
+  --green: rgb(31, 215, 93);
 
-    /* адаптивчик */
+  /* адаптивчик */
   --breakpoint-mobile: 480px;
   --breakpoint-tablets: 768px;
   --breakpoint-laptops: 1024px;
   --breakpoint-desktop: 1280px;
-
 }
 
 * {
@@ -27,4 +26,3 @@ body {
   color: var(--blue);
   background: var(--white);
 }
-
