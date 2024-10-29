@@ -10,6 +10,7 @@
 - **Prettier**
 - **Framer Motion**
 
+
 # Установка и запуск
 
 - **_git clone_** _url_
