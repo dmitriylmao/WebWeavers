@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: start;
   overflow: hidden;
+  margin: 0 0 80px;
 }
 
 .overlay {
@@ -136,6 +137,9 @@
 }
 
 @media (max-width: 1024px) {
+  .bannerContainer {
+    margin: 0 0 100px;
+  }
 }
 @media (max-width: 768px) {
   .bannerContainer {
