@@ -1,6 +1,4 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Translate from '../components/Translate';
-
 import Banner from '../components/Banner/Banner';
 import ProductsList from '../components/ProductCard/ProductsList';
 import Promotion_swiper from '../components/Promotion_swiper/Promotion_swiper';
@@ -12,7 +10,6 @@ import Footer from '../components/Footer/Footer';
 const HomePage = () => {
   return (
     <>
-      {/*<Translate /> */}
       <Banner />
       <ProductsList />
       <Categories />
