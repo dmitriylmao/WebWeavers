@@ -1,106 +1,113 @@
 .footer {
-    background-color: #3F4E65;
-    padding: 20px;
-    color: #FFFFFF;
+  background-color: #3f4e65;
+  padding: 20px;
+  color: #ffffff;
 }
 
 .footerContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .topSection {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .downloadButton {
-    background-color: #fec85e;
-    border: none;
-    border-radius: 20px;
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
+  background-color: #fec85e;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.description, .subscribeText {
-    text-align: center;
+.description,
+.subscribeText {
+  text-align: center;
 }
 
 .subscribeForm {
-    display: flex;
-    justify-content: center;
-    margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
 }
 
 .subscribeForm input {
-    padding: 8px;
-    border-radius: 20px 0 0 20px;
-    border: 1px solid #C4C4C4;
-    width: 70%;
-    font-size: 14px;
-    color: #333333;
+  padding: 8px;
+  border-radius: 20px 0 0 20px;
+  border: 1px solid #c4c4c4;
+  width: 70%;
+  font-size: 14px;
+  color: #333333;
 }
 
 .subscribeForm button {
-    padding: 8px 15px;
-    border-radius: 0 20px 20px 0;
-    background-color: #FFCE3E;
-    color: white;
-    cursor: pointer;
+  padding: 8px 15px;
+  border-radius: 0 20px 20px 0;
+  background-color: #ffce3e;
+  color: white;
+  cursor: pointer;
 }
 
 .mainContent {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.linksSection, .contactSection {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+.linksSection,
+.contactSection {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .footerColumn h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .footerColumn ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .footerColumn li {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .footerColumn a {
-    color: #FFFFFF;
-    text-decoration: none;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .footerColumn a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-.messengers, .languageSwitcher, .paymentMethods {
-    display: flex;
-    gap: 10px;
-    align-items: center;
+.messengers,
+.languageSwitcher,
+.paymentMethods {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .paymentMethods {
-    margin-top: 10px;
-    justify-content: flex-start;
+  margin-top: 10px;
+  justify-content: flex-start;
 }
 
-.workTime, .orderCall, .alwaysOnContact, .mail {
-    font-size: 14px;
-    line-height: 1.4;
+.workTime,
+.orderCall,
+.alwaysOnContact,
+.mail {
+  font-size: 14px;
+  line-height: 1.4;
 }

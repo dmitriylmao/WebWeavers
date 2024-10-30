@@ -1,116 +1,117 @@
 .footer {
-    background-color: #3F4E65;
-    padding: 40px;
-    color: #FFFFFF;
+  background-color: #3f4e65;
+  padding: 40px;
+  color: #ffffff;
 }
 
 .footerContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .topSection {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .companyDescription {
-    flex: 1;
-    margin: 0 20px;
-    font-size: 16px;
+  flex: 1;
+  margin: 0 20px;
+  font-size: 16px;
 }
 
 .downloadButton {
-    background-color: #fec85e;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
+  background-color: #fec85e;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .subscribeSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .subscribeText {
-    font-size: 16px;
-    margin-bottom: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .subscribeForm {
-    display: flex;
-    width: 100%;
-    max-width: 500px;
+  display: flex;
+  width: 100%;
+  max-width: 500px;
 }
 
 .subscribeForm input {
-    padding: 10px;
-    border-radius: 30px 0 0 30px;
-    border: 1px solid #C4C4C4;
-    font-size: 14px;
-    flex: 1;
+  padding: 10px;
+  border-radius: 30px 0 0 30px;
+  border: 1px solid #c4c4c4;
+  font-size: 14px;
+  flex: 1;
 }
 
 .subscribeForm button {
-    padding: 10px 15px;
-    border-radius: 0 30px 30px 0;
-    background-color: #FFCE3E;
-    color: white;
-    cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 0 30px 30px 0;
+  background-color: #ffce3e;
+  color: white;
+  cursor: pointer;
 }
 
 .linksSection {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .linkColumn {
-    flex: 1;
+  flex: 1;
 }
 
 .linkColumn h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .linkColumn ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .linkColumn a {
-    color: #FFFFFF;
-    text-decoration: none;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .linkColumn a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .contactSection {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.contactDetails, .messengerSection {
-    flex: 1;
+.contactDetails,
+.messengerSection {
+  flex: 1;
 }
 
 .messengers {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .paymentMethods {
-    display: flex;
-    gap: 20px;
-    margin-top: 10px;
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
 }
