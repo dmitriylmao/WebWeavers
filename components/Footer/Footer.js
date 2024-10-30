@@ -1,27 +1,38 @@
 import React, { useEffect, useState } from 'react';
-import FooterDesktop from './FooterDesktop';
-import FooterMobile from './FooterMobile';
+import FooterDesktop from './desktop/FooterDesktop';
+import FooterMobile from './mobile/FooterMobile';
+import FooterTablet from './tablet/FooterTablet';
+import FooterLaptop from './laptop/FooterLaptop';
 
 const Footer = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
+  const [isLaptop, setIsLaptop] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 480px)');
-
-    const handleMediaChange = (event) => {
-      setIsMobile(event.matches);
+    const handleResize = () => {
+      const width = window.innerWidth;
+      setIsMobile(width < 480);
+      setIsTablet(width >= 480 && width < 768);
+      setIsLaptop(width >= 768 && width < 1280);
+      setIsDesktop(width >= 1280);
     };
 
-    setIsMobile(mediaQuery.matches);
+    // Устанавливаем начальное значение
+    handleResize();
 
-    mediaQuery.addEventListener('change', handleMediaChange);
-
-    return () => mediaQuery.removeEventListener('change', handleMediaChange);
+    // Добавляем слушатель изменения размера экрана
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
     <>
-      {isMobile ? <FooterMobile /> : <FooterDesktop />}
+      {isMobile && <FooterMobile />}
+      {isTablet && <FooterTablet />}
+      {isLaptop && <FooterLaptop />}
+      {isDesktop && <FooterDesktop />}
     </>
   );
 };
