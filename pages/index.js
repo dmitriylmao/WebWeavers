@@ -7,6 +7,7 @@ import Categories from '../components/Сategories/Сategories';
 import Map from '../components/Map/Map';
 import Footer from '../components/Footer/Footer';
 
+
 const HomePage = () => {
   return (
     <>

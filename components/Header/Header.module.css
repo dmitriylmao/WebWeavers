@@ -1,0 +1,519 @@
+/*.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background-color: #ffffff;
+  width: 1920px; 
+  height: 170px; 
+  gap: 0; 
+  opacity: 1; 
+  position: relative;
+}*/
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 170px;
+  background-color: #ffffff;
+}
+
+.menuRect {
+  width: 100%;
+  height: 61px;
+  position: absolute;
+  border-width: 0px, 0px, 0px, 0px;
+  border-width: 0px, 0px, 0px, 0px;
+  border-style: solid;
+  border-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuContainer {
+  position: absolute;
+  left: 58.91%;
+  right: 14.43%;
+  top: 9.41%;
+  bottom: 73.53%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  position: absolute;
+  top: 10px;
+}
+
+.menuItem {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #3f4e65;
+  text-decoration: none;
+}
+
+.divider {
+  width: 0;
+  height: 29px;
+  border: 1px dashed #3f4e65;
+  opacity: 0.1;
+}
+
+.addressContainer {
+  width: 275px;
+  height: 34px;
+  position: absolute;
+  top: 14px;
+  left: 270px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.mapIcon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 7px;
+  left: 0px;
+
+  gap: 0px;
+  opacity: 1;
+}
+
+.mainAddress {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18.2px;
+  color: #111111;
+  position: absolute;
+  right: 0px;
+}
+
+.subAddress {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15.6px;
+  color: #111111;
+  position: absolute;
+  left: 40px;
+  top: 19px;
+}
+
+.contactContainer {
+  position: absolute;
+  left: 624px;
+  top: 14px;
+  width: 178px;
+  height: 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  opacity: 1;
+}
+
+.postIcon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 7px;
+  left: 0px;
+  gap: 0px;
+  opacity: 1;
+}
+
+.email {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18.2px;
+  color: #111111;
+  position: absolute;
+  left: 42px;
+}
+
+.contactText {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15.6px;
+  color: #111111;
+  position: absolute;
+  right: 0px;
+  top: 19px;
+}
+
+.headerContainer {
+  position: absolute;
+  width: 1920px;
+  height: 96px;
+  top: 61px;
+  gap: 0px;
+  opacity: 1;
+  background-color: aqua;
+}
+
+.rectangle {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 35.88%;
+  bottom: 63.53%;
+  background: #3f4e65;
+  opacity: 0.2;
+}
+
+.logo {
+  position: absolute;
+  top: 82px;
+  left: 277px;
+  width: 156px;
+  height: 66px;
+}
+
+.catalogButton {
+  width: 192px;
+  height: 59px;
+  position: absolute;
+  top: 86px;
+  left: 471px;
+  padding: 10px 19px;
+  gap: 12px;
+  border-radius: 30px;
+  background: rgba(255, 200, 94, 1);
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+.catalogText {
+  width: 57px;
+  height: 17px;
+
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16.94px;
+  text-align: left;
+
+  color: #ffffff;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.catalogIcon {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.search {
+  position: absolute;
+  top: 86px;
+  left: 678px;
+  width: 263px;
+  height: 59px;
+  padding: 13px 10px 13px 20px;
+  border-radius: 36px;
+  background: #ededed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  opacity: 1;
+}
+
+.searchInput {
+  width: calc(100% - 39px - 10px);
+  height: 100%;
+  border: 1px solid #ccc;
+  background: transparent;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #5c6370;
+  opacity: 0.6;
+  margin: 0;
+  padding: 10px;
+  border-radius: 36px 0 0 36px;
+}
+
+.searchInput::placeholder {
+  color: #5c6370;
+  opacity: 0.6;
+  font-family: 'Inter', sans-serif;
+}
+
+.searchButton {
+  position: absolute;
+  width: 39px;
+  height: 39px;
+  left: 214px;
+  top: 10px;
+  background: #ffc85e;
+  border-radius: 1000px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  width: 18.35px;
+  height: 18.35px;
+}
+
+.contactBlock {
+  position: absolute;
+  left: 976px;
+  top: 65px;
+  width: 236px;
+  height: 92px;
+  gap: 0;
+  opacity: 1;
+}
+
+.textBlock {
+  position: absolute;
+  left: 0;
+  right: 41.25%;
+  top: 20px;
+  bottom: 12.94%;
+  width: 152px;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+}
+
+.phoneNumber {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #111111;
+  width: 136px;
+  height: 21px;
+  text-align: right;
+  letter-spacing: 0.43px;
+}
+
+.workingHours {
+  position: absolute;
+  left: 0px;
+  top: 23px;
+  bottom: 24.71%;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  color: #3f4e65;
+  width: 152px;
+  height: 18px;
+  font-family: Inter, sans-serif;
+  line-height: 18px;
+  text-align: right;
+}
+
+.orderCall {
+  position: absolute;
+  right: 0px;
+  top: 46px;
+  width: 81px;
+  height: 15px;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 15px;
+  text-align: right;
+  color: #3f4e65;
+  text-decoration: underline;
+}
+
+.personIcon {
+  width: 70px;
+  height: 92px;
+  top: 0px;
+  right: 0px;
+  gap: 0px;
+  opacity: 0px;
+  position: absolute;
+}
+
+.separator1 {
+  position: absolute;
+  width: 0px;
+  height: 49px;
+  top: 91px;
+  left: 1237px;
+  gap: 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0.1;
+  border: 1px dashed #3f4e65;
+}
+
+.priceListButton {
+  width: 200px;
+  height: 59px;
+  position: absolute;
+  top: 86px;
+  left: 1262px;
+  padding: 10px 19px 10px 19px;
+  gap: 12px;
+  border-radius: 30px;
+  background: rgba(255, 200, 94, 1);
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+.priceListText {
+  width: 84px;
+  height: 17px;
+
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16.94px;
+  text-align: left;
+
+  color: #ffffff;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.priceListIcon {
+  width: 17px;
+  height: 17px;
+  padding: 2.13px 2.83px 2.13px 2.83px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+.separator2 {
+  position: absolute;
+  width: 0px;
+  height: 49px;
+  top: 91px;
+  left: 1487px;
+  gap: 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0.1;
+  border: 1px dashed #3f4e65;
+}
+
+.cartContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 93px;
+  left: 1512px;
+  gap: 0;
+  opacity: 1;
+  width: 128px;
+  height: 46px;
+}
+
+.iconWrapper {
+  width: 46px;
+  height: 46px;
+  padding: 8.17px 4.09px 9.07px 1.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemCount {
+  position: absolute;
+  top: 1px;
+  left: 30px;
+  width: 22px;
+  height: 22px;
+  background-color: rgba(255, 200, 94, 1);
+  border: 3px solid rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.cartLabel {
+  position: absolute;
+  width: 48px;
+  height: 18px;
+  opacity: 1;
+  font-size: 14px;
+  color: #ffffff;
+  margin-top: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: #3f4e65;
+  top: 6px;
+  right: 11px;
+  gap: 0px;
+}
+
+.cartTotal {
+  position: absolute;
+  width: 58px;
+  height: 21px;
+  opacity: 1;
+  font-size: 14px;
+  color: #ffffff;
+  margin-top: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #111111;
+  bottom: 0px;
+  right: 0px;
+  gap: 0px;
+}
+
+.rectangleBottom {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 99.41%;
+  bottom: 0%;
+  background: #3f4e65;
+  opacity: 0.2;
+}
