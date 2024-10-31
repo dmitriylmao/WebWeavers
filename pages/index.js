@@ -1,17 +1,24 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Translate from '../components/Translate';
-import Promotion_swiper from '../components/Promotion_swiper/Promotion_swiper';
-import Categories from '../components/Сategories/Сategories';
 import { Header } from '@/components/Header/Header';
+import Banner from '../components/Banner/Banner';
+import ProductsList from '../components/ProductCard/ProductsList';
+import Promotion_swiper from '../components/Promotion_swiper/Promotion_swiper';
+import Logo_swiper from '../components/Logo_swiper/Logo_swiper';
+import Categories from '../components/Сategories/Сategories';
+import Map from '../components/Map/Map';
+import Footer from '../components/Footer/Footer';
+
 
 const HomePage = () => {
   return (
     <>
-      <Header/>
+      <Banner />
+      <ProductsList />
       <Categories />
       <Promotion_swiper />
-      
-      {/* Сюда лепите ваши компоненты , формата <Component/> ,а лучше ничего не лепите , потом на ветке dev вставим , но для проверки вам в любом кайфе придется лепить , так что лепите*/}
+      <Logo_swiper />
+      <Map />
+      <Footer />
     </>
   );
 };

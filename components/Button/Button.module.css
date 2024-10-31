@@ -9,7 +9,7 @@
   font-family: var(--font-inter);
 }
 .button:hover {
-  background-color: rgb(255, 190, 59);
+  background-color: var(--yellow-hover);
 }
 .buttonImage {
   margin-left: 10px;

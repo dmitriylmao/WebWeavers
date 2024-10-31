@@ -8,6 +8,7 @@
 - **i18next**
 - **ESLint**
 - **Prettier**
+- **Framer Motion**
 
 # Установка и запуск
 
