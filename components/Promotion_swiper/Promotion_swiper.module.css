@@ -1,7 +1,7 @@
 .container {
   max-width: 1432px;
   height: 500px;
-  margin: 0 auto;
+  margin: 0 auto 80px;
   position: relative;
   font-family: var(--font-inter);
 }
@@ -45,6 +45,7 @@
 .slideDuration {
   font-size: 14px;
   font-weight: 300;
+  letter-spacing: 4px;
   color: var(--white);
   margin: 80px 0 20px;
 }
@@ -61,9 +62,10 @@
 .slideDescription {
   font-size: 20px;
   font-weight: 300;
+  line-height: 30px;
   max-width: 60%;
   color: var(--white);
-  margin-bottom: 70px;
+  margin-bottom: 50px;
   z-index: 1;
 }
 
@@ -104,7 +106,7 @@
 
 .container :global(.swiper-button-next:hover),
 .container :global(.swiper-button-prev:hover) {
-  background-color: var(--yellow);
+  background-color: var(--yellow-hover);
 }
 
 .container :global(.swiper-button-next::after),
@@ -128,7 +130,7 @@
 .container :global(.swiper-pagination-bullet) {
   background-color: gray;
   width: 16px;
-  height: 6px;
+  height: 7px;
   border-radius: 4px;
   margin: 0 4px;
   transition: all 0.3s ease;
@@ -137,59 +139,137 @@
 .container :global(.swiper-pagination-bullet-active) {
   background-color: var(--white);
   width: 26px;
-  height: 6px;
+  height: 7px;
   border-radius: 6px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    height: 320px;
+    margin: 0 auto 60px;
+    width: 95%;
+  }
+  .mySwiper {
+    padding: 0 18px;
+  }
+  .slideContent {
+    padding-left: 45px;
+  }
+  .slideDuration {
+    font-size: 12px;
+    margin: 40px 0 24px;
+  }
+  .slideTitle {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  .slideDescription {
+    font-size: 18px;
+    max-width: 50%;
+    margin-bottom: 20px;
+    line-height: 18px;
+  }
+  .slideButton {
+    width: 200px;
+    height: 60px;
+    font-size: 14px;
+  }
+  .container :global(.swiper-button-next),
+  .container :global(.swiper-button-prev) {
+    width: 44px;
+    height: 44px;
+    top: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    height: auto;
+  }
+  .slideContent {
+    padding-left: 45px;
+  }
+  .slideDuration {
+    font-size: 10px;
+    margin: 40px 0 24px;
+  }
+  .slideTitle {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  .slideDescription {
+    font-size: 14px;
+    max-width: 50%;
+    margin-bottom: 20px;
+    line-height: 16px;
+  }
+  .slideButton {
+    width: 180px;
+    height: 50px;
+    font-size: 14px;
+  }
+  .container :global(.swiper-button-next::after),
+  .container :global(.swiper-button-prev::after) {
+    font-size: 12px;
+    font-weight: 900;
+    color: var(--yellow);
+  }
+  .container :global(.swiper-button-next),
+  .container :global(.swiper-button-prev) {
+    top: 45%;
+  }
+  .container :global(.swiper-pagination-bullet-active) {
+    background-color: var(--yellow);
+  }
+  .container :global(.swiper) {
+    height: 340px;
+    padding-bottom: 40px;
+  }
 }
 
 @media (max-width: 480px) {
   .container {
     width: 100%;
-    height: 240px;
+    height: auto;
+    margin: 0 auto 40px;
   }
-
-  .mySwiper {
-    padding: 0 18px;
-  }
-
   .slideContent {
-    padding-left: 25px;
+    padding-left: 32px;
   }
-
-  .slideImage {
-    height: 100%;
-  }
-
   .slideDuration {
     font-size: 8px;
     margin: 30px 0 20px;
+    width: 50%;
+    line-height: 11px;
   }
-
   .slideTitle {
     font-size: 20px;
     margin-bottom: 20px;
   }
-
   .slideDescription {
     font-size: 12px;
+    line-height: 14px;
     max-width: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 28px;
   }
-
   .slideButton {
     width: 161px;
     height: 43px;
     font-size: 12px;
   }
-
-  .container :global(.swiper-button-next),
-  .container :global(.swiper-button-prev) {
-    width: 39px;
-    height: 39px;
-    top: 50%;
-  }
-
   .container :global(.swiper-button-next::after),
   .container :global(.swiper-button-prev::after) {
     font-size: 10px;
+    font-weight: 900;
+    color: var(--yellow);
+  }
+  .container :global(.swiper-button-next),
+  .container :global(.swiper-button-prev) {
+    top: 44%;
+  }
+  .container :global(.swiper) {
+    height: 300px;
+    padding-bottom: 40px;
   }
 }
