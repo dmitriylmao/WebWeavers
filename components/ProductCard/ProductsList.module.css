@@ -15,12 +15,42 @@
   font-size: 36px;
   font-weight: 500;
   color: var(--black);
-  margin-bottom: 36px;
+  margin-bottom: 48px;
 }
 
 .highlight {
   color: var(--yellow);
   font-weight: 800;
+}
+
+.container :global(.swiper) {
+  padding-bottom: 40px;
+}
+
+.container :global(.swiper-slide) {
+  height: 460px;
+}
+
+.container :global(.swiper-pagination) {
+  display: flex;
+  justify-content: center;
+  margin-top: 52px;
+}
+
+.container :global(.swiper-pagination-bullet) {
+  background-color: gray;
+  width: 16px;
+  height: 7px;
+  border-radius: 4px;
+  margin: 0 4px;
+  transition: all 0.3s ease;
+}
+
+.container :global(.swiper-pagination-bullet-active) {
+  background-color: var(--yellow);
+  width: 26px;
+  height: 7px;
+  border-radius: 6px;
 }
 
 @media (max-width: 480px) {

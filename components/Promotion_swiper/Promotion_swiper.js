@@ -8,7 +8,7 @@ import Button from '../Button/Button';
 
 const promotionSlide = {
   imageSrc: '/images/Promotion_swiper/slide1.png',
-  duration: '* ЯКЦИЯ ДЕЙСТВУЕТ ДО 04/09/22',
+  duration: '*АКЦИЯ ДЕЙСТВУЕТ ДО 04/09/22',
   title: 'Название Акции',
   description:
     'Условия: поставить лайк , подписаться на канал , репост на стену ВК',
@@ -18,7 +18,7 @@ const promotionSlide = {
 
 const partnerSlide = {
   imageSrc: '/images/Promotion_swiper/slide2.png',
-  duration: 'ЯКЦИЯ ДЕЙСТВУЕТ ДО 02/03/24',
+  duration: '*АКЦИЯ ДЕЙСТВУЕТ ДО 02/03/24',
   title: 'Наш партнер',
   description:
     'Леруа мерлен Леруа мерлен Леруа Леруа Леруа мерлен Леруа Леруа Леруа',

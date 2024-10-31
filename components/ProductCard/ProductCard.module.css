@@ -107,5 +107,5 @@
 }
 
 .addToCartButton:hover {
-  background-color: var(--green);
+  background-color: var(--yellow-hover);
 }

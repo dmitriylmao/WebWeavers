@@ -62,7 +62,7 @@
 }
 
 .imageWrapper:hover {
-  background-color: rgba(188, 165, 120, 0.4);
+  background-color: var(--yellow-hover);
 }
 
 .imageWrapper:hover img {

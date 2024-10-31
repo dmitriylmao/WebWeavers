@@ -2,6 +2,7 @@
 
 :root {
   --yellow: rgb(255, 200, 94);
+  --yellow-hover: rgb(255, 171, 2);
   --blue: rgb(63, 78, 101);
   --gray: rgb(237, 237, 237);
   --white: #fff;

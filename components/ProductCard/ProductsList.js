@@ -1,3 +1,6 @@
+import { useState, useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
 import ProductCard from './ProductCard';
 
 import typeA from '../../public/images/Products/box.svg';
@@ -10,6 +13,16 @@ import product4Img from '@/public/images/Products/4.png';
 import styles from './ProductsList.module.css';
 
 const ProductsList = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const saleProducts = [
     {
       id: 101,
@@ -101,21 +114,48 @@ const ProductsList = () => {
       <h2 className={styles.title}>
         <span className={styles.highlight}>АКЦИОННЫЕ</span> ТОВАРЫ
       </h2>
-      <div className={styles.productsList}>
-        {saleProducts.map((product) => (
-          <ProductCard
-            key={product.id}
-            id={product.id}
-            volume={product.volume}
-            volumeType={product.volumeType}
-            title={product.title}
-            producer={product.producer}
-            brand={product.brand}
-            price={product.price}
-            imgSrc={product.imgSrc}
-          />
-        ))}
-      </div>
+
+      {isMobile ? (
+        <Swiper
+          modules={[Pagination]}
+          pagination={{ clickable: true }}
+          spaceBetween={16}
+          slidesPerView={1}
+          loop={true}
+          className={styles.swiper}
+        >
+          {saleProducts.map((product) => (
+            <SwiperSlide key={product.id}>
+              <ProductCard
+                id={product.id}
+                volume={product.volume}
+                volumeType={product.volumeType}
+                title={product.title}
+                producer={product.producer}
+                brand={product.brand}
+                price={product.price}
+                imgSrc={product.imgSrc}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      ) : (
+        <div className={styles.productsList}>
+          {saleProducts.map((product) => (
+            <ProductCard
+              key={product.id}
+              id={product.id}
+              volume={product.volume}
+              volumeType={product.volumeType}
+              title={product.title}
+              producer={product.producer}
+              brand={product.brand}
+              price={product.price}
+              imgSrc={product.imgSrc}
+            />
+          ))}
+        </div>
+      )}
     </section>
   );
 };
