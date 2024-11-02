@@ -1,6 +1,5 @@
 import { Inter } from 'next/font/google';
 import { appWithTranslation } from 'next-i18next';
-import Layout from '@/layouts/Layout';
 import '@/styles/global.css';
 
 const inter = Inter({
