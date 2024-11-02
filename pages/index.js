@@ -5,7 +5,6 @@ import Promotion_swiper from '../components/Promotion_swiper/Promotion_swiper';
 import Logo_swiper from '../components/Logo_swiper/Logo_swiper';
 import Categories from '../components/Сategories/Сategories';
 import Map from '../components/Map/Map';
-import Footer from '../components/Footer/Footer';
 
 const HomePage = () => {
   return (
@@ -16,7 +15,6 @@ const HomePage = () => {
       <Promotion_swiper />
       <Logo_swiper />
       <Map />
-      <Footer />
     </>
   );
 };

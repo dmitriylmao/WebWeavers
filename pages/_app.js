@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google';
 import { appWithTranslation } from 'next-i18next';
-import '../styles/global.css';
+import Layout from '@/layouts/Layout';
+import '@/styles/global.css';
 
 const inter = Inter({
   weight: ['100', '300', '400', '500', '700', '900'],
@@ -13,7 +14,9 @@ const inter = Inter({
 const MyApp = ({ Component, pageProps }) => {
   return (
     <div className={inter.className}>
+      {/* <Layout> */}
       <Component {...pageProps} />
+      {/*</Layout> */}
     </div>
   );
 };
