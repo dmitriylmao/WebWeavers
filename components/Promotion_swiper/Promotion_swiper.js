@@ -3,28 +3,12 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
-import styles from './Promotion_swiper.module.css';
-import Button from '../Button/Button';
-
-const promotionSlide = {
-  imageSrc: '/images/Promotion_swiper/slide1.png',
-  duration: '*АКЦИЯ ДЕЙСТВУЕТ ДО 04/09/22',
-  title: 'Название Акции',
-  description:
-    'Условия: поставить лайк , подписаться на канал , репост на стену ВК',
-  buttonText: 'ПРИНЯТЬ УЧАСТИЕ',
-  link: '/promotion',
-};
-
-const partnerSlide = {
-  imageSrc: '/images/Promotion_swiper/slide2.png',
-  duration: '*АКЦИЯ ДЕЙСТВУЕТ ДО 02/03/24',
-  title: 'Наш партнер',
-  description:
-    'Леруа мерлен Леруа мерлен Леруа Леруа Леруа мерлен Леруа Леруа Леруа',
-  buttonText: 'ПЕРЕЙТИ К БРЕНДУ',
-  link: '/Lerua',
-};
+import Button from '@/components/Button/Button';
+import {
+  promotionSlide,
+  partnerSlide,
+} from '@/components/Promotion_swiper/Constants';
+import styles from '@/components/Promotion_swiper/Promotion_swiper.module.css';
 
 const sliderData = [promotionSlide, partnerSlide];
 

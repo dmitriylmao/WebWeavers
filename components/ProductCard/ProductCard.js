@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from './ProductCard.module.css';
-
 import telejka from '@/public/images/Products/telejka.svg';
+import styles from '@/components/ProductCard/ProductCard.module.css';
 
 const ProductCard = ({
   id,

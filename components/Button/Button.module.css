@@ -3,14 +3,16 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  font-family: var(--font-inter);
   color: var(--white);
   background-color: var(--yellow);
   transition: background-color 0.3s ease;
-  font-family: var(--font-inter);
 }
+
 .button:hover {
   background-color: var(--yellow-hover);
 }
+
 .buttonImage {
   margin-left: 10px;
   width: 20px;

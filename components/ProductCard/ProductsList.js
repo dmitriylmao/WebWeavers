@@ -1,113 +1,12 @@
-import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
-import ProductCard from './ProductCard';
-
-import typeA from '../../public/images/Products/box.svg';
-import typeB from '@/public/images/Products/bottle.svg';
-
-import product1Img from '@/public/images/Products/1.png';
-import product2Img from '@/public/images/Products/2.png';
-import product3Img from '@/public/images/Products/3.png';
-import product4Img from '@/public/images/Products/4.png';
-import styles from './ProductsList.module.css';
+import ProductCard from '@/components/ProductCard/ProductCard';
+import { saleProducts } from '@/components/ProductCard/Constants';
+import useWindowSize from '@/core/hooks/useWindowSize';
+import styles from '@/components/ProductCard/ProductsList.module.css';
 
 const ProductsList = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 768);
-    handleResize();
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  const saleProducts = [
-    {
-      id: 101,
-      title: 'ср-во для мытья посуды Апельсин+мята',
-      producer: 'Нэфис',
-      brand: 'AOS',
-      price: '48,76',
-      imgSrc: product1Img,
-      volume: '450 мл',
-      volumeType: typeB,
-    },
-    {
-      id: 102,
-      volume: '450 мл',
-      title: 'средство для мытья посуды Srystal',
-      producer: 'Нэфис',
-      brand: 'AOS',
-      price: '48,76',
-      imgSrc: product2Img,
-      volumeType: typeB,
-    },
-    {
-      id: 103,
-      volume: '15X28.8 г',
-      title:
-        'Автмат Гель СМС жидкое в растворимых капсулах Liauid Capsules Горный родник',
-      producer: 'Нэфис',
-      brand: 'AOS',
-      price: '48,76',
-      imgSrc: product3Img,
-      volumeType: typeA,
-    },
-    {
-      id: 104,
-      volume: '450 мл',
-      title: 'Порошок стиральный Автомат 100 пятен COMPACT',
-      producer: 'Нэфис',
-      brand: 'AOS',
-      price: '48,76',
-      imgSrc: product4Img,
-      volumeType: typeA,
-    },
-    {
-      id: 101,
-
-      title: 'ср-во для мытья посуды Апельсин+мята',
-      producer: 'Нэфис',
-      brand: 'AOS',
-      price: '48,76',
-      imgSrc: product1Img,
-      volume: '450 мл',
-      volumeType: typeB,
-    },
-    {
-      id: 102,
-      volume: '450 мл',
-      title: 'средство для мытья посуды Srystal',
-      producer: 'Нэфис',
-      brand: 'AOS',
-      price: '48,76',
-      imgSrc: product2Img,
-      volumeType: typeB,
-    },
-    {
-      id: 103,
-      volume: '15X28.8 г',
-      title:
-        'Автмат Гель СМС жидкое в растворимых капсулах Liauid Capsules Горный родник',
-      producer: 'Нэфис',
-      brand: 'AOS',
-      price: '48,76',
-      imgSrc: product3Img,
-      volumeType: typeA,
-    },
-    {
-      id: 104,
-      volume: '450 мл',
-      title: 'Порошок стиральный Автомат 100 пятен COMPACT',
-      producer: 'Нэфис',
-      brand: 'AOS',
-      price: '48,76',
-      imgSrc: product4Img,
-      volumeType: typeA,
-    },
-  ];
+  const { isMobile, isTablet } = useWindowSize();
 
   return (
     <section className={styles.container}>
@@ -115,7 +14,7 @@ const ProductsList = () => {
         <span className={styles.highlight}>АКЦИОННЫЕ</span> ТОВАРЫ
       </h2>
 
-      {isMobile ? (
+      {isMobile | isTablet ? (
         <Swiper
           modules={[Pagination]}
           pagination={{ clickable: true }}

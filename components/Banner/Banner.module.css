@@ -2,38 +2,38 @@
   position: relative;
   width: 100%;
   height: 796px;
-  background-image: url('/images/Banner/image19.png');
-  background-size: cover;
-  background-position: center;
+  margin: 0 0 80px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: start;
-  overflow: hidden;
-  margin: 0 0 80px;
+  background-image: url('/images/Banner/image19.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .overlay {
   width: 47%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
   background: linear-gradient(
     to right,
     rgba(138, 148, 171, 1) 0%,
     rgba(138, 148, 171, 0) 100%
   );
   backdrop-filter: blur(5px);
-  display: flex;
-  align-items: center;
-  justify-content: end;
 }
 
 .content {
   position: relative;
+  z-index: 2;
   width: 600px;
   height: 100%;
   padding: 88px 10px;
   text-align: left;
   color: var(--white);
-  z-index: 2;
 }
 
 .mainTitle {
@@ -53,17 +53,17 @@
 .catalogButton {
   width: 300px;
   height: 95px;
-  background-color: var(--yellow);
-  color: white;
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 50px;
+  margin-bottom: 88px;
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 4px;
+  color: white;
+  background-color: var(--yellow);
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-bottom: 88px;
 }
 
 .catalogButton:hover {
@@ -84,10 +84,10 @@
 }
 
 .featureText {
-  color: var(--white);
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
+  color: var(--white);
 }
 
 .highlights {
@@ -98,12 +98,12 @@
 }
 
 .icon {
-  font-size: 20px;
+  min-width: 39px;
+  min-height: 39px;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 39px;
-  min-height: 39px;
+  font-size: 20px;
   background-color: var(--yellow);
   border-radius: 50%;
 }
@@ -112,27 +112,34 @@
   .mainTitle {
     font-size: 50px;
   }
+
   .subTitle {
     font-size: 20px;
   }
+
   .catalogButton {
     width: 160px;
     height: 60px;
     font-size: 0.75rem;
     margin-bottom: 44px;
   }
+
   .features {
     width: 100%;
   }
+
   .featureText {
     font-size: 10px;
   }
+
   .highlights {
     font-size: 10px;
   }
+
   .content {
     text-align: end;
   }
+
   .overlay {
     align-items: end;
     justify-content: end;
@@ -144,15 +151,18 @@
     margin: 0 0 100px;
   }
 }
+
 @media (max-width: 768px) {
   .bannerContainer {
     width: 100%;
     height: 250px;
     overflow: visible;
   }
+
   .catalogButton {
     display: none;
   }
+
   .overlay {
     width: 90%;
     height: 56%;
@@ -161,10 +171,12 @@
     top: auto;
     justify-content: center;
   }
+
   .content {
     padding: 36px 10px;
     text-align: center;
   }
+
   .mainTitle {
     font-size: 24px;
     line-height: 19.8px;
@@ -172,12 +184,14 @@
     position: relative;
     margin-bottom: 20px;
   }
+
   .subTitle {
     font-size: 16px;
     line-height: 15px;
     font-weight: 300;
     position: relative;
   }
+
   .features {
     flex-direction: column;
     position: absolute;
@@ -191,6 +205,7 @@
     min-width: 18px;
     min-height: 18px;
   }
+
   .featureText {
     color: var(--blue);
     text-align: justify;
@@ -209,19 +224,24 @@
     line-height: 19.8px;
     font-weight: 400;
   }
+
   .subTitle {
     font-size: 12px;
     line-height: 15px;
   }
+
   .catalogButton {
     display: none;
   }
+
   .icon {
     font-size: 10px;
   }
+
   .featureText {
     font-size: 10px;
   }
+
   .overlay {
     width: 90%;
   }

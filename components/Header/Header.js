@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './Header.module.css';
 import Image from 'next/image';
 import mapSrc from './map_icon.svg';
 import postSrc from './postIcon.svg';
@@ -9,6 +8,7 @@ import searchIconSrc from './search_icon.svg';
 import basketIconSrc from './basket_icon.svg';
 import priceListIconSrc from './priceList_icon.svg';
 import personIconSrc from './personIcon.svg';
+import styles from './Header.module.css';
 
 export function Header() {
   return (

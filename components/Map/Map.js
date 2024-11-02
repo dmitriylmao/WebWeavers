@@ -1,4 +1,4 @@
-import styles from './Map.module.css';
+import styles from '@/components/Map/Map.module.css';
 
 export default function Map() {
   return (

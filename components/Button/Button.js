@@ -1,6 +1,5 @@
-// components/Button.js
 import Link from 'next/link';
-import styles from './Button.module.css'; // Импорт CSS модуля
+import styles from '@/components/Button/Button.module.css';
 
 const Button = ({ text, href, imgSrc, customClass }) => {
   return (

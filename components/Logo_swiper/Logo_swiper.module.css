@@ -1,8 +1,8 @@
 .container {
   padding: 0;
-  text-align: start;
   max-width: 1366px;
   margin: 0 auto 80px;
+  text-align: start;
   font-family: var(--font-inter);
 }
 
@@ -36,8 +36,6 @@
 }
 
 .card {
-  background-color: var(--white);
-  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,6 +44,8 @@
   padding: 10px;
   box-sizing: border-box;
   overflow: hidden;
+  background-color: var(--white);
+  border-radius: 8px;
 }
 
 .logoImage {
@@ -95,9 +95,11 @@
   .container {
     width: 90%;
   }
+
   .title {
     font-size: 34px;
   }
+
   .subtitle {
     font-size: 18px;
   }
@@ -108,9 +110,11 @@
     width: 85%;
     margin: 0 auto 60px;
   }
+
   .title {
     font-size: 32px;
   }
+
   .subtitle {
     font-size: 18px;
   }
@@ -121,13 +125,16 @@
     width: 90%;
     margin: 0 auto 40px;
   }
+
   .title {
     font-size: 20px;
     font-weight: 500;
   }
+
   .highlight {
     font-weight: 600;
   }
+
   .subtitle {
     font-size: 14px;
   }

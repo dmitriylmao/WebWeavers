@@ -45,6 +45,7 @@
   color: var(--blue);
   margin-bottom: 5px;
 }
+
 .volumeType {
   opacity: 0.3;
 }
@@ -53,9 +54,10 @@
   font-size: 16px;
   font-weight: 500;
   color: var(--black);
-  margin-bottom: 15px;
   line-height: 20.8px;
+  margin-bottom: 15px;
 }
+
 .productBrand {
   font-size: 16px;
   font-weight: 800;
@@ -99,10 +101,10 @@
   height: 45px;
   border: none;
   padding: 10px 19px;
-  opacity: 1;
-  cursor: pointer;
   color: white;
   border-radius: 80px;
+  cursor: pointer;
+  opacity: 1;
   transition: background-color 0.3s ease;
 }
 

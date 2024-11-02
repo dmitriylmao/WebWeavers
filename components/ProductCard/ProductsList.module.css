@@ -58,9 +58,11 @@
     width: 90%;
     margin: 0 auto 40px;
   }
+
   .productsList {
     grid-template-columns: 1fr;
   }
+
   .title {
     font-size: 20px;
     margin-bottom: 24px;
@@ -72,9 +74,11 @@
     width: 85%;
     margin: 0 auto 60px;
   }
+
   .productsList {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .title {
     font-size: 32px;
   }
@@ -84,9 +88,11 @@
   .container {
     width: 90%;
   }
+
   .productsList {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .title {
     font-size: 34px;
   }
@@ -96,6 +102,7 @@
   .container {
     width: 95%;
   }
+
   .productsList {
     grid-template-columns: repeat(4, 1fr);
   }
