@@ -1,1 +1,1 @@
-export {default} from '@/components/Сategories/Сategories'
+export { default } from '@/components/Сategories/Сategories';

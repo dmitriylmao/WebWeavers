@@ -51,23 +51,7 @@
 }
 
 .catalogButton {
-  width: 300px;
-  height: 95px;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 50px;
   margin-bottom: 88px;
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 4px;
-  color: white;
-  background-color: var(--yellow);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.catalogButton:hover {
-  background-color: var(--yellow-hover);
 }
 
 .features {
@@ -108,9 +92,6 @@
   }
 
   .catalogButton {
-    width: 160px;
-    height: 60px;
-    font-size: 0.75rem;
     margin-bottom: 44px;
   }
 
@@ -199,7 +180,6 @@
     font-size: 10px;
     white-space: nowrap;
   }
-
 }
 
 @media (max-width: 480px) {

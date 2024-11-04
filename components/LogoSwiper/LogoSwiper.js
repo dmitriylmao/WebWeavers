@@ -2,7 +2,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import shortid from 'shortid';
 import { Pagination, Navigation } from 'swiper/modules';
 import Link from 'next/link';
 import { logoData } from '@/components/LogoSwiper/Constants';

@@ -1,1 +1,1 @@
-export {default} from '@/components/PromotionSwiper/PromotionSwiper'
+export { default } from '@/components/PromotionSwiper/PromotionSwiper';

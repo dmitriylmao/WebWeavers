@@ -1,1 +1,1 @@
-export {default} from '@/components/LogoSwiper/LogoSwiper'
+export { default } from '@/components/LogoSwiper/LogoSwiper';

@@ -6,12 +6,16 @@ import PromotionSwiper from '@/components/PromotionSwiper';
 import LogoSwiper from '@/components/LogoSwiper';
 import Map from '@/components/Map';
 import { LANGUAGE_EN } from '@/core/constants';
-import Test from '@/components/Test/Test';
 
 const HomePage = () => {
   return (
     <>
-      <Test />
+      <Banner />
+      <ProductsList />
+      <Categories />
+      <PromotionSwiper />
+      <LogoSwiper />
+      <Map />
     </>
   );
 };

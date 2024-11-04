@@ -15,7 +15,7 @@ const ProductsList = () => {
         <span className={styles.highlight}>АКЦИОННЫЕ</span> ТОВАРЫ
       </h2>
 
-      {isMobile || isTablet ? ( 
+      {isMobile || isTablet ? (
         <Swiper
           modules={[Pagination]}
           pagination={{ clickable: true }}
@@ -25,16 +25,20 @@ const ProductsList = () => {
           className={styles.swiper}
         >
           {saleProducts.map((product) => (
-            <SwiperSlide key={product.id}>  
-              <Link href={`Products/${product.id}`} style={{ textDecoration: 'none' }} passHref> 
+            <SwiperSlide key={product.id}>
+              <Link
+                href={`Products/${product.id}`}
+                style={{ textDecoration: 'none' }}
+                passHref
+              >
                 <ProductCard
-                  id={product.id} 
+                  id={product.id}
                   volume={product.volume}
                   volumeType={product.volumeType}
                   title={product.title}
                   producer={product.producer}
                   brand={product.brand}
-                  price={product.price} 
+                  price={product.price}
                   imgSrc={product.imgSrc}
                 />
               </Link>
@@ -44,9 +48,14 @@ const ProductsList = () => {
       ) : (
         <div className={styles.productsList}>
           {saleProducts.map((product) => (
-            <Link key={product.id} href={`Products/${product.id}`} style={{ textDecoration: 'none' }} passHref> 
+            <Link
+              key={product.id}
+              href={`Products/${product.id}`}
+              style={{ textDecoration: 'none' }}
+              passHref
+            >
               <ProductCard
-                id={product.id} 
+                id={product.id}
                 volume={product.volume}
                 volumeType={product.volumeType}
                 title={product.title}

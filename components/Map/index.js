@@ -1,1 +1,1 @@
-export {default} from '@/components/Map/Map'
+export { default } from '@/components/Map/Map';

@@ -6,7 +6,7 @@ export const promotionSlide = {
     'Условия: поставить лайк , подписаться на канал , репост на стену ВК',
   buttonText: 'ПРИНЯТЬ УЧАСТИЕ',
   link: '/promotion',
-  id : '000',
+  id: '000',
 };
 
 export const partnerSlide = {
@@ -17,5 +17,5 @@ export const partnerSlide = {
     'Леруа мерлен Леруа мерлен Леруа Леруа Леруа мерлен Леруа Леруа Леруа',
   buttonText: 'ПЕРЕЙТИ К БРЕНДУ',
   link: '/Lerua',
-  id : '001',
+  id: '001',
 };

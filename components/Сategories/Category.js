@@ -31,7 +31,7 @@ const Category = ({ category, delay }) => {
       ref={ref}
       initial={getAnimationDirection(category.direction)}
       animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-      transition={{ duration: 0.4, delay: isInView ? delay : 0 }} 
+      transition={{ duration: 0.4, delay: isInView ? delay : 0 }}
       className={styles.card}
     >
       <Link

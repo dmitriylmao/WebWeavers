@@ -1,31 +1,29 @@
-import logo from '@/public/images/Products/telejka.svg'
+import logo from '@/public/images/Products/telejka.svg';
 import YellowButton from '../UI/YellowButton/YellowButton';
 
 export default function Test() {
   return (
-    <section >
+    <section>
+      <YellowButton label="В КАТАЛОГ" size="lg" href="/catalog" />
       <YellowButton
-        label="В каталог"
+        label="ПРИНЯТЬ УЧАСТИЕ"
         size="lg"
         href="/catalog"
-      />
-      <YellowButton
-        label="Принять участие"
-        size="lg"
-        href="/catalog"
+        icon={logo}
       />
 
       <YellowButton
         label="Каталог"
         size="md"
         download="/path/to/pricelist.pdf"
+        icon={logo}
       />
 
       <YellowButton
-        label="Добавить в корзину"
+        label="В КОРЗИНУ"
         size="sm"
         action="add-to-cart"
-        icon = {logo}
+        icon={logo}
       />
     </section>
   );

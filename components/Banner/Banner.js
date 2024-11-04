@@ -13,7 +13,9 @@ export default function Banner() {
           <h3 className={styles.subTitle}>
             ОПТОМ <span>ПО КОКЧЕТАВУ И ОБЛАСТИ</span>
           </h3>
-          <button className={styles.catalogButton}>В КАТАЛОГ</button>
+          <div className={styles.catalogButton}>
+            <YellowButton label="В КАТАЛОГ" size="lg" href="/catalog" />
+          </div>
           <div className={styles.features}>
             {bannerAdvantages.map((advantage) => (
               <p key={advantage} className={styles.feature}>

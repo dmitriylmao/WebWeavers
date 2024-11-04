@@ -95,19 +95,4 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--yellow);
-  gap: 5px;
-  width: 153px;
-  height: 45px;
-  border: none;
-  padding: 10px 19px;
-  color: white;
-  border-radius: 80px;
-  cursor: pointer;
-  opacity: 1;
-  transition: background-color 0.3s ease;
-}
-
-.addToCartButton:hover {
-  background-color: var(--yellow-hover);
 }

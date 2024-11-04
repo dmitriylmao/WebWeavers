@@ -2,9 +2,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import shortid from 'shortid';
 import { Pagination, Navigation } from 'swiper/modules';
-import Button from '@/components/Button';
+import YellowButton from '../UI/YellowButton/YellowButton';
 import {
   promotionSlide,
   partnerSlide,
@@ -37,9 +36,9 @@ export default function PromotionSwiper() {
                 <p className={styles.slideDuration}>{slide.duration}</p>
                 <h2 className={styles.slideTitle}>{slide.title}</h2>
                 <p className={styles.slideDescription}>{slide.description}</p>
-                <Button
-                  customClass={styles.slideButton}
-                  text={slide.buttonText}
+                <YellowButton
+                  label={slide.buttonText}
+                  size="lg"
                   href={slide.link}
                 />
               </div>
