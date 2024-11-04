@@ -2,17 +2,18 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import shortid from 'shortid';
 import { Pagination, Navigation } from 'swiper/modules';
-import Button from '@/components/Button/Button';
+import Button from '@/components/Button';
 import {
   promotionSlide,
   partnerSlide,
-} from '@/components/Promotion_swiper/Constants';
-import styles from '@/components/Promotion_swiper/Promotion_swiper.module.css';
+} from '@/components/PromotionSwiper/Constants';
+import styles from '@/components/PromotionSwiper/PromotionSwiper.module.css';
 
 const sliderData = [promotionSlide, partnerSlide];
 
-export default function Promotion_swiper() {
+export default function PromotionSwiper() {
   return (
     <section className={styles.container}>
       <Swiper
@@ -24,8 +25,8 @@ export default function Promotion_swiper() {
         modules={[Pagination, Navigation]}
         className={styles.mySwiper}
       >
-        {sliderData.map((slide, index) => (
-          <SwiperSlide key={index}>
+        {sliderData.map((slide) => (
+          <SwiperSlide key={slide.id}>
             <div className={styles.slideContent}>
               <img
                 src={slide.imageSrc}

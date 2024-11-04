@@ -1,27 +1,24 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Banner from '../components/Banner/Banner';
-import ProductsList from '../components/ProductCard/ProductsList';
-import Promotion_swiper from '../components/Promotion_swiper/Promotion_swiper';
-import Logo_swiper from '../components/Logo_swiper/Logo_swiper';
-import Categories from '../components/Сategories/Сategories';
-import Map from '../components/Map/Map';
+import Banner from '@/components/Banner';
+import ProductsList from '@/components/ProductCard/ProductsList';
+import Categories from '@/components/Сategories';
+import PromotionSwiper from '@/components/PromotionSwiper';
+import LogoSwiper from '@/components/LogoSwiper';
+import Map from '@/components/Map';
+import { LANGUAGE_EN } from '@/core/constants';
+import Test from '@/components/Test/Test';
 
 const HomePage = () => {
   return (
     <>
-      <Banner />
-      <ProductsList />
-      <Categories />
-      <Promotion_swiper />
-      <Logo_swiper />
-      <Map />
+      <Test />
     </>
   );
 };
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale || 'en', ['common'])),
+    ...(await serverSideTranslations(locale || LANGUAGE_EN, ['common'])),
   },
 });
 

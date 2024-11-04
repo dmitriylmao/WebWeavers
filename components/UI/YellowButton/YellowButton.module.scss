@@ -1,0 +1,51 @@
+.yellowButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 100px;
+  font-family: var(--font-inter);
+  background-color: var(--yellow);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+
+  &--sm {
+    padding: 10px 19px;
+    font-size: 14px;
+  }
+
+  &--md {
+    padding: 10px 19px;
+    font-size: 16px;
+  }
+
+  &--lg {
+    padding: 10px 19px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+
+  &__icon {
+    margin-left: 4px; 
+    display: flex; 
+    align-items: center; 
+}
+
+  &__label {
+    font-size: inherit;
+  }
+
+  &:disabled {
+    background-color: var(--yellow);
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: var(--yellow-hover); 
+  }
+}

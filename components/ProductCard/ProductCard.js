@@ -14,21 +14,18 @@ const ProductCard = ({
   producer,
 }) => {
   return (
-    <Link href={`Products/${id}`} style={{ textDecoration: 'none' }}>
-      <div className={styles.productCard}>
+      <article className={styles.productCard}>
         <span className={styles.popularLabel}>Популярное</span>
         <Image src={imgSrc} alt={title} className={styles.productImage} />
-        <p className={styles.volume}>
-          {' '}
+        <p className={styles.volume}>         
           <span>
-            {' '}
             <Image
               src={volumeType}
               alt={'type'}
               className={styles.volumeType}
               width={16}
               height={16}
-            />{' '}
+            />
           </span>
           {volume}
         </p>
@@ -46,16 +43,14 @@ const ProductCard = ({
         </p>
         <div className={styles.priceAndButton}>
           <p className={styles.productPrice}>{price} ₸</p>
-          <button className={styles.addToCartButton}>
-            В корзину{' '}
+          <button className={styles.addToCartButton} >
+            В корзину 
             <span>
-              {' '}
-              <Image src={telejka} alt={'type'} width={27} height={27} />{' '}
-            </span>{' '}
+              <Image src={telejka} alt={'type'} width={27} height={27} />
+            </span>
           </button>
         </div>
-      </div>
-    </Link>
+      </article>
   );
 };
 

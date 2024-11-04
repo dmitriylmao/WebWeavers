@@ -2,12 +2,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import shortid from 'shortid';
 import { Pagination, Navigation } from 'swiper/modules';
 import Link from 'next/link';
-import { logoData } from '@/components/Logo_swiper/Constants';
-import styles from '@/components/Logo_swiper/Logo_swiper.module.css';
+import { logoData } from '@/components/LogoSwiper/Constants';
+import styles from '@/components/LogoSwiper/LogoSwiper.module.css';
 
-export default function Logo_swiper() {
+export default function LogoSwiper() {
   return (
     <section className={styles.container}>
       <h2 className={styles.title}>
@@ -50,8 +51,8 @@ export default function Logo_swiper() {
           },
         }}
       >
-        {logoData.map((logo, index) => (
-          <SwiperSlide key={index}>
+        {logoData.map((logo) => (
+          <SwiperSlide key={logo.number}>
             <Link href={logo.number} passHref>
               <div className={styles.card}>
                 <img

@@ -1,26 +1,8 @@
-import { useRef } from 'react';
-import Image from 'next/image';
-import { motion, useInView } from 'framer-motion';
-import Link from 'next/link';
+import Category from '@/components/Сategories/Category';
 import { categories } from '@/components/Сategories/Constants';
 import styles from '@/components/Сategories/Categories.module.css';
 
 export default function Categories() {
-  const getAnimationDirection = (direction) => {
-    switch (direction) {
-      case 'top':
-        return { y: -30, opacity: 0 };
-      case 'bottom':
-        return { y: 30, opacity: 0 };
-      case 'left':
-        return { x: -30, opacity: 0 };
-      case 'right':
-        return { x: 30, opacity: 0 };
-      default:
-        return { opacity: 0 };
-    }
-  };
-
   return (
     <section className={styles.container}>
       <h2 className={styles.title}>
@@ -30,40 +12,9 @@ export default function Categories() {
         10 000+ ходовых позиций по специальным ценам
       </p>
       <div className={styles.grid}>
-        {categories.map((category, index) => {
-          const ref = useRef(null);
-          const isInView = useInView(ref, {
-            triggerOnce: true,
-            threshold: 0.2,
-          });
-
-          return (
-            <motion.div
-              ref={ref}
-              key={index}
-              initial={getAnimationDirection(category.direction)}
-              animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              className={styles.card}
-            >
-              <Link
-                href={category.link}
-                className={styles.link}
-                style={{ textDecoration: 'none' }}
-              >
-                <div className={styles.imageWrapper}>
-                  <Image
-                    src={category.imgSrc}
-                    alt={category.title}
-                    width={250}
-                    height={250}
-                  />
-                </div>
-                <p className={styles.cardTitle}>{category.title}</p>
-              </Link>
-            </motion.div>
-          );
-        })}
+        {categories.map((category, index) => (
+          <Category key={category.id} category={category} delay={index * 0.1} />
+        ))}
       </div>
     </section>
   );

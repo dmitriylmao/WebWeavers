@@ -48,7 +48,7 @@ export const saleProducts = [
     volumeType: typeA,
   },
   {
-    id: 101,
+    id: 105,
 
     title: 'ср-во для мытья посуды Апельсин+мята',
     producer: 'Нэфис',
@@ -59,7 +59,7 @@ export const saleProducts = [
     volumeType: typeB,
   },
   {
-    id: 102,
+    id: 106,
     volume: '450 мл',
     title: 'средство для мытья посуды Srystal',
     producer: 'Нэфис',
@@ -69,7 +69,7 @@ export const saleProducts = [
     volumeType: typeB,
   },
   {
-    id: 103,
+    id: 107,
     volume: '15X28.8 г',
     title:
       'Автмат Гель СМС жидкое в растворимых капсулах Liauid Capsules Горный родник',
@@ -80,7 +80,7 @@ export const saleProducts = [
     volumeType: typeA,
   },
   {
-    id: 104,
+    id: 108,
     volume: '450 мл',
     title: 'Порошок стиральный Автомат 100 пятен COMPACT',
     producer: 'Нэфис',
