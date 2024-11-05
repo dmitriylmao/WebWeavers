@@ -1,0 +1,106 @@
+.footer {
+    background-color: #3F4E65;
+    padding: 20px;
+    color: #fff;
+}
+
+.footerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logoAndButtonContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.downloadButtonMobile {
+    display: none;
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footerColumn {
+    margin-bottom: 20px;
+}
+
+.menuCategoriesContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.downloadAndMessengers {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.downloadButtonDesktop {
+    display: none;
+}
+
+.messengersDesktop {
+    display: flex;
+    gap: 10px;
+}
+
+.footerContactsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 10px;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.messengerIconsMobile {
+    display: none;
+}
+
+/* Мобильные стили */
+@media (max-width: 480px) {
+    .mainContent {
+        flex-direction: column;
+    }
+
+    .downloadButtonMobile {
+        display: block;
+    }
+
+    .downloadButtonDesktop {
+        display: none;
+    }
+
+    .menuCategoriesContainer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footerContactsContainer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .messengersDesktop {
+        display: none;
+    }
+
+    .messengerIconsMobile {
+        display: flex;
+        gap: 10px;
+    }
+}
