@@ -1,106 +1,158 @@
-.footer {
+.root {
+    padding: 70px 0 110px;
     background-color: #3F4E65;
-    padding: 20px;
-    color: #fff;
+    color: #ffffff;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 50px;
 }
 
-.footerContainer {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+/* 1 Колонна */
+.company {
     display: flex;
     flex-direction: column;
-}
 
-.logoAndButtonContainer {
+    height: 300px;
+    flex-basis: 320px;
+}
+.description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+    margin-top: 15px;
+}
+.appeal {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.subscribe {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+
+    height: 60px;
+    width: 280px;
+    padding: 0 10px 0 20px;
+    margin-top: 15px;
+
+    background-color: #ffffff;
+    border-radius: 36px;
+    overflow: hidden;
+}
+.input {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 500;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
 }
 
-.downloadButtonMobile {
-    display: none;
+/* 2 Колонна */
+.menu_column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
-
-.mainContent {
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+}
+.list {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
 }
 
-.footerColumn {
-    margin-bottom: 20px;
-}
 
-.menuCategoriesContainer {
+
+/* 3 Колонна */
+.categories_column {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    flex-direction: column;
+    gap: 25px;
 }
 
-.downloadAndMessengers {
+/* 4 Колонна */
+.download_column {
+    display: flex;
+    flex-direction: column;
+}
+.price-button {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 12px;
+
+    width: 215px;
+    padding: 20px 50px;
+    margin-top: 25px;
+
+    border-radius: 80px;
+
+    transition: all ease 0.4s;
 }
 
-.downloadButtonDesktop {
+.--not-active {
     display: none;
 }
+.price {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+}
 
-.messengersDesktop {
+.messengers {
     display: flex;
     gap: 10px;
+    margin-top: 15px;
 }
 
-.footerContactsContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding-top: 10px;
-}
-
-.contactInfo {
+/* 5 Колонна */
+.contacts {
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 
-.messengerIconsMobile {
-    display: none;
+.orderCall{
+    text-decoration: underline;
 }
 
-/* Мобильные стили */
-@media (max-width: 480px) {
-    .mainContent {
-        flex-direction: column;
-    }
 
-    .downloadButtonMobile {
-        display: block;
-    }
 
-    .downloadButtonDesktop {
-        display: none;
-    }
-
-    .menuCategoriesContainer {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .footerContactsContainer {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .messengersDesktop {
-        display: none;
-    }
-
-    .messengerIconsMobile {
-        display: flex;
-        gap: 10px;
-    }
+.languageButton {
+    padding-top: 12px;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+}
+.languageText {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
 }
