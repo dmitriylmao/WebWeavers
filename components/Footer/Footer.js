@@ -1,5 +1,7 @@
 import styles from "./Footer.module.css"
 import Image from "next/image";
+import LanguageSwitcher from "@/components/Footer/LanguageSwitcher";
+import EmailInput from "@/components/Footer/EmailInput";
 
 
 
@@ -17,62 +19,65 @@ const Footer= () => {
                         className={styles.logo}
                     />
 
-
-
                     <p className={styles.description}>
                         Компания «Султан» — снабжаем розничные магазины товарами "под ключ"
                         в Кокчетаве и Акмолинской области
                     </p>
-                    <span className={styles.appeal}>Подпишись на скидки и акции</span>
-                    <form className={styles.subscribe}>
-                        <input
-                            type="email"
-                            className={styles.input}
-                            placeholder="Введите ваш E-mail"
-                        />
-                        <button type="submit" className={styles.button}>
-                            &gt;
-                        </button>
-                    </form>
+                    <span className={styles.sales}>Подпишись на скидки и акции</span>
+
+                    <EmailInput/>
+
+
+
+
                 </div>
 
                 {/* 2 колонна */}
                 <div className={styles.menu_column}>
                     <h4 className={styles.title}>Меню сайта:</h4>
-                    {/*className="styles.styles.item"*/}
                     <ul className={styles.list}>
-                        <li><a href="#company">О компании</a></li>
-                        <li><a href="#delivery">Доставка и оплата</a></li>
-                        <li><a href="#return">Возврат</a></li>
-                        <li><a href="#contacts">Контакты</a></li>
+                        <li className={styles.listItem}><a href="#company">О компании</a></li>
+                        <li className={styles.listItem}><a href="#delivery">Доставка и оплата</a></li>
+                        <li className={styles.listItem}><a href="#return">Возврат</a></li>
+                        <li className={styles.listItem}><a href="#contacts">Контакты</a></li>
                     </ul>
                 </div>
 
                 {/* 3 колонна */}
                 <div className={styles.categories_column}>
                     <h4 className={styles.title}>Категории:</h4>
-                    {/*className="styles.styles.item"*/}
                     <ul className={styles.list}>
-                        <li><a href="#chemistry">Бытовая химия</a></li>
-                        <li><a href="#cosmetics">Косметика и гигиена</a></li>
-                        <li><a href="#home">Товары для дома</a></li>
-                        <li><a href="#children">Товары для детей и мам</a></li>
-                        <li><a href="#dishes">Посудa</a></li>
+                        <li className={styles.listItem}><a href="#chemistry">Бытовая химия</a></li>
+                        <li className={styles.listItem}><a href="#cosmetics">Косметика и гигиена</a></li>
+                        <li className={styles.listItem}><a href="#home">Товары для дома</a></li>
+                        <li className={styles.listItem}><a href="#children">Товары для детей и мам</a></li>
+                        <li className={styles.listItem}><a href="#dishes">Посудa</a></li>
                     </ul>
                 </div>
 
                 {/* 4 колонна */}
                 <div className={styles.download_column}>
-                    
+                    <h4>Скачать прайс-лист:</h4>
+                    <button className={styles.downloadButton}>
+                        <div className={styles.buttonContent}>
+                            <span className={styles.price}>Прайс-лист</span>
+                            <Image
+                                src="/images/Footer/download_icon.svg"
+                                alt="Логотип"
+                                width={30}  // Установите фиксированную ширину
+                                height={16} // Установите фиксированную высоту
+                            />
+                        </div>
+                    </button>
                     <p>Связь в мессенджерах:</p>
                     <div className={styles.messengers}>
                         <Image
-                               src="/images/Footer/whatsapp_logo.svg"
-                               alt="WhatsApp" width={40} height={40}
+                            src="/images/Footer/whatsapp_logo.svg"
+                            alt="WhatsApp" width={40} height={40}
                         />
                         <Image
-                               src="/images/Footer/telegram_logo.svg"
-                               alt="Telegram" width={40} height={40}
+                            src="/images/Footer/telegram_logo.svg"
+                            alt="Telegram" width={40} height={40}
                         />
                     </div>
                 </div>
@@ -93,6 +98,8 @@ const Footer= () => {
                         <Image src="/images/Footer/visa_logo.svg" alt="Visa" width={50} height={40}/>
                         <Image src="/images/Footer/mastercard_logo.svg" alt="MasterCard" width={50} height={40}/>
                     </div>
+
+                    <LanguageSwitcher />
                 </div>
             </div>
         </footer>
