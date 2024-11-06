@@ -3,11 +3,12 @@ import Translate from '../components/Translate';
 import Promotion_swiper from '../components/Promotion_swiper/Promotion_swiper';
 import Categories from '../components/Сategories/Сategories';
 import { Header } from '@/components/Header/Header';
+import { Header1 } from '@/components/Header1/Header1';
 
 const HomePage = () => {
   return (
     <>
-      <Header/>
+      <Header1/>
       <Categories />
       <Promotion_swiper />
       
