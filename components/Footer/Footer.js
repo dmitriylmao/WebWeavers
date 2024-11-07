@@ -2,10 +2,20 @@ import styles from "./Footer.module.css"
 import Image from "next/image";
 import LanguageSwitcher from "@/components/Footer/LanguageSwitcher";
 import EmailInput from "@/components/Footer/EmailInput";
+import {useEffect, useState} from "react";
 
 
 
 const Footer= () => {
+    const [isMobile, setIsMobile] = useState(false);
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 480); // Условие для мобильного экрана, например, менее 480px
+        };
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
     return (
         <footer className={styles.root}>
             <div className={styles.container}>
@@ -19,15 +29,31 @@ const Footer= () => {
                         className={styles.logo}
                     />
 
+                    {isMobile ? (
+                        <div>
+                            <button className={styles.downloadButton}>
+                                <div className={styles.buttonContent}>
+                                    <span className={styles.price}>Прайс-лист</span>
+                                    <Image
+                                        src="/images/Footer/download_icon.svg"
+                                        alt="Логотип"
+                                        width={30}
+                                        height={16}
+                                    />
+                                </div>
+                            </button>
+                        </div>
+                    ) : null}
+
+
                     <p className={styles.description}>
                         Компания «Султан» — снабжаем розничные магазины товарами "под ключ"
                         в Кокчетаве и Акмолинской области
                     </p>
-                    <span className={styles.sales}>Подпишись на скидки и акции</span>
-
-                    <EmailInput/>
-
-
+                    <div className={styles.near}>
+                        <span className={styles.sales}>Подпишись на скидки и акции</span>
+                        <EmailInput/>
+                    </div>
 
 
                 </div>
@@ -57,19 +83,29 @@ const Footer= () => {
 
                 {/* 4 колонна */}
                 <div className={styles.download_column}>
-                    <h4>Скачать прайс-лист:</h4>
-                    <button className={styles.downloadButton}>
-                        <div className={styles.buttonContent}>
-                            <span className={styles.price}>Прайс-лист</span>
-                            <Image
-                                src="/images/Footer/download_icon.svg"
-                                alt="Логотип"
-                                width={30}  // Установите фиксированную ширину
-                                height={16} // Установите фиксированную высоту
-                            />
-                        </div>
-                    </button>
-                    <p>Связь в мессенджерах:</p>
+
+
+                    <div>
+                        {isMobile ? null : ( // Используем `null` вместо пустой функции, чтобы ничего не рендерить
+                            <>
+                                <h4>Скачать прайс-лист:</h4>
+                                <button className={styles.downloadButton}>
+                                    <div className={styles.buttonContent}>
+                                        <span className={styles.price}>Прайс-лист</span>
+                                        <Image
+                                            src="/images/Footer/download_icon.svg"
+                                            alt="Логотип"
+                                            width={30} // Установите фиксированную ширину
+                                            height={16} // Установите фиксированную высоту
+                                        />
+                                    </div>
+                                </button>
+                            </>
+                        )}
+                    </div>
+
+
+                    <p className={styles.titleMessengers}>Связь в мессенджерах:</p>
                     <div className={styles.messengers}>
                         <Image
                             src="/images/Footer/whatsapp_logo.svg"
@@ -83,10 +119,10 @@ const Footer= () => {
                 </div>
 
                 {/* 5 колонна */}
-                <div >
+                <div>
                     <h4 className={styles.title}>Контакты:</h4>
                     <div>
-                        <p>+7 (777) 490-00-91</p>
+                    <p>+7 (777) 490-00-91</p>
                         <p>Время работы: 9:00-20:00</p>
                         <p className={styles.orderCall}>Заказать звонок</p>
                     </div>
