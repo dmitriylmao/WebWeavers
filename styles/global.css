@@ -2,17 +2,12 @@
 
 :root {
   --yellow: rgb(255, 200, 94);
+  --yellow-hover: rgb(255, 171, 2);
   --blue: rgb(63, 78, 101);
   --gray: rgb(237, 237, 237);
   --white: #fff;
   --black: rgb(17, 17, 17);
   --green: rgb(31, 215, 93);
-
-  /* адаптивчик */
-  --breakpoint-tablets: 480px;
-  --breakpoint-tablets: 768px;
-  --breakpoint-laptops: 1024px;
-  --breakpoint-desktop: 1280px;
 }
 
 * {
@@ -25,4 +20,17 @@ body {
   font-family: var(--font-inter);
   color: var(--blue);
   background: var(--white);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue);
+  border-radius: 20px;
 }

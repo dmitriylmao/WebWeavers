@@ -1,0 +1,197 @@
+.footer {
+  background-color: #3f4e65;
+  padding: 40px 0;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 40px;
+}
+
+.subscribeText {
+  font-size: 12px;
+  margin-top: 40px !important;
+  color: white;
+  text-align: left;
+}
+
+.workTime {
+  white-space: nowrap;
+}
+
+.orderCall {
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.alwaysOnContact {
+  font-size: 12px;
+  color: white;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.mail {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-top: 12px !important;
+}
+
+.footerColumn {
+  flex: 1 1 200px;
+  margin-bottom: 20px;
+}
+
+.footerColumn h3 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footerColumn p,
+.footerColumn ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.footerColumn a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.footerColumn a:hover {
+  text-decoration: underline;
+}
+
+.subscribeForm {
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.subscribeForm input {
+  padding: 15px;
+  border-radius: 30px 0 0 30px;
+  border: 1px solid #c4c4c4;
+  flex: 1;
+  font-size: 14px;
+  color: #333333;
+}
+
+.subscribeForm button {
+  padding: 15px 20px;
+  border-radius: 0 30px 30px 0;
+  border: none;
+  background-color: #ffce3e;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.subscribeForm button::before {
+  content: '>';
+  font-size: 18px;
+  color: white;
+}
+
+.downloadButton {
+  background-color: #fec85e;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  padding: 20px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.downloadIcon {
+  display: inline-block;
+  vertical-align: middle;
+  color: #fff;
+}
+
+.messengers img {
+  padding-top: 8px;
+  margin-right: 10px;
+}
+
+.paymentMethods img {
+  width: 60px;
+  height: auto;
+}
+
+.paymentMethods {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.myDiv {
+  margin: 20px;
+  padding: 10px;
+}
+
+.languageButton {
+  padding-top: 12px;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 8px;
+}
+
+.languageText {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.menuCategoriesContainer {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.footerColumn {
+  flex: 1 1 200px;
+}
+
+.footerTopContainer {
+  display: flex;
+  gap: 20px;
+}
+
+.contactAndPaymentContainer {
+  display: flex;
+  gap: 20px;
+}
+
+.paymentColumn,
+.contactColumn {
+  flex: 1;
+}

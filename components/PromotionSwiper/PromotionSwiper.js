@@ -3,32 +3,16 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
-import styles from './Promotion_swiper.module.css';
-import Button from '../Button/Button';
-
-const promotionSlide = {
-  imageSrc: '/images/Promotion_swiper/slide1.png',
-  duration: '* ЯКЦИЯ ДЕЙСТВУЕТ ДО 04/09/22',
-  title: 'Название Акции',
-  description:
-    'Условия: поставить лайк , подписаться на канал , репост на стену ВК',
-  buttonText: 'ПРИНЯТЬ УЧАСТИЕ',
-  link: '/promotion',
-};
-
-const partnerSlide = {
-  imageSrc: '/images/Promotion_swiper/slide2.png',
-  duration: 'ЯКЦИЯ ДЕЙСТВУЕТ ДО 02/03/24',
-  title: 'Наш партнер',
-  description:
-    'Леруа мерлен наш давний друг , вообще магаз норм , султан шоп советует',
-  buttonText: 'ПЕРЕЙТИ К БРЕНДУ',
-  link: '/Lerua',
-};
+import YellowButton from '../UI/YellowButton/YellowButton';
+import {
+  promotionSlide,
+  partnerSlide,
+} from '@/components/PromotionSwiper/Constants';
+import styles from '@/components/PromotionSwiper/PromotionSwiper.module.css';
 
 const sliderData = [promotionSlide, partnerSlide];
 
-export default function Promotion_swiper() {
+export default function PromotionSwiper() {
   return (
     <section className={styles.container}>
       <Swiper
@@ -40,8 +24,8 @@ export default function Promotion_swiper() {
         modules={[Pagination, Navigation]}
         className={styles.mySwiper}
       >
-        {sliderData.map((slide, index) => (
-          <SwiperSlide key={index}>
+        {sliderData.map((slide) => (
+          <SwiperSlide key={slide.id}>
             <div className={styles.slideContent}>
               <img
                 src={slide.imageSrc}
@@ -52,9 +36,9 @@ export default function Promotion_swiper() {
                 <p className={styles.slideDuration}>{slide.duration}</p>
                 <h2 className={styles.slideTitle}>{slide.title}</h2>
                 <p className={styles.slideDescription}>{slide.description}</p>
-                <Button
-                  customClass={styles.slideButton}
-                  text={slide.buttonText}
+                <YellowButton
+                  label={slide.buttonText}
+                  size="lg"
                   href={slide.link}
                 />
               </div>
