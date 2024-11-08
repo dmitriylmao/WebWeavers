@@ -10,7 +10,7 @@ const Footer= () => {
     const [isMobile, setIsMobile] = useState(false);
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth < 480); // Условие для мобильного экрана, например, менее 480px
+            setIsMobile(window.innerWidth < 480);
         };
         handleResize();
         window.addEventListener('resize', handleResize);
