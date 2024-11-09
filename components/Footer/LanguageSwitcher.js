@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { LANGUAGE_EN, LANGUAGE_RU } from '@/core/constants';
+import { useTranslation } from 'next-i18next';
 import styles from './desktop/FooterDesktop.module.css';
 
 const LanguageSwitcher = () => {
+  const { i18n } = useTranslation();
   const [language, setLanguage] = useState(LANGUAGE_RU);
 
   const toggleLanguage = () => {
-    setLanguage((prevLanguage) =>
-      prevLanguage === LANGUAGE_RU ? LANGUAGE_EN : LANGUAGE_RU,
-    );
+    const newLanguage = language === LANGUAGE_RU ? LANGUAGE_EN : LANGUAGE_RU;
+    setLanguage(newLanguage);
+    i18n.changeLanguage(newLanguage);
   };
 
   return (
