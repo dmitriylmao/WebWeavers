@@ -2,22 +2,15 @@ import styles from "./Footer.module.css"
 import Image from "next/image";
 import LanguageSwitcher from "@/components/Footer/LanguageSwitcher";
 import EmailInput from "@/components/Footer/EmailInput";
-import {useEffect, useState} from "react";
-
-
+import useWindowSize from "@/core/hooks/useWindowSize";
+import YellowButton from "@/components/UI/YellowButton/YellowButton";
+import down_icon from '@/public/images/Footer/download_icon.svg';
 
 const Footer= () => {
-    const [isMobile, setIsMobile] = useState(false);
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth < 480);
-        };
-        handleResize();
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
+    const { isMobile } = useWindowSize();
+    useWindowSize()
     return (
-        <footer className={styles.root}>
+        <footer>
             <div className={styles.container}>
                 {/* 1 коллона */}
                 <div className={styles.company}>
@@ -28,24 +21,9 @@ const Footer= () => {
                         height={50}
                         className={styles.logo}
                     />
-
                     {isMobile ? (
-                        <div>
-                            <button className={styles.downloadButton}>
-                                <div className={styles.buttonContent}>
-                                    <span className={styles.price}>Прайс-лист</span>
-                                    <Image
-                                        src="/images/Footer/download_icon.svg"
-                                        alt="Логотип"
-                                        width={30}
-                                        height={16}
-                                    />
-                                </div>
-                            </button>
-                        </div>
+                            <YellowButton icon={down_icon} label="Прайс-лист" size="md"/>
                     ) : null}
-
-
                     <p className={styles.description}>
                         Компания «Султан» — снабжаем розничные магазины товарами "под ключ"
                         в Кокчетаве и Акмолинской области
@@ -54,8 +32,6 @@ const Footer= () => {
                         <span className={styles.sales}>Подпишись на скидки и акции</span>
                         <EmailInput/>
                     </div>
-
-
                 </div>
 
                 {/* 2 колонна */}
@@ -83,28 +59,15 @@ const Footer= () => {
 
                 {/* 4 колонна */}
                 <div className={styles.download_column}>
-
-
                     <div>
-                        {isMobile ? null : ( // Используем `null` вместо пустой функции, чтобы ничего не рендерить
+                        {isMobile ? null : (
                             <>
                                 <h4>Скачать прайс-лист:</h4>
-                                <button className={styles.downloadButton}>
-                                    <div className={styles.buttonContent}>
-                                        <span className={styles.price}>Прайс-лист</span>
-                                        <Image
-                                            src="/images/Footer/download_icon.svg"
-                                            alt="Логотип"
-                                            width={30} // Установите фиксированную ширину
-                                            height={16} // Установите фиксированную высоту
-                                        />
-                                    </div>
-                                </button>
+                                <div className={styles.gap}/>
+                                <YellowButton icon={down_icon} label="Прайс-лист" size="sm"/>
                             </>
                         )}
                     </div>
-
-
                     <p className={styles.titleMessengers}>Связь в мессенджерах:</p>
                     <div className={styles.messengers}>
                         <Image
@@ -119,23 +82,24 @@ const Footer= () => {
                 </div>
 
                 {/* 5 колонна */}
-                <div>
-                    <h4 className={styles.title}>Контакты:</h4>
+                <div className={styles.contactsContainer}>
                     <div>
-                    <p>+7 (777) 490-00-91</p>
+                        <h4 className={styles.title}>Контакты:</h4>
+                        <div className={styles.gap}/>
+                        <p>+7 (777) 490-00-91</p>
+                        <div className={styles.gap}/>
                         <p>Время работы: 9:00-20:00</p>
                         <p className={styles.orderCall}>Заказать звонок</p>
                     </div>
                     <div>
-                        <p>opt.sultan@mail.ru</p>
+                    <p>opt.sultan@mail.ru</p>
                         <h4>На связи в любое время</h4>
                     </div>
                     <div>
                         <Image src="/images/Footer/visa_logo.svg" alt="Visa" width={50} height={40}/>
                         <Image src="/images/Footer/mastercard_logo.svg" alt="MasterCard" width={50} height={40}/>
                     </div>
-
-                    <LanguageSwitcher />
+                    <LanguageSwitcher/>
                 </div>
             </div>
         </footer>
