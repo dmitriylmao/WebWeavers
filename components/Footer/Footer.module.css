@@ -1,13 +1,19 @@
+.footer {
+    width:100%;
+    background-color: var(--blue);
+    font-family: var(--font-inter);
+}
 .container {
-    padding: 70px;
-    background-color:var(--blue);
+    padding: 70px 0px 0;
     color: var(--white);
+    background-color:chocolate;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    column-gap: 30px;
+    column-gap: 20px;
     row-gap: 50px;
-    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
 }
 
 /* 1 Колонна */

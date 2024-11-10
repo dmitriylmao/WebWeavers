@@ -5,12 +5,13 @@ import EmailInput from "@/components/Footer/EmailInput";
 import useWindowSize from "@/core/hooks/useWindowSize";
 import YellowButton from "@/components/UI/YellowButton/YellowButton";
 import down_icon from '@/public/images/Footer/download_icon.svg';
+import Pavel from '@/public/images/pavel.png'
 
 const Footer= () => {
     const { isMobile } = useWindowSize();
     useWindowSize()
     return (
-        <footer>
+        <footer className={styles.footer}>
             <div className={styles.container}>
                 {/* 1 коллона */}
                 <div className={styles.company}>
@@ -64,7 +65,7 @@ const Footer= () => {
                             <>
                                 <h4>Скачать прайс-лист:</h4>
                                 <div className={styles.gap}/>
-                                <YellowButton icon={down_icon} label="Прайс-лист" size="sm"/>
+                                <YellowButton icon={down_icon} label="Прайс-лист" size="sm" download="./EmailInput.js"/>
                             </>
                         )}
                     </div>
