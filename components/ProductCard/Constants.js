@@ -70,7 +70,7 @@ export const saleProducts = [
     id: 105,
     title: 'ср-во для мытья посуды Апельсин+мята',
     producer: 'Нэфис',
-    brand: 'AOS',
+    brand: 'AOSSSS',
     price: '48,76',
     imgSrc: product1Img,
     volume: '450 мл',
