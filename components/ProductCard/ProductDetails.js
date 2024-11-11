@@ -10,7 +10,6 @@ import downloadLogo from '@/public/images/ProductDetails/download.svg';
 const ProductDetails = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
   const [isDescriptionOpen, setDescriptionOpen] = useState(false);
-
   const incrementQuantity = () => setQuantity(quantity + 1);
   const decrementQuantity = () => setQuantity(Math.max(1, quantity - 1));
   const toggleDescription = () => setDescriptionOpen(!isDescriptionOpen);
@@ -20,7 +19,6 @@ const ProductDetails = ({ product }) => {
     const randomLeft = Math.floor(Math.random() * 80) + '%';
     setPosition({ top: randomTop, left: randomLeft });
   };
-
   const openGitHub = () => {
     window.open('https://github.com/dmitriylmao/WebWeavers', '_blank');
   };
@@ -81,6 +79,9 @@ const ProductDetails = ({ product }) => {
               action="add-to-cart"
               icon={logo}
             />
+            <button className={style.shareButton1}>
+              <Image src={shareLogo} alt="Share" width={20} height={20} />
+            </button>
           </div>
 
           <div className={style.actions}>
