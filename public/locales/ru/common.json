@@ -1,3 +1,11 @@
 {
-  "WebWeavers": "ВебТкачи"
+  "WebWeavers": "ВебТкачи",
+
+  "Popular": "Популярное",
+  "Type": "Тип",
+  "Barcode": "Штрихкод",
+  "Producer": "Производитель",
+  "Brand": "Бренд",
+  "AddToCart": "В корзину"
+
 }

@@ -5,10 +5,16 @@ import Categories from '@/components/Сategories';
 import PromotionSwiper from '@/components/PromotionSwiper';
 import LogoSwiper from '@/components/LogoSwiper';
 import Map from '@/components/Map';
-import { LANGUAGE_EN } from '@/core/constants';
+import Footer from '@/components/Footer/Footer';
+
+export const getServerSideProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ['common'])),
+  },
+});
 
 const HomePage = () => {
-  return (
+  return (  
     <>
       <Banner />
       <ProductsList />
@@ -16,14 +22,9 @@ const HomePage = () => {
       <PromotionSwiper />
       <LogoSwiper />
       <Map />
+      <Footer />
     </>
   );
 };
-
-export const getStaticProps = async ({ locale }) => ({
-  props: {
-    ...(await serverSideTranslations(locale || LANGUAGE_EN, ['common'])),
-  },
-});
 
 export default HomePage;

@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
-import { LANGUAGE_EN, LANGUAGE_RU } from '@/core/constants';
 import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 import styles from './Footer.module.css';
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
-  const [language, setLanguage] = useState(LANGUAGE_RU);
+  const router = useRouter();
 
   const toggleLanguage = () => {
-    const newLanguage = language === LANGUAGE_RU ? LANGUAGE_EN : LANGUAGE_RU;
-    setLanguage(newLanguage);
-    i18n.changeLanguage(newLanguage);
+    const newLanguage = i18n.language === 'ru' ? 'en' : 'ru';
+    
+    router.push(router.pathname, router.asPath, { locale: newLanguage });
   };
 
   return (
@@ -22,7 +22,9 @@ const LanguageSwitcher = () => {
         width={60}
         height={40}
       />
-      <span className={styles.languageText}>{language}</span>
+      <span className={styles.languageText}>
+        {i18n.language === 'ru' ? 'Русский' : 'English'}
+      </span>
     </button>
   );
 };

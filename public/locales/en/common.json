@@ -1,3 +1,12 @@
 {
-  "WebWeavers": "WebWeavers"
+  "WebWeavers": "WebWeavers",
+  
+  
+  "Popular": "Popular",
+  "Type": "Type",
+  "Barcode": "Barcode",
+  "Producer": "Producer",
+  "Brand": "Brand",
+  "AddToCart": "Add to Cart"
+  
 }

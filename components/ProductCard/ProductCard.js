@@ -48,7 +48,7 @@ const ProductCard = ({
         <p className={styles.productPrice}>{price} ₸</p>
         <div className={styles.addToCartButton}>
           <YellowButton
-            label={t('addToCart')}
+            label={t('AddToCart')}
             size="sm"
             action="add-to-cart"
             icon={telejka}
