@@ -163,7 +163,7 @@ const ProductDetails = ({ product }) => {
               className={style.webWeavers}
               style={{ top: position.top, left: position.left }}
             >
-              Нажми меня!
+              Нажми на меня!
             </div>
           </div>
         </div>
