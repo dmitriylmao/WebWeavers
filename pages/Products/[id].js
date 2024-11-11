@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { saleProducts } from '@/components/ProductCard/Constants';
-import SimilarProducts from '@/components/ProductCard/SimilarProducts';
 import ProductDetails from '@/components/ProductCard/ProductDetails';
+import SimilarProducts from '@/components/ProductCard/SimilarProducts';
 
 const ProductPage = () => {
   const router = useRouter();
