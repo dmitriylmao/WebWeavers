@@ -94,8 +94,19 @@ const ProductDetails = ({ product }) => {
             </p>
 
             <button className={style.priceListButton}>
-              Прайс-лист
-              <Image src={downloadLogo} alt="Download" width={11} height={12} />
+              <a
+                href="/images/pavel.png"
+                download
+                style={{ textDecoration: 'none', color: 'inherit' }}
+              >
+                Прайс-лист{' '}
+                <Image
+                  src={downloadLogo}
+                  alt="Download"
+                  width={11}
+                  height={12}
+                />
+              </a>
             </button>
           </div>
 
