@@ -14,6 +14,16 @@ const ProductDetails = ({ product }) => {
   const incrementQuantity = () => setQuantity(quantity + 1);
   const decrementQuantity = () => setQuantity(Math.max(1, quantity - 1));
   const toggleDescription = () => setDescriptionOpen(!isDescriptionOpen);
+  const [position, setPosition] = useState({ top: '0%', left: '50%' });
+  const moveText = () => {
+    const randomTop = Math.floor(Math.random() * 80) + '%';
+    const randomLeft = Math.floor(Math.random() * 80) + '%';
+    setPosition({ top: randomTop, left: randomLeft });
+  };
+
+  const openGitHub = () => {
+    window.open('https://github.com/dmitriylmao/WebWeavers', '_blank');
+  };
 
   return (
     <div className={style.container}>
@@ -31,27 +41,39 @@ const ProductDetails = ({ product }) => {
 
         <div className={style.infoSection}>
           <p className={style.inStock}>В наличии</p>
-          <h1 className={style.productTitle}> 
-            <span className={style.productBrand}>{product.brand}</span> {product.title}
-            </h1>
+          <h1 className={style.productTitle}>
+            <span className={style.productBrand}>{product.brand}</span>{' '}
+            {product.title}
+          </h1>
           <p className={style.productVolume}>
-          <span>
-                <Image src={product.volumeType} 
-                alt="Volume Type" 
-                className={style.volumeType} 
-                width={16} 
-                height={16} 
-                />
+            <span>
+              <Image
+                src={product.volumeType}
+                alt="Volume Type"
+                className={style.volumeType}
+                width={16}
+                height={16}
+              />
             </span>
             {product.volume}
           </p>
-          
+
           <div className={style.priceContainer}>
             <p className={style.productPrice}>{product.price} ₸</p>
             <div className={style.quantityContainer}>
-                <button className={style.quantityButton} onClick={decrementQuantity}>-</button>
-                <span className={style.quantity}>{quantity}</span>
-                <button className={style.quantityButton} onClick={incrementQuantity}>+</button>
+              <button
+                className={style.quantityButton}
+                onClick={decrementQuantity}
+              >
+                -
+              </button>
+              <span className={style.quantity}>{quantity}</span>
+              <button
+                className={style.quantityButton}
+                onClick={incrementQuantity}
+              >
+                +
+              </button>
             </div>
             <YellowButton
               label="В КОРЗИНУ"
@@ -67,70 +89,71 @@ const ProductDetails = ({ product }) => {
             </button>
 
             <p className={style.freeShipping}>
-            При покупке от 10 000 ₸ бесплатная доставка по Кокчетаву и области
-          </p>
+              При покупке от <span>10 000 ₸</span> бесплатная доставка по
+              Кокчетаву и области
+            </p>
 
             <button className={style.priceListButton}>
-                Прайс-лист
+              Прайс-лист
               <Image src={downloadLogo} alt="Download" width={11} height={12} />
             </button>
           </div>
 
           <div className={style.characteristicsList}>
-            <p >Производитель: 
-               <span className={style.characteristics} >
-               {product.producer}
-                </span> 
+            <p>
+              Производитель:
+              <span className={style.characteristics}> {product.producer}</span>
             </p>
-            <p>Бренд: 
-            <span className={style.characteristics} >
-               {product.brand}
-                </span> 
+            <p>
+              Бренд:
+              <span className={style.characteristics}> {product.brand}</span>
             </p>
-            <p>Артикул:
-                <span className={style.characteristics} >
-               {product.article}
-                </span> 
+            <p>
+              Артикул:
+              <span className={style.characteristics}> {product.article}</span>
             </p>
-            <p>Категория: 
-                <span className={style.characteristics} >
+            <p>
+              Категория:{' '}
+              <span className={style.characteristics}>
                 {product.category.join(', ')}
-                </span> 
+              </span>
             </p>
           </div>
 
-
-
           <div className={style.description}>
-      <h2 onClick={toggleDescription} className={style.descriptionTitle}>
-        Описание
-        <motion.span
-          initial={{ rotate: 0 }}
-          animate={{ rotate: isDescriptionOpen ? 240 : 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          {isDescriptionOpen ? '▴' : '▾'}
-        </motion.span>
-      </h2>
-      <motion.p
-        className={style.descriptionText}
-        initial={{ opacity: 0, maxHeight: 0 }}
-        animate={{
-          opacity: isDescriptionOpen ? 1 : 0,
-          maxHeight: isDescriptionOpen ? 200 : 0, // Максимальная высота текста
-        }}
-        transition={{ duration: 0.3 }}
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo,
-        vestibulum sagittis iaculis iaculis. Maecenas...
-      </motion.p>
-    </div>
-    
-
-
-    <div className={style.divider}></div>
-
-    <div >1203812038019825409185-029812-0589</div>
+            <h2 onClick={toggleDescription} className={style.descriptionTitle}>
+              Описание
+              <motion.span
+                initial={{ rotate: 0 }}
+                animate={{ rotate: isDescriptionOpen ? 240 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                {isDescriptionOpen ? '▴' : '▾'}
+              </motion.span>
+            </h2>
+            <motion.p
+              className={style.descriptionText}
+              initial={{ opacity: 0, maxHeight: 0 }}
+              animate={{
+                opacity: isDescriptionOpen ? 1 : 0,
+                maxHeight: isDescriptionOpen ? 200 : 0,
+              }}
+              transition={{ duration: 0.3 }}
+            >
+              {product.description}
+            </motion.p>
+          </div>
+          <div className={style.divider}></div>
+          <div className={style.webWeaversGame}>
+            <div
+              onMouseEnter={moveText}
+              onClick={openGitHub}
+              className={style.webWeavers}
+              style={{ top: position.top, left: position.left }}
+            >
+              Нажми меня!
+            </div>
+          </div>
         </div>
       </div>
     </div>
