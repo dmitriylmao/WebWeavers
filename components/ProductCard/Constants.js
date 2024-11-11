@@ -9,6 +9,7 @@ export const productCategories = {
   DISHWASHING: 'Для мытья посуды',
   LAUNDRY: 'Стиральные средства',
   CLEANING: 'Уборка',
+  TEST: 'Тест!!!',
 };
 
 export const saleProducts = [
@@ -21,7 +22,7 @@ export const saleProducts = [
     imgSrc: product1Img,
     volume: '450 мл',
     volumeType: typeB,
-    category: [productCategories.DISHWASHING, productCategories.CLEANING],
+    category: [productCategories.TEST],
     article: 1001001,
   },
   {
@@ -33,7 +34,11 @@ export const saleProducts = [
     price: '48,76',
     imgSrc: product2Img,
     volumeType: typeB,
-    category: [productCategories.DISHWASHING, productCategories.CLEANING],
+    category: [
+      productCategories.DISHWASHING,
+      productCategories.CLEANING,
+      productCategories.TEST,
+    ],
     article: 1001002,
   },
   {
