@@ -22,9 +22,11 @@
     flex-direction: column;
     height: 300px;
     flex-basis: 320px;
+    font-family: 'Inter', sans-serif;
 }
 
 .description {
+    font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -33,33 +35,17 @@
 
 .sales {
     display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    justify-content: flex-end;
+    justify-content: start;
+    align-items: flex-start;
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
-}
-
-.input {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
-}
-
-.button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    font-weight: 500;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
+    font-family: 'Inter', sans-serif;
 }
 
 .price {
     margin-right: 10px;
+    font-family: 'Inter', sans-serif;
 }
 
 .menu_column {
@@ -70,7 +56,15 @@
 
 .title {
     font-size: 20px;
+    line-height: 30px;
+    font-family: 'Inter', sans-serif;
 }
+
+.payments {
+    display: flex;
+    gap: 4px;
+}
+
 
 .list {
     display: flex;
@@ -81,7 +75,8 @@
 }
 
 .listItem {
-    font-size: 20px;
+    font-size: 14px;
+    line-height: 21px;
 }
 
 .listItem a {
@@ -98,27 +93,13 @@
     flex-direction: column;
     gap: 25px;
 }
+.phoneNumber{
+    padding-top: 12px;
+}
 
 .download_column {
     display: flex;
     flex-direction: column;
-}
-
-.price-button {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    width: 215px;
-    padding: 20px 50px;
-    margin-top: 25px;
-    border-radius: 80px;
-    transition: all ease 0.4s;
-}
-
-.price {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 17px;
 }
 
 .messengers {
@@ -127,14 +108,32 @@
     margin-top: 15px;
 }
 
+.near {
+    margin-top: 24px;
 
+}
+
+
+.email{
+    margin-top: 12px;
+}
 .contacts {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
+.jobTime{
+    padding-top: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    height: 18px;
+}
 .orderCall {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    line-height: 15px;
+    padding-top: 8px;
     text-decoration: underline;
 }
 
@@ -144,13 +143,21 @@
     gap: 12px;
 }
 
-.gap {
-    height: 12px;
-}
+
 
 .titleMessengers {
     padding-top: 12px;
+    font-family: 'Inter', sans-serif;
 }
+
+
+.priceList h4 {
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 12px;
+    line-height: 30px;
+    font-size: 20px;
+}
+
 
 @media (max-width: 768px) {
     .download_column {
@@ -225,9 +232,7 @@
         flex-basis: 100%;
     }
 
-    .menu {
-        gap: 20px;
-    }
+
 }
 
 
@@ -255,12 +260,6 @@
         font-weight: 400;
         line-height: 20px;
         margin-bottom: 8px;
-    }
-
-    .price-button {
-        width: auto;
-        padding: 10px 25px;
-        gap: 8px;
     }
 
     .description,

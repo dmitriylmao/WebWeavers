@@ -23,7 +23,7 @@ const Footer= () => {
                         className={styles.logo}
                     />
                     {isMobile ? (
-                            <YellowButton icon={down_icon} label="Прайс-лист" size="md"/>
+                            <YellowButton icon={down_icon}  label="Прайс-лист" size="md"/>
                     ) : null}
                     <p className={styles.description}>
                         Компания «Султан» — снабжаем розничные магазины товарами "под ключ"
@@ -31,7 +31,8 @@ const Footer= () => {
                     </p>
                     <div className={styles.near}>
                         <span className={styles.sales}>Подпишись на скидки и акции</span>
-                        <EmailInput/>
+                        <div className={styles.email}><EmailInput/></div>
+
                     </div>
                 </div>
 
@@ -63,9 +64,10 @@ const Footer= () => {
                     <div>
                         {isMobile ? null : (
                             <>
-                                <h4>Скачать прайс-лист:</h4>
-                                <div className={styles.gap}/>
-                                <YellowButton icon={down_icon} label="Прайс-лист" size="sm" download="./EmailInput.js"/>
+                                <div className={styles.priceList}>
+                                    <h4 className={styles.priceList}>Скачать прайс-лист:</h4>
+                                    <YellowButton icon={down_icon} label="Прайс-лист" size="sm" download="./EmailInput.js"/>
+                                </div>
                             </>
                         )}
                     </div>
@@ -86,17 +88,17 @@ const Footer= () => {
                 <div className={styles.contactsContainer}>
                     <div>
                         <h4 className={styles.title}>Контакты:</h4>
-                        <div className={styles.gap}/>
-                        <p>+7 (777) 490-00-91</p>
-                        <div className={styles.gap}/>
-                        <p>Время работы: 9:00-20:00</p>
+                        <p className={styles.phoneNumber}>+7 (777) 490-00-91</p>
+
+                        <p className={styles.jobTime}>время работы: 9:00-20:00</p>
                         <p className={styles.orderCall}>Заказать звонок</p>
                     </div>
                     <div>
                     <p>opt.sultan@mail.ru</p>
                         <h4>На связи в любое время</h4>
                     </div>
-                    <div>
+
+                    <div className={styles.payments}>
                         <Image src="/images/Footer/visa_logo.svg" alt="Visa" width={50} height={40}/>
                         <Image src="/images/Footer/mastercard_logo.svg" alt="MasterCard" width={50} height={40}/>
                     </div>
