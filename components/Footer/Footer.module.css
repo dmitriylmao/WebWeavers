@@ -4,7 +4,7 @@
     font-family: var(--font-inter);
 }
 .container {
-    padding: 70px 0px 0;
+    padding: 70px;
     color: var(--white);
     background-color:chocolate;
     display: flex;
@@ -39,19 +39,6 @@
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
-}
-
-.subscribe {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-    width: 280px;
-    padding: 0 10px 0 20px;
-    margin-top: 15px;
-    background-color: var(--white);
-    border-radius: 36px;
-    overflow: hidden;
 }
 
 .input {
@@ -161,23 +148,6 @@
     height: 12px;
 }
 
-
-.languageButton {
-    padding-top: 12px;
-    background: none;
-    border: none;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    gap: 8px;
-}
-
-.languageText {
-    font-size: 16px;
-    font-weight: bold;
-    color: var(--white);
-}
-
 .titleMessengers {
     padding-top: 12px;
 }
@@ -220,9 +190,6 @@
         margin-top: 0;
     }
 
-    .downloadButton {
-        margin-left: 10px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -236,10 +203,6 @@
         display: flex;
         align-items: center;
         flex-direction: row;
-    }
-
-    .downloadButton {
-        margin-left: 10px;
     }
 
     .logo img {
@@ -304,10 +267,6 @@
     .price-button,
     .subscribe {
         margin-top: 10px;
-    }
-
-    .downloadButton {
-        margin-left: 15px;
     }
 }
 

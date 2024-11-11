@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { LANGUAGE_EN, LANGUAGE_RU } from '@/core/constants';
-import styles from './Footer.module.css';
+import styles from './LanguageSwitcher.module.css';
 
 const LanguageSwitcher = () => {
   const [language, setLanguage] = useState(LANGUAGE_RU);
