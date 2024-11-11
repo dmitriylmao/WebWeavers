@@ -6,7 +6,6 @@
 .container {
     padding: 70px;
     color: var(--white);
-    background-color:chocolate;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -22,11 +21,9 @@
     flex-direction: column;
     height: 300px;
     flex-basis: 320px;
-    font-family: 'Inter', sans-serif;
 }
 
 .description {
-    font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -40,12 +37,10 @@
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
-    font-family: 'Inter', sans-serif;
 }
 
 .price {
     margin-right: 10px;
-    font-family: 'Inter', sans-serif;
 }
 
 .menu_column {
@@ -57,7 +52,6 @@
 .title {
     font-size: 20px;
     line-height: 30px;
-    font-family: 'Inter', sans-serif;
 }
 
 .payments {
@@ -125,12 +119,10 @@
 
 .jobTime{
     padding-top: 12px;
-    font-family: 'Inter', sans-serif;
     font-size: 12px;
     height: 18px;
 }
 .orderCall {
-    font-family: 'Inter', sans-serif;
     font-size: 10px;
     line-height: 15px;
     padding-top: 8px;
@@ -147,12 +139,10 @@
 
 .titleMessengers {
     padding-top: 12px;
-    font-family: 'Inter', sans-serif;
 }
 
 
 .priceList h4 {
-    font-family: 'Inter', sans-serif;
     margin-bottom: 12px;
     line-height: 30px;
     font-size: 20px;
