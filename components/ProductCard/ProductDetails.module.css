@@ -10,14 +10,17 @@
 .productDetails {
   display: flex;
   width: 100%;
+  overflow: hidden;
 }
 
 .imageSection {
   display: flex;
   justify-content: center;
   align-items: start;
+  overflow: hidden;
   flex: 1;
   max-width: 50%;
+  cursor: default;
 }
 
 .productImage {

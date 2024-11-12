@@ -26,7 +26,18 @@ const ProductDetails = ({ product }) => {
   return (
     <div className={style.container}>
       <div className={style.productDetails}>
-        <div className={style.imageSection}>
+        <motion.div
+          key={product.id}
+          className={style.imageSection}
+          initial={{ x: 100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{
+            type: 'spring',
+            stiffness: 60,
+            damping: 8,
+            duration: 0.2,
+          }}
+        >
           <Image
             src={product.imgSrc}
             alt={product.title}
@@ -35,7 +46,7 @@ const ProductDetails = ({ product }) => {
             height={350}
             className={style.productImage}
           />
-        </div>
+        </motion.div>
 
         <div className={style.infoSection}>
           <p className={style.inStock}>В наличии</p>
