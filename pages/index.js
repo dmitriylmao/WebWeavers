@@ -1,6 +1,6 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Banner from '@/components/Banner';
-import ProductsList from '@/components/ProductCard/ProductsList';
+import ProductsList from '@/components/ProductList/ProductCardDetails/ProductsList';
 import Categories from '@/components/Сategories';
 import PromotionSwiper from '@/components/PromotionSwiper';
 import LogoSwiper from '@/components/LogoSwiper';
