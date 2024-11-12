@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
-import { saleProducts } from '@/components/ProductCard/Constants';
-import ProductDetails from '@/components/ProductCard/ProductDetails';
-import SimilarProducts from '@/components/ProductCard/SimilarProducts';
+import { saleProducts } from '@/components/ProductList/ProductCard/Constants';
+import ProductDetails from '@/components/ProductList/ProductCardDetails/ProductDetails';
+import SimilarProducts from '@/components/ProductList/ProductCardDetails/SimilarProducts';
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
 
 const ProductPage = () => {
