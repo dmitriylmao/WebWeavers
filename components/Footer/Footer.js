@@ -5,7 +5,7 @@ import EmailInput from "@/components/Footer/EmailInput";
 import useWindowSize from "@/core/hooks/useWindowSize";
 import YellowButton from "@/components/UI/YellowButton/YellowButton";
 import down_icon from '@/public/images/Footer/download_icon.svg';
-import Pavel from '@/public/images/pavel.png'
+import Link from "next/link";
 
 const Footer= () => {
     const { isMobile } = useWindowSize();
@@ -15,15 +15,19 @@ const Footer= () => {
             <div className={styles.container}>
                 {/* 1 коллона */}
                 <div className={styles.company}>
-                    <Image
-                        src="/images/Footer/sultan_logo.svg"
-                        alt="Логотип"
-                        width={150}
-                        height={50}
-                        className={styles.logo}
-                    />
+                    <Link href="/">
+                        <Image
+                            src="/images/Footer/sultan_logo.svg"
+                            alt="Логотип"
+                            width={150}
+                            height={50}
+                            className={styles.logo}
+                        />
+                    </Link>
                     {isMobile ? (
-                            <YellowButton icon={down_icon}  label="Прайс-лист" size="md"/>
+                            <div className={styles.button}>
+                                <YellowButton icon={down_icon}  label="Прайс-лист" size="md"/>
+                            </div>
                     ) : null}
                     <p className={styles.description}>
                         Компания «Султан» — снабжаем розничные магазины товарами "под ключ"
@@ -32,13 +36,11 @@ const Footer= () => {
                     <div className={styles.near}>
                         <span className={styles.sales}>Подпишись на скидки и акции</span>
                         <div className={styles.email}><EmailInput/></div>
-
                     </div>
                 </div>
-
                 {/* 2 колонна */}
                 <div className={styles.menu_column}>
-                    <h4 className={styles.title}>Меню сайта:</h4>
+                    <h4 className={styles.titleMenu}>Меню сайта:</h4>
                     <ul className={styles.list}>
                         <li className={styles.listItem}><a href="#company">О компании</a></li>
                         <li className={styles.listItem}><a href="#delivery">Доставка и оплата</a></li>
@@ -46,10 +48,9 @@ const Footer= () => {
                         <li className={styles.listItem}><a href="#contacts">Контакты</a></li>
                     </ul>
                 </div>
-
                 {/* 3 колонна */}
                 <div className={styles.categories_column}>
-                    <h4 className={styles.title}>Категории:</h4>
+                    <h4 className={styles.titleCategories}>Категории:</h4>
                     <ul className={styles.list}>
                         <li className={styles.listItem}><a href="#chemistry">Бытовая химия</a></li>
                         <li className={styles.listItem}><a href="#cosmetics">Косметика и гигиена</a></li>
@@ -58,13 +59,12 @@ const Footer= () => {
                         <li className={styles.listItem}><a href="#dishes">Посудa</a></li>
                     </ul>
                 </div>
-
                 {/* 4 колонна */}
                 <div className={styles.download_column}>
                     <div>
                         {isMobile ? null : (
                             <>
-                                <div className={styles.priceList}>
+                                <div>
                                     <h4 className={styles.priceList}>Скачать прайс-лист:</h4>
                                     <YellowButton icon={down_icon} label="Прайс-лист" size="sm" download="./EmailInput.js"/>
                                 </div>
@@ -83,21 +83,18 @@ const Footer= () => {
                         />
                     </div>
                 </div>
-
                 {/* 5 колонна */}
                 <div className={styles.contactsContainer}>
                     <div>
                         <h4 className={styles.title}>Контакты:</h4>
                         <p className={styles.phoneNumber}>+7 (777) 490-00-91</p>
-
                         <p className={styles.jobTime}>время работы: 9:00-20:00</p>
                         <p className={styles.orderCall}>Заказать звонок</p>
                     </div>
                     <div>
-                    <p>opt.sultan@mail.ru</p>
-                        <h4>На связи в любое время</h4>
+                    <p className={styles.email}>opt.sultan@mail.ru</p>
+                        <h4 className={styles.textOnTouch}>На связи в любое время</h4>
                     </div>
-
                     <div className={styles.payments}>
                         <Image src="/images/Footer/visa_logo.svg" alt="Visa" width={50} height={40}/>
                         <Image src="/images/Footer/mastercard_logo.svg" alt="MasterCard" width={50} height={40}/>

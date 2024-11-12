@@ -1,8 +1,14 @@
 .footer {
-    width:100%;
+    width: 100%;
     background-color: var(--blue);
     font-family: var(--font-inter);
 }
+
+.logo {
+    height: 66px;
+    width: 156px;
+}
+
 .container {
     padding: 70px;
     color: var(--white);
@@ -15,7 +21,13 @@
     margin: 0 auto;
 }
 
-/* 1 Колонна */
+.button {
+    padding: 10px 19px;
+    gap: 12px;
+    width: 214px;
+    height: 59px;
+}
+
 .company {
     display: flex;
     flex-direction: column;
@@ -52,13 +64,25 @@
 .title {
     font-size: 20px;
     line-height: 30px;
+    font-weight: 600;
+}
+
+.titleCategories {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+.titleMenu {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
 }
 
 .payments {
     display: flex;
     gap: 4px;
 }
-
 
 .list {
     display: flex;
@@ -71,6 +95,7 @@
 .listItem {
     font-size: 14px;
     line-height: 21px;
+    font-weight: 400;
 }
 
 .listItem a {
@@ -87,7 +112,11 @@
     flex-direction: column;
     gap: 25px;
 }
-.phoneNumber{
+
+.phoneNumber {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
     padding-top: 12px;
 }
 
@@ -104,28 +133,43 @@
 
 .near {
     margin-top: 24px;
-
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
 }
 
-
-.email{
+.email {
     margin-top: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
 }
+
+.textOnTouch {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+}
+
 .contacts {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.jobTime{
+.jobTime {
+    font-weight: 300;
     padding-top: 12px;
     font-size: 12px;
-    height: 18px;
+    line-height: 18px;
 }
+
 .orderCall {
+    font-weight: 400;
     font-size: 10px;
     line-height: 15px;
     padding-top: 8px;
+    text-decoration-style: solid;
     text-decoration: underline;
 }
 
@@ -135,19 +179,19 @@
     gap: 12px;
 }
 
-
-
 .titleMessengers {
-    padding-top: 12px;
+    padding-top: 14px;
+    line-height: 21px;
+    font-size: 14px;
+    font-weight: 400;
 }
 
-
-.priceList h4 {
-    margin-bottom: 12px;
+.priceList {
+    padding-bottom: 10px;
+    font-weight: 600;
     line-height: 30px;
     font-size: 20px;
 }
-
 
 @media (max-width: 768px) {
     .download_column {
@@ -175,16 +219,39 @@
         margin-bottom: 5px;
     }
 
-    .price-button {
-        width: auto;
-        padding: 12px 30px;
-        gap: 5px;
+    .description {
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 400;
     }
 
-    .description,
-    .price-button,
-    .subscribe {
-        margin-top: 0;
+    .orderCall {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 15px;
+        padding-top: 8px;
+        text-decoration-style: solid;
+        text-decoration: underline;
+    }
+
+    .contactsContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .titleMessengers {
+        padding-top: 14px;
+        line-height: 21px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .priceList {
+        padding-bottom: 10px;
+        font-weight: 600;
+        line-height: 30px;
+        font-size: 20px;
     }
 
 }
@@ -196,6 +263,44 @@
         row-gap: 25px;
     }
 
+    .near {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .sales {
+        font-size: 14px;
+        color: #ffffff;
+        text-align: left;
+        margin-bottom: 5px; /* Добавляем нижний отступ */
+    }
+
+    .email {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .email input {
+        width: calc(100% - 40px); /* Для корректной ширины с кнопкой */
+        padding: 10px;
+        border-radius: 25px 0 0 25px;
+    }
+
+    
+
+
+
+    .button {
+        justify-content: space-between;
+        padding: 10px 19px;
+        width: 149px;
+        height: 40px;
+        gap: 5px;
+    }
+
     .company {
         display: flex;
         align-items: center;
@@ -204,6 +309,7 @@
 
     .logo img {
         height: 40px;
+        width: 98px;
     }
 
     .price-button {
@@ -212,17 +318,10 @@
         gap: 5px;
     }
 
-    .price,
     .description {
         font-size: 12px;
         line-height: 18px;
     }
-
-    .subscribe {
-        flex-basis: 100%;
-    }
-
-
 }
 
 
@@ -252,10 +351,39 @@
         margin-bottom: 8px;
     }
 
-    .description,
-    .price-button,
-    .subscribe {
-        margin-top: 10px;
+    .email {
+        margin-top: 12px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .textOnTouch {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .jobTime {
+        font-weight: 300;
+        padding-top: 12px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .orderCall {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 15px;
+        padding-top: 8px;
+        text-decoration-style: solid;
+        text-decoration: underline;
     }
 }
 
