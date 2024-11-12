@@ -1,4 +1,6 @@
 import { Inter } from 'next/font/google';
+import 'swiper/css';
+import 'swiper/css/pagination';
 import { appWithTranslation } from 'next-i18next';
 import '@/styles/global.css';
 
