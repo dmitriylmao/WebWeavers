@@ -7,6 +7,37 @@
   "Barcode": "Barcode",
   "Producer": "Producer",
   "Brand": "Brand",
-  "AddToCart": "Add to Cart"
+  "AddToCart": "Add to cart",
+
+
+  "SupplierSultan": "Wholesale supplier \"Sultan\"",
+  "Address": "Address",
+  "KokshetauTashenova": "Kokshetau, 129B Zh. Tashenov street",
+  "EasternMarket": "The Eastern market",
+  "SalesDepartment": "Sales Department",
+  "TaxpayerData": "Taxpayer's data",
+  "Katran": "IE Katran D.S.",
+  "TaxpayerNumber": "TIN",
+
+
+  "DescriptionOfTheCompany":"Sultan company — we supply retail stores with turnkey goods in Kokchetav and Akmola region",
+  "SubscribeToDiscount": "Subscribe to discounts and promotions",
+  "SiteMenu": "Site Menu",
+  "Сompany": "About company",
+  "Delivery": "Delivery",
+  "Return": "Return",
+  "Contacts": "Contacts",
+  "Categories": "Categories",
+  "Chemistry": "Household chemicals",
+  "Cosmetics": "Cosmetics and hygiene",
+  "Home": "Household Goods",
+  "Children": "Products for children and mothers",
+  "Dishes": "Tableware",
+  "DowloadPrice": "Download the price list",
+  "PriceList": "Price list",
+  "Communication": "Communication in messengers",
+  "WorkingHours": "Working hours",
+  "OrderCall": "Order a call",
+  "TouchAnyTime":"Be in touch at any time"
   
 }
