@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import YellowButton from '../UI/YellowButton/YellowButton';
 import Image from 'next/image';
 import mapSrc from '@/public/images/Header/map_Icon.svg';
@@ -64,21 +65,23 @@ export function Header1() {
         </div>
 
         <div className={styles.hat}>
-          <div className={styles.logo}>
-            <Image src={logoSrc} alt="Лого" width={156} height={66} />
-          </div>
-
-          <div className={styles.catalogButton}>
-            <YellowButton
-              label="Каталог"
-              size="md"
-              href="/catalog"
-              icon={catalogIconSrc}
-            />
-          </div>
-
-          <div className={styles.search}>
-            <SearchInput />
+          <Link href="/" passHref>
+            <div className={styles.logo}>
+              <Image src={logoSrc} alt="Лого" width={156} height={66} />
+            </div>
+          </Link>
+          <div className={styles.catalogAndSearch}>
+            <div className={styles.catalogButton}>
+              <YellowButton
+                label="Каталог"
+                size="md"
+                href="/catalog"
+                icon={catalogIconSrc}
+              />
+            </div>
+            <div className={styles.search}>
+              <SearchInput />
+            </div>
           </div>
 
           <div className={styles.contactBlock}>
@@ -93,14 +96,15 @@ export function Header1() {
             </div>
 
             <div className={styles.photoWrapper}>
-              <div className={styles.ellipseGray}></div>
-              <Image
-                src={personIconSrc}
-                alt="Работник"
-                width={70}
-                height={92}
-                className={styles.personIcon}
-              />
+              <div className={styles.ellipseGray}>
+                <Image
+                  src={personIconSrc}
+                  alt="Работник"
+                  width={70}
+                  height={92}
+                  className={styles.personIcon}
+                />
+              </div>
               <div className={styles.statusIndicator}></div>
             </div>
           </div>
@@ -115,9 +119,9 @@ export function Header1() {
           </div>
 
           <div className={styles.cartContainer}>
-            <a href="#" className={styles.iconWrapper}>
-              <Image src={basketIconSrc} alt="Корзина" />
-            </a>
+           <Link href="/korZina" className={styles.iconWrapper}>
+                <Image src={basketIconSrc} alt="Корзина" />
+            </Link>
             <div className={styles.itemCount}>3</div>
             <div className={styles.price}>
               <span className={styles.cartLabel}>Корзина</span>

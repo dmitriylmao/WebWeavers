@@ -19,6 +19,7 @@
   width: 100%;
   height: 61px;
   background-color: rgb(136, 0, 255);
+  border-bottom: 2px solid var(--gray);
 }
 
 .address,
@@ -26,10 +27,14 @@
   display: flex;
   flex-direction: column;
 }
+
 .blockAddress,
 .blockMailinfo {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .block {
@@ -47,30 +52,51 @@
 }
 
 .mainText {
-  font-weight: bold;
-  color: #333;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  color: var(--black);
 }
 
 .subText {
   font-size: 12px;
-  color: #888;
+  font-weight: 300;
+  line-height: 16px;
+  color: var(--blue);
 }
 
 .menuBlock {
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
   background-color: rgb(0, 255, 140);
 }
 
 .menuItem {
+  position: relative;
   text-decoration: none;
   font-size: 14px;
-  color: #333;
-  transition: color 0.3s;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--blue);
 }
 
-.menuItem:hover {
-  color: #fbb03b;
+.menuItem::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--blue);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.menuItem:hover::after {
+  transform: scaleX(1);
 }
 
 .hat {
@@ -79,8 +105,17 @@
   align-items: center;
   width: 100%;
   height: 108px;
-  padding: 10px 0;
+  padding: 24px 0;
   background-color: chartreuse;
+}
+
+.logo {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.03);
 }
 
 .logo img {
@@ -88,51 +123,55 @@
   height: 66px;
 }
 
-.catalogButton {
-  margin-right: 20px;
-}
-
-.search {
+.catalogAndSearch {
   display: flex;
   align-items: center;
-  position: relative;
-  width: auto;
+  flex-direction: row;
+  gap: 15px;
 }
 
 .contactBlock {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 14px;
+  margin-right: 50px;
   background-color: cornflowerblue;
+  width: auto;
 }
 
 .textBlock {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  background-color: #fff;
+  text-align: end;
+  background-color: #ffdada;
 }
 
 .phoneNumber {
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  color: var(--black);
 }
 
 .workingHours {
   font-size: 12px;
-  color: #888;
+  font-weight: 300;
+  line-height: 18px;
+  color: var(--blue);
 }
 
 .orderCall {
-  text-decoration: none;
-  font-size: 12px;
-  color: #fbb03b;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--blue);
 }
 
 .photoWrapper {
   position: relative;
   display: flex;
   align-items: center;
+  background-color: #f00;
 }
 
 .ellipseGray {
@@ -141,19 +180,19 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-}
-
-.personIcon {
-  z-index: 0;
+  overflow: hidden;
 }
 
 .statusIndicator {
   position: absolute;
+  bottom: 10px;
+  left: 56px;
   width: 10px;
   height: 10px;
-  background-color: green;
+  background-color: var(--green);
   border-radius: 50%;
-  border: 2px solid #fff;
+  border: 2px solid var(--white);
+  z-index: 1;
 }
 
 .priceListButton {
@@ -164,42 +203,55 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 5px;
+  gap: 24px;
   background-color: cornflowerblue;
 }
 
+.iconWrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 .iconWrapper img {
-  width: 30px;
-  height: 30px;
+  width: 46px;
+  height: 46px;
 }
 
 .itemCount {
-  position: absolute;
-  background-color: #f00;
-  color: #fff;
-  font-size: 12px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-}
-.price {
-  display: flex;
-  flex-direction: column;
-}
-.cartLabel {
-  font-size: 14px;
-  color: #333;
-  background-color: crimson;
-}
-
-.cartTotal {
-  font-size: 14px;
-  font-weight: bold;
-  color: #333;
-  background-color: darkgoldenrod;
-}
+    background-color: var(--yellow);
+    border: 2px solid var(--white);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    min-width: 22px;
+    min-height: 22px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -40px; 
+    margin-top: -20px; 
+    z-index: 1;
+  }
+  
+  .price {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cartLabel {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 18px;
+    color: var(--blue);
+  }
+  
+  .cartTotal {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    color: var(--black);
+  }
