@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './EmailInput.module.css';
 
 export default function EmailInput() {

@@ -1,61 +1,54 @@
-import styles from './Footer.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 import LanguageSwitcher from '@/components/Footer/LanguageSwitcher';
 import EmailInput from '@/components/Footer/EmailInput';
-import { useEffect, useState } from 'react';
+import useWindowSize from '@/core/hooks/useWindowSize';
+import YellowButton from '@/components/UI/YellowButton/YellowButton';
+import down_icon from '@/public/images/Footer/download_icon.png';
+import styles from './Footer.module.css';
 
 const Footer = () => {
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 480);
-    };
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  const { isMobile } = useWindowSize();
+  useWindowSize();
   return (
-    <footer className={styles.root}>
+    <footer className={styles.footer}>
       <div className={styles.container}>
-        {/* 1 коллона */}
         <div className={styles.company}>
-          <Image
-            src="/images/Footer/sultan_logo.svg"
-            alt="Логотип"
-            width={150}
-            height={50}
-            className={styles.logo}
-          />
-
-          {isMobile ? (
-            <div>
-              <button className={styles.downloadButton}>
-                <div className={styles.buttonContent}>
-                  <span className={styles.price}>Прайс-лист</span>
-                  <Image
-                    src="/images/Footer/download_icon.svg"
-                    alt="Логотип"
-                    width={30}
-                    height={16}
-                  />
-                </div>
-              </button>
-            </div>
-          ) : null}
-
+          <div className={styles.logoContainer}>
+            <Link href="/">
+              <Image
+                src="/images/Footer/sultan_logo.svg"
+                alt="Логотип"
+                width={150}
+                height={50}
+                className={styles.logo}
+              />
+            </Link>
+            {isMobile ? (
+              <div className={styles.button}>
+                <YellowButton
+                  icon={down_icon}
+                  label="Прайс-лист"
+                  size="sm"
+                  download="./EmailInput.js"
+                />
+              </div>
+            ) : null}
+          </div>
           <p className={styles.description}>
-            Компания «Султан» — снабжаем розничные магазины товарами "под ключ"
+            Компания «Султан» — снабжаем розничные магазины товарами `под ключ`
             в Кокчетаве и Акмолинской области
           </p>
           <div className={styles.near}>
             <span className={styles.sales}>Подпишись на скидки и акции</span>
-            <EmailInput />
+            <div className={styles.email}>
+              <EmailInput />
+            </div>
           </div>
         </div>
 
-        {/* 2 колонна */}
         <div className={styles.menu_column}>
-          <h4 className={styles.title}>Меню сайта:</h4>
+          <h4 className={styles.titleMenu}>Меню сайта:</h4>
           <ul className={styles.list}>
             <li className={styles.listItem}>
               <a href="#company">О компании</a>
@@ -72,9 +65,8 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* 3 колонна */}
         <div className={styles.categories_column}>
-          <h4 className={styles.title}>Категории:</h4>
+          <h4 className={styles.titleCategories}>Категории:</h4>
           <ul className={styles.list}>
             <li className={styles.listItem}>
               <a href="#chemistry">Бытовая химия</a>
@@ -94,27 +86,22 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* 4 колонна */}
         <div className={styles.download_column}>
           <div>
-            {isMobile ? null : ( // Используем `null` вместо пустой функции, чтобы ничего не рендерить
+            {isMobile ? null : (
               <>
-                <h4>Скачать прайс-лист:</h4>
-                <button className={styles.downloadButton}>
-                  <div className={styles.buttonContent}>
-                    <span className={styles.price}>Прайс-лист</span>
-                    <Image
-                      src="/images/Footer/download_icon.svg"
-                      alt="Логотип"
-                      width={30} // Установите фиксированную ширину
-                      height={16} // Установите фиксированную высоту
-                    />
-                  </div>
-                </button>
+                <div>
+                  <h4 className={styles.priceList}>Скачать прайс-лист:</h4>
+                  <YellowButton
+                    icon={down_icon}
+                    label="Прайс-лист"
+                    size="md"
+                    download="./EmailInput.js"
+                  />
+                </div>
               </>
             )}
           </div>
-
           <p className={styles.titleMessengers}>Связь в мессенджерах:</p>
           <div className={styles.messengers}>
             <Image
@@ -132,19 +119,18 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* 5 колонна */}
-        <div>
-          <h4 className={styles.title}>Контакты:</h4>
+        <div className={styles.contactsContainer}>
           <div>
-            <p>+7 (777) 490-00-91</p>
-            <p>Время работы: 9:00-20:00</p>
+            <h4 className={styles.title}>Контакты:</h4>
+            <p className={styles.phoneNumber}>+7 (777) 490-00-91</p>
+            <p className={styles.jobTime}>время работы: 9:00-20:00</p>
             <p className={styles.orderCall}>Заказать звонок</p>
           </div>
           <div>
-            <p>opt.sultan@mail.ru</p>
-            <h4>На связи в любое время</h4>
+            <p className={styles.email}>opt.sultan@mail.ru</p>
+            <h4 className={styles.textOnTouch}>На связи в любое время</h4>
           </div>
-          <div>
+          <div className={styles.payments}>
             <Image
               src="/images/Footer/visa_logo.svg"
               alt="Visa"
@@ -158,7 +144,6 @@ const Footer = () => {
               height={40}
             />
           </div>
-
           <LanguageSwitcher />
         </div>
       </div>

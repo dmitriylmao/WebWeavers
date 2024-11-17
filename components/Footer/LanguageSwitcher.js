@@ -2,7 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
-import styles from './Footer.module.css';
+import styles from './LanguageSwitcher.module.css';
+
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();

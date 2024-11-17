@@ -1,10 +1,10 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
-import ProductCard from '@/components/ProductCard/ProductCard';
-import { saleProducts } from '@/components/ProductCard/Constants';
-import useWindowSize from '@/core/hooks/useWindowSize';
 import Link from 'next/link';
-import styles from '@/components/ProductCard/ProductsList.module.css';
+import useWindowSize from '@/core/hooks/useWindowSize';
+import ProductCard from '@/components/ProductList/ProductCard/ProductCard';
+import { saleProducts } from '@/components/ProductList/ProductCard/Constants';
+import styles from '@/components/ProductList/ProductCardDetails/ProductsList.module.css';
 
 const ProductsList = () => {
   const { isMobile, isTablet } = useWindowSize();
