@@ -5,12 +5,15 @@ import { saleProducts } from '@/components/ProductCard/Constants';
 import useWindowSize from '@/core/hooks/useWindowSize';
 import Link from 'next/link';
 import styles from '@/components/ProductCard/ProductsList.module.css';
+import ContextTheme from '@/core/hooks/ContextTheme';
+import useTheme from '@/core/hooks/SetTheme';
+import { useContext } from 'react';
 
 const ProductsList = () => {
   const { isMobile, isTablet } = useWindowSize();
-
+  const value = useContext(ContextTheme);
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id={value.isDark ? "dark" : "light"}>
       <h2 className={styles.title}>
         <span className={styles.highlight}>АКЦИОННЫЕ</span> ТОВАРЫ
       </h2>
