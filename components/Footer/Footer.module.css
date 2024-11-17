@@ -21,13 +21,6 @@
   color: var(--white);
 }
 
-.button {
-  padding: 10px 19px;
-  gap: 12px;
-  width: 214px;
-  height: 59px;
-}
-
 .company {
   display: flex;
   flex-direction: column;
@@ -266,6 +259,7 @@
     padding: 8px 0;
     column-gap: 15px;
     row-gap: 25px;
+    background-color: aquamarine;
   }
 
   .near {
@@ -297,12 +291,12 @@
     border-radius: 25px 0 0 25px;
   }
 
-  .button {
-    width: 149px;
-    height: 40px;
-    gap: 5px;
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
     justify-content: space-between;
-    padding: 10px 19px;
+    width: 100%;
   }
 
   .company {

@@ -14,25 +14,27 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.company}>
-          <Link href="/">
-            <Image
-              src="/images/Footer/sultan_logo.svg"
-              alt="Логотип"
-              width={150}
-              height={50}
-              className={styles.logo}
-            />
-          </Link>
-          {isMobile ? (
-            <div className={styles.button}>
-              <YellowButton
-                icon={down_icon}
-                label="Прайс-лист"
-                size="md"
-                download="./EmailInput.js"
+          <div className={styles.logoContainer}>
+            <Link href="/">
+              <Image
+                src="/images/Footer/sultan_logo.svg"
+                alt="Логотип"
+                width={150}
+                height={50}
+                className={styles.logo}
               />
-            </div>
-          ) : null}
+            </Link>
+            {isMobile ? (
+              <div className={styles.button}>
+                <YellowButton
+                  icon={down_icon}
+                  label="Прайс-лист"
+                  size="sm"
+                  download="./EmailInput.js"
+                />
+              </div>
+            ) : null}
+          </div>
           <p className={styles.description}>
             Компания «Султан» — снабжаем розничные магазины товарами `под ключ`
             в Кокчетаве и Акмолинской области
