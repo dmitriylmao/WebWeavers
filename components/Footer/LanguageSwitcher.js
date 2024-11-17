@@ -4,14 +4,13 @@ import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import styles from './LanguageSwitcher.module.css';
 
-
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
   const router = useRouter();
 
   const toggleLanguage = () => {
     const newLanguage = i18n.language === 'ru' ? 'en' : 'ru';
-    
+
     router.push(router.pathname, router.asPath, { locale: newLanguage });
   };
 

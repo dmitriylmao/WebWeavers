@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import telejka from '@/public/images/Products/telejka.svg';
-import YellowButton from '../UI/YellowButton/YellowButton';
+import YellowButton from '@/components/UI/YellowButton/YellowButton';
 import { useTranslation } from 'next-i18next';
-import styles from '@/components/ProductCard/ProductCard.module.css';
+import styles from '@/components/ProductList/ProductCard/ProductCard.module.css';
 
 const ProductCard = ({
   id,

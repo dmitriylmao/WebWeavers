@@ -14,7 +14,7 @@ export const getServerSideProps = async ({ locale }) => ({
 });
 
 const HomePage = () => {
-  return (  
+  return (
     <>
       <Banner />
       <ProductsList />
