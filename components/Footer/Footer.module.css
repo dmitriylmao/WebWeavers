@@ -1,0 +1,397 @@
+.footer {
+  width: 100%;
+  font-family: var(--font-inter);
+  background-color: var(--blue);
+}
+
+.logo {
+  height: 66px;
+  width: 156px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 70px 0 116px;
+  max-width: 1366px;
+  margin: 0 auto;
+  column-gap: 20px;
+  row-gap: 50px;
+  color: var(--white);
+}
+
+.company {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  flex-basis: 320px;
+}
+
+.description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 15px;
+}
+
+.sales {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.price {
+  margin-right: 10px;
+}
+
+.menu_column {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.title {
+  margin-bottom: 16px;
+}
+
+.title,
+.titleCategories,
+.titleMenu {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600;
+}
+
+.payments {
+  display: flex;
+  gap: 4px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.listItem {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.listItem a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.listItem a:hover {
+  text-decoration: underline;
+}
+
+.categories_column,
+.download_column,
+.contacts,
+.contactsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.categories_column {
+  gap: 25px;
+}
+
+.download_column .messengers {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.phoneNumber,
+.email,
+.titleMessengers,
+.priceList,
+.near,
+.textOnTouch,
+.jobTime,
+.orderCall {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 600;
+}
+
+.phoneNumber {
+  padding-top: 12px;
+}
+
+.messengers {
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.near {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 24px;
+}
+
+.email {
+  margin-top: 12px;
+}
+
+.textOnTouch {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.jobTime {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  padding-top: 12px;
+}
+
+.orderCall {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 15px;
+  text-decoration-style: solid;
+  text-decoration: underline;
+  padding-top: 8px;
+}
+
+.contactsContainer {
+  gap: 12px;
+}
+
+.titleMessengers {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  padding-top: 14px;
+}
+
+.priceList {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .download_column {
+    order: 1;
+  }
+
+  .company {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .near {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sales {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 5px;
+  }
+
+  .description {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+
+  .orderCall {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    padding-top: 8px;
+    text-decoration: underline;
+    text-decoration-style: solid;
+  }
+
+  .contactsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .titleMessengers {
+    line-height: 21px;
+    font-size: 14px;
+    font-weight: 400;
+    padding-top: 14px;
+  }
+
+  .priceList {
+    font-weight: 600;
+    line-height: 30px;
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+
+  .container {
+    width: 85%;
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    padding: 8px 0;
+    column-gap: 15px;
+    row-gap: 25px;
+    background-color: aquamarine;
+  }
+
+  .near {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .sales {
+    font-size: 14px;
+    color: var(--white);
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+  .email {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .email input {
+    width: calc(100% - 40px);
+    padding: 10px;
+    border-radius: 25px 0 0 25px;
+  }
+
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .company {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .logo img {
+    width: 98px;
+    height: 40px;
+  }
+
+  .price-button {
+    width: auto;
+    padding: 12px 30px;
+    gap: 5px;
+  }
+
+  .description {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .download_column {
+    order: 1;
+  }
+
+  .company {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .near {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sales {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+
+  .email {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 12px;
+  }
+
+  .textOnTouch {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .jobTime {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+    padding-top: 12px;
+  }
+
+  .orderCall {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    padding-top: 8px;
+    text-decoration: underline;
+    text-decoration-style: solid;
+  }
+
+  .container {
+    width: 95%;
+    padding: 24px 0;
+  }
+}

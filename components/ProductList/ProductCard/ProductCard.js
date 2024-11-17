@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import telejka from '@/public/images/Products/telejka.svg';
-import YellowButton from '../UI/YellowButton/YellowButton';
-import styles from '@/components/ProductCard/ProductCard.module.css';
+import YellowButton from '@/components/UI/YellowButton/YellowButton';
+import styles from '@/components/ProductList/ProductCard/ProductCard.module.css';
 
 const ProductCard = ({
   id,
