@@ -5,18 +5,26 @@ import Categories from '@/components/Сategories';
 import PromotionSwiper from '@/components/PromotionSwiper';
 import LogoSwiper from '@/components/LogoSwiper';
 import Map from '@/components/Map';
+import FooterDesktop from '@/components/Footer/desktop/FooterDesktop';
 import { LANGUAGE_EN } from '@/core/constants';
+import ContextTheme from '@/core/hooks/ContextTheme';
+import useTheme from '@/core/hooks/SetTheme';
 
 const HomePage = () => {
+  const [isDark, handleThemeToggle] = useTheme();
+  const value = {
+    isDark,
+    handleThemeToggle
+  }
   return (
-    <>
+    <ContextTheme.Provider value={value}> 
       <Banner />
       <ProductsList />
       <Categories />
       <PromotionSwiper />
       <LogoSwiper />
       <Map />
-    </>
+    </ContextTheme.Provider>
   );
 };
 
