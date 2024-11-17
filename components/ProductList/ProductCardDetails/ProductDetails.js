@@ -6,23 +6,28 @@ import YellowButton from '@/components/UI/YellowButton/YellowButton';
 import shareLogo from '@/public/images/ProductDetails/share.svg';
 import downloadLogo from '@/public/images/ProductDetails/download.svg';
 import style from '@/components/ProductList/ProductCardDetails/ProductDetails.module.css';
+import { useTranslation } from 'next-i18next';
+
 
 const ProductDetails = ({ product }) => {
+  const { t } = useTranslation('common'); 
   const [quantity, setQuantity] = useState(1);
   const [isDescriptionOpen, setDescriptionOpen] = useState(false);
+
   const incrementQuantity = () => setQuantity(quantity + 1);
   const decrementQuantity = () => setQuantity(Math.max(1, quantity - 1));
   const toggleDescription = () => setDescriptionOpen(!isDescriptionOpen);
+
   const [position, setPosition] = useState({ top: '0%', left: '50%' });
   const moveText = () => {
     const randomTop = Math.floor(Math.random() * 80) + '%';
     const randomLeft = Math.floor(Math.random() * 80) + '%';
     setPosition({ top: randomTop, left: randomLeft });
   };
+
   const openGitHub = () => {
     window.open('https://github.com/dmitriylmao/WebWeavers', '_blank');
   };
-
   return (
     <div className={style.container}>
       <div className={style.productDetails}>
@@ -49,7 +54,7 @@ const ProductDetails = ({ product }) => {
         </motion.div>
 
         <div className={style.infoSection}>
-          <p className={style.inStock}>В наличии</p>
+          <p className={style.inStock}>{t('InStock')}</p>
           <h1 className={style.productTitle}>
             <span className={style.productBrand}>{product.brand}</span>{' '}
             {product.title}
@@ -58,7 +63,7 @@ const ProductDetails = ({ product }) => {
             <span>
               <Image
                 src={product.volumeType}
-                alt="Volume Type"
+                alt={t('VolumeType')}
                 className={style.volumeType}
                 width={16}
                 height={16}
@@ -85,24 +90,24 @@ const ProductDetails = ({ product }) => {
               </button>
             </div>
             <YellowButton
-              label="В КОРЗИНУ"
+              label={t('AddToCart')} // Перевод кнопки
               size="md"
               action="add-to-cart"
               icon={logo}
             />
             <button className={style.shareButton1}>
-              <Image src={shareLogo} alt="Share" width={20} height={20} />
+              <Image src={shareLogo} alt={t('Share')} width={20} height={20} />
             </button>
           </div>
 
           <div className={style.actions}>
             <button className={style.shareButton}>
-              <Image src={shareLogo} alt="Share" width={20} height={20} />
+              <Image src={shareLogo} alt={t('Share')} width={20} height={20} />
             </button>
 
             <p className={style.freeShipping}>
-              При покупке от <span>10 000 ₸</span> бесплатная доставка по
-              Кокчетаву и области
+              {t('FreeShipping')} <span>10 000 ₸</span>{' '}
+              {t('FreeShippingLocation')}
             </p>
 
             <button className={style.priceListButton}>
@@ -111,10 +116,10 @@ const ProductDetails = ({ product }) => {
                 download
                 style={{ textDecoration: 'none', color: 'inherit' }}
               >
-                Прайс-лист{' '}
+                {t('PriceList')}{' '}
                 <Image
                   src={downloadLogo}
-                  alt="Download"
+                  alt={t('Download')}
                   width={11}
                   height={12}
                 />
@@ -124,19 +129,19 @@ const ProductDetails = ({ product }) => {
 
           <div className={style.characteristicsList}>
             <p>
-              Производитель:
+              {t('Producer')}:
               <span className={style.characteristics}> {product.producer}</span>
             </p>
             <p>
-              Бренд:
+              {t('Brand')}:
               <span className={style.characteristics}> {product.brand}</span>
             </p>
             <p>
-              Артикул:
+              {t('Barcode')}:
               <span className={style.characteristics}> {product.article}</span>
             </p>
             <p>
-              Категория:{' '}
+              {t('Category')}:{' '}
               <span className={style.characteristics}>
                 {product.category.join(', ')}
               </span>
@@ -145,7 +150,7 @@ const ProductDetails = ({ product }) => {
 
           <div className={style.description}>
             <h2 onClick={toggleDescription} className={style.descriptionTitle}>
-              Описание
+              {t('Description')}
               <motion.span
                 initial={{ rotate: 0 }}
                 animate={{ rotate: isDescriptionOpen ? 240 : 0 }}
@@ -174,7 +179,7 @@ const ProductDetails = ({ product }) => {
               className={style.webWeavers}
               style={{ top: position.top, left: position.left }}
             >
-              Нажми на меня!
+              {t('ClickMe')}
             </div>
           </div>
         </div>

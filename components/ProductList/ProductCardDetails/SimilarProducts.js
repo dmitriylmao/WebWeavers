@@ -4,8 +4,10 @@ import Link from 'next/link';
 import ProductCard from '@/components/ProductList/ProductCard/ProductCard';
 import { saleProducts } from '@/components/ProductList/ProductCard/Constants';
 import styles from '@/components/ProductList/ProductCardDetails/ProductsList.module.css';
+import { useTranslation } from 'next-i18next';
 
 const SimilarProducts = ({ selectedProduct }) => {
+  const { t } = useTranslation('common');
   const relatedProducts = saleProducts
     .filter(
       (product) =>
@@ -19,7 +21,7 @@ const SimilarProducts = ({ selectedProduct }) => {
   return (
     <section className={styles.container}>
       <h2 className={styles.title}>
-        <span className={styles.highlight}>ПОХОЖИЕ</span> ТОВАРЫ
+        <span className={styles.highlight}>{t('Similar')}</span> {' '} {t('saleProducts')}
       </h2>
       <Swiper
         modules={[Pagination]}

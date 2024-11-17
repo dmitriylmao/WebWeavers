@@ -3,8 +3,10 @@ import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import Link from 'next/link';
 import styles from '@/components/Сategories/Categories.module.css';
+import { useTranslation } from 'next-i18next';
 
 const Category = ({ category, delay }) => {
+  const { t } = useTranslation('common');
   const ref = useRef(null);
   const isInView = useInView(ref, {
     triggerOnce: true,
@@ -47,7 +49,7 @@ const Category = ({ category, delay }) => {
             height={250}
           />
         </div>
-        <p className={styles.cardTitle}>{category.title}</p>
+        <p className={styles.cardTitle}>{t(category.title)}</p>
       </Link>
     </motion.div>
   );

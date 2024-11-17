@@ -7,11 +7,13 @@ import LogoSwiper from '@/components/LogoSwiper';
 import Map from '@/components/Map';
 import Footer from '@/components/Footer/Footer';
 
-export const getServerSideProps = async ({ locale }) => ({
-  props: {
-    ...(await serverSideTranslations(locale, ['common'])),
-  },
-});
+export const getServerSideProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
+};
 
 const HomePage = () => {
   return (

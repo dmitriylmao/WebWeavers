@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
 import mapSrc from './map_icon.svg';
 import postSrc from './postIcon.svg';
 import logoSrc from './logo.svg';
@@ -11,25 +12,26 @@ import personIconSrc from './personIcon.svg';
 import styles from './Header.module.css';
 
 export function Header() {
+  const { t } = useTranslation('common'); 
   return (
     <header className={styles.header}>
       <div className={styles.menuRect}>
         <div className={styles.menuContainer}>
           <nav className={styles.menu}>
             <a href="#" className={styles.menuItem}>
-              О компании
+              {t('AboutCompany')}
             </a>
             <div className={styles.divider}></div>
             <a href="#" className={styles.menuItem}>
-              Доставка и оплата
+              {t('DeliveryAndPayment')}
             </a>
             <div className={styles.divider}></div>
             <a href="#" className={styles.menuItem}>
-              Возврат
+              {t('Return')}
             </a>
             <div className={styles.divider}></div>
             <a href="#" className={styles.menuItem}>
-              Контакты
+              {t('Contacts')}
             </a>
           </nav>
         </div>
@@ -38,28 +40,26 @@ export function Header() {
         <div className={styles.addressContainer}>
           <Image
             src={mapSrc}
-            alt="Иконка карты"
+            alt={t('MapIconAlt')}
             width={20}
             height={20}
             className={styles.mapIcon}
           />
-          <span className={styles.mainAddress}>
-            г. Кокчетав, ул. Ж. Ташенова 129Б
-          </span>
-          <span className={styles.subAddress}>(Рынок Восточный)</span>
+          <span className={styles.mainAddress}>{t('KokshetauTashenova')}</span>
+          <span className={styles.subAddress}>{t('EasternMarket')}</span>
         </div>
 
         {/* Блок с контактной информацией */}
         <div className={styles.contactContainer}>
           <Image
             src={postSrc}
-            alt="Иконка почты"
+            alt={t('PostIconAlt')}
             width={20}
             height={20}
             className={styles.postIcon}
           />
-          <span className={styles.email}>opt.sultan@mail.ru</span>
-          <span className={styles.contactText}>На связи в любое время</span>
+          <span className={styles.email}>{'opt.sultan@mail.ru'}</span>
+          <span className={styles.contactText}>{t('AlwaysAvailable')}</span>
         </div>
       </div>
 
@@ -70,21 +70,21 @@ export function Header() {
       <div className={styles.logo}>
         <Image
           src={logoSrc}
-          alt="Султан"
-          width={156} // Задаем ширину по макету
-          height={66} // Задаем высоту по макету
+          alt={t('LogoAlt')}
+          width={156}
+          height={66}
         />
       </div>
 
       {/* Кнопка Каталог */}
       <button className={styles.catalogButton}>
-        <span className={styles.catalogText}>Каталог</span>
+        <span className={styles.catalogText}>{t('Catalog')}</span>
         <Image
           src={iconSrc}
-          alt="Иконка каталога"
+          alt={t('CatalogIconAlt')}
           width={15}
           height={15}
-          className={styles.catalogIcon} // Добавим класс для стилей
+          className={styles.catalogIcon}
         />
       </button>
 
@@ -92,16 +92,16 @@ export function Header() {
       <div className={styles.search}>
         <input
           type="text"
-          placeholder="Поиск…"
+          placeholder={t('SearchPlaceholder')}
           className={styles.searchInput}
         />
         <button className={styles.searchButton}>
           <Image
             src={searchIconSrc}
-            alt="Поиск"
+            alt={t('SearchIconAlt')}
             width={18.35}
             height={18.35}
-            className={styles.searchIcon} // Добавляем класс для иконки
+            className={styles.searchIcon}
           />
         </button>
       </div>
@@ -109,16 +109,15 @@ export function Header() {
       {/* Блок контактной информации */}
       <div className={styles.contactBlock}>
         <div className={styles.textBlock}>
-          <div className={styles.phoneNumber}>+7 (777) 490-00-91</div>
-          <div className={styles.workingHours}>время работы: 9:00-20:00</div>
+          <div className={styles.phoneNumber}>{'+7 (777) 490-00-91'}</div>
+          <div className={styles.workingHours}>{t('WorkingHours')(': 9:00-20:00')}</div>
           <a href="#" className={styles.orderCall}>
-            Заказать звонок
+            {t('OrderCall')}
           </a>
         </div>
-
         <Image
           src={personIconSrc}
-          alt="Работник"
+          alt={t('PersonIconAlt')}
           width={60}
           height={92}
           className={styles.personIcon}
@@ -130,13 +129,13 @@ export function Header() {
 
       {/* Кнопка Прайс-лист */}
       <button className={styles.priceListButton}>
-        <span className={styles.priceListText}>Прайс-лист</span>
+        <span className={styles.priceListText}>{t('PriceList')}</span>
         <Image
           src={priceListIconSrc}
-          alt="Иконка прайс-листа"
+          alt={t('PriceListIconAlt')}
           width={17}
           height={17}
-          className={styles.catalogIcon} // Добавим класс для стилей
+          className={styles.catalogIcon}
         />
       </button>
 
@@ -146,11 +145,11 @@ export function Header() {
       {/* Корзина */}
       <div className={styles.cartContainer}>
         <div className={styles.iconWrapper}>
-          <Image src={basketIconSrc} alt="Корзина" />
+          <Image src={basketIconSrc} alt={t('BasketIconAlt')} />
         </div>
         <div className={styles.itemCount}>3</div>
         <a href="#" className={styles.cartLabel}>
-          Корзина
+          {t('Cart')}
         </a>
         <span className={styles.cartTotal}>12 478 ₸</span>
       </div>

@@ -1,6 +1,9 @@
 import styles from '@/components/Map/Map.module.css';
+import { useTranslation } from 'next-i18next';
 
 export default function Map() {
+  const { t } = useTranslation('common');
+
   return (
     <section className={styles.container}>
       <img
@@ -10,22 +13,22 @@ export default function Map() {
       />
 
       <div className={styles.overlay}>
-        <h2>Контакты</h2>
-        <p>Оптовый поставщик «Султан»</p>
+        <h2>{t('Contacts')}</h2>
+        <p>{t('SupplierSultan')}</p>
 
         <div className={styles.contactInfo}>
           <div className={styles.iconText}>
-            <img src="/images/Map/gps.svg" alt="Icon" className={styles.icon} />
+            <img
+              src="/images/Map/gps.svg"
+              alt="Icon"
+              className={styles.icon}
+            />
             <div>
-              <h3>Адрес:</h3>
-              <p>
-                г. Кокшетау, ул. Ж. Ташенова 129Б
-                <br />
-                (Рынок Восточный)
-              </p>
+              <h3>{t('Address')}</h3>
+              <p>{t('KokshetauTashenova')}{'\n'}{t('EasternMarket')}</p>
             </div>
             <div className={styles.sale}>
-              <h3>Отдел продаж:</h3>
+              <h3>{t('SalesDepartment')}</h3>
               <p>
                 +7 (777) 490-00-91
                 <br />
@@ -36,13 +39,16 @@ export default function Map() {
         </div>
 
         <div className={styles.iconText}>
-          <img src="/images/Map/file.svg" alt="Icon" className={styles.icon} />
+          <img
+            src="/images/Map/file.svg"
+            alt="Icon"
+            className={styles.icon}
+          />
           <div>
-            <h3>Данные налогоплательщика:</h3>
-            <p>
-              ИП Катран Д.С.
+            <h3>{t('TaxpayerData')}</h3>
+            <p>{t('Katran')}
               <br />
-              ИНН: 860113450858
+            {t('TaxpayerNumber')}: 860113450858
             </p>
           </div>
         </div>

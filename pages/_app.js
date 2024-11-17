@@ -20,10 +20,11 @@ const MyApp = ({ Component, pageProps }) => {
   const router = useRouter();
 
   useEffect(() => {
-    if (i18n.language !== router.locale) {
+    if (i18n && i18n.changeLanguage && i18n.language !== router.locale) {
       i18n.changeLanguage(router.locale);
     }
   }, [i18n, router.locale]);
+  
 
   return (
     <div className={inter.className}>

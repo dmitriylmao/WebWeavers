@@ -1,13 +1,15 @@
 import styles from '@/components/Breadcrumb/Breadcrumb.module.css';
 import useWindowSize from '@/core/hooks/useWindowSize';
 import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
 
 const Breadcrumb = ({ product }) => {
   const { isTablet, isMobile } = useWindowSize();
+  const { t } = useTranslation('common');
 
   const breadcrumbItems = [
-    { name: 'Главная', path: '/' },
-    { name: 'Каталог', path: '/catalog' },
+    { name: t('Main'), path: '/' },
+    { name: t('Catalog'), path: '/catalog' },
     {
       name: `${product.brand} ${product.title}`,
       path: `/product/${product.id}`,
@@ -24,7 +26,7 @@ const Breadcrumb = ({ product }) => {
             className={styles.backLink}
           >
             <span className={styles.backSymbol}>&lt;</span>
-            <span className={styles.backText}>НАЗАД</span>
+            <span className={styles.backText}>{t('Back')}</span>
           </Link>
         </div>
       </div>

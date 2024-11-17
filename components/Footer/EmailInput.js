@@ -1,11 +1,14 @@
+import { useTranslation } from 'next-i18next';
 import styles from './EmailInput.module.css';
 
 export default function EmailInput() {
+  const { t } = useTranslation('common');
+
   return (
     <div className={styles.container}>
       <input
         type="email"
-        placeholder="Введите ваш E-mail"
+        placeholder={t('EnterYourEmail')}
         className={styles.input}
       />
       <button className={styles.button}>

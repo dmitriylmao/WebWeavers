@@ -6,14 +6,16 @@ import { Pagination, Navigation } from 'swiper/modules';
 import Link from 'next/link';
 import { logoData } from '@/components/LogoSwiper/Constants';
 import styles from '@/components/LogoSwiper/LogoSwiper.module.css';
+import { useTranslation } from 'next-i18next';
 
 export default function LogoSwiper() {
+  const { t } = useTranslation('common');
   return (
     <section className={styles.container}>
       <h2 className={styles.title}>
-        <span className={styles.highlight}>ЛУЧШИЕ</span> ТОВАРЫ
+        <span className={styles.highlight}>{t('highlight')}</span>{' '}{t('products')}
       </h2>
-      <p className={styles.subtitle}>От ведущих мировых брендов</p>
+      <p className={styles.subtitle}>{t('subtitle')}</p>
 
       <Swiper
         spaceBetween={10}

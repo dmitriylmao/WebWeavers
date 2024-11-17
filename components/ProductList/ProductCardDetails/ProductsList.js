@@ -5,14 +5,15 @@ import useWindowSize from '@/core/hooks/useWindowSize';
 import ProductCard from '@/components/ProductList/ProductCard/ProductCard';
 import { saleProducts } from '@/components/ProductList/ProductCard/Constants';
 import styles from '@/components/ProductList/ProductCardDetails/ProductsList.module.css';
+import { useTranslation } from 'next-i18next';
 
 const ProductsList = () => {
   const { isMobile, isTablet } = useWindowSize();
-
+  const { t } = useTranslation('common');
   return (
     <section className={styles.container}>
       <h2 className={styles.title}>
-        <span className={styles.highlight}>АКЦИОННЫЕ</span> ТОВАРЫ
+        <span className={styles.highlight}>{t('saleHighlight')}</span>{' '}{t('saleProducts')}
       </h2>
 
       {isMobile || isTablet ? (

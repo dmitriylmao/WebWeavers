@@ -1,17 +1,70 @@
 {
   "WebWeavers": "ВебТкачи",
 
+  "Main": "Главная",
+  "Back": "Назад",
+
+
+  "MainTitle": "Бытовая химия, косметика и хозтовары",
+  "Wholesale": "ОПТОМ",
+  "Kokchetav": "ПО КОКЧЕТАВУ И ОБЛАСТИ",
+  "ToKatalog": "В КАТАЛОГ",
+  "BestDeals": "Только самые выгодные предложения",
+  "Shipping": "Бесплатная доставка по Кокчетаву от 10 тыс ₸",
+
+  "AboutCompany": "О компании",
+  "DeliveryAndPayment": "Доставка и оплата",
+  "MapIconAlt": "Иконка карты",
+  "MainAddress": "г. Кокчетав, ул. Ж. Ташенова 129Б",
+  "SubAddress": "(Рынок Восточный)",
+  "PostIconAlt": "Иконка почты",
+  "Email": "opt.sultan@mail.ru",
+  "AlwaysAvailable": "На связи в любое время",
+  "LogoAlt": "Султан",
+  "Catalog": "Каталог",
+  "CatalogIconAlt": "Иконка каталога",
+  "SearchPlaceholder": "Поиск…",
+  "SearchIconAlt": "Поиск",
+  "PhoneNumber": "+7 (777) 490-00-91",
+  "PersonIconAlt": "Работник",
+  "PriceListIconAlt": "Иконка прайс-листа",
+  "BasketIconAlt": "Корзина",
+  "Cart": "Корзина",
+
+
+  "saleHighlight": "АКЦИОННЫЕ",
+  "Similar":"ПОХОЖИЕ",
+  "saleProducts": "ТОВАРЫ",
+
+
   "Popular": "Популярное",
   "Type": "Тип",
   "Barcode": "Штрихкод",
   "Producer": "Производитель",
   "Brand": "Бренд",
   "AddToCart": "В корзину",
+  "InStock":"В наличии",
+  "FreeShipping":"При покупке от",
+  "FreeShippingLocation":"бесплатная доставка по Кокчетаву и области",
+  "Category": "Категория",
+  "Description":"Описание",
+  "ClickMe":"Нажми на меня!",
+
+
+  "CATEGORIES": "КАТЕГОРИИ",
+  "PRODUCTS": "ТОВАРОВ",
+  "SpecialPrices": "10 000+ ходовых позиций по специальным ценам",
+
+
+  "highlight": "ЛУЧШИЕ",
+  "subtitle": "От ведущих мировых брендов",
+  "products": "ТОВАРЫ",
+
 
   "SupplierSultan": "Оптовый поставщик «Султан»",
   "Address": "Адрес",
   "KokshetauTashenova": "г. Кокшетау, ул. Ж. Ташенова 129Б",
-  "EasternMarket": "Рынок Восточный",
+  "EasternMarket": "(Рынок Восточный)",
   "SalesDepartment": "Отдел продаж",
   "TaxpayerData": "Данные налогоплательщика",
   "Katran": "ИП Катран Д.С.",
@@ -35,5 +88,6 @@
   "Communication": "Связь в мессенджерах",
   "WorkingHours": "Время работы",
   "OrderCall": "Заказать звонок",
-  "TouchAnyTime": "На связи в любое время"
+  "TouchAnyTime": "На связи в любое время",
+  "EnterYourEmail": "Введите ваш E-mail"
 }

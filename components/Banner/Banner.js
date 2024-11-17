@@ -1,26 +1,28 @@
 import { bannerAdvantages } from '@/components/Banner/constants.js';
 import styles from '@/components/Banner/Banner.module.css';
 import YellowButton from '../UI/YellowButton/YellowButton';
+import { useTranslation } from 'next-i18next';
 
 export default function Banner() {
+  const { t } = useTranslation('common'); 
   return (
     <section className={styles.bannerContainer}>
       <div className={styles.overlay}>
         <div className={styles.content}>
           <h2 className={styles.mainTitle}>
-            Бытовая химия, косметика и хозтовары
+            {t('MainTitle')}
           </h2>
           <h3 className={styles.subTitle}>
-            ОПТОМ <span>ПО КОКЧЕТАВУ И ОБЛАСТИ</span>
+          {t('Wholesale')} <span>{''}{t('Kokchetav')}</span>
           </h3>
           <div className={styles.catalogButton}>
-            <YellowButton label="В КАТАЛОГ" size="lg" href="/catalog" />
+            <YellowButton label={t('ToKatalog')} size="lg" href="/catalog" />
           </div>
           <div className={styles.features}>
             {bannerAdvantages.map((advantage) => (
               <p key={advantage} className={styles.feature}>
                 <span className={styles.icon}>+</span>
-                {advantage}
+                {t(advantage)}
               </p>
             ))}
           </div>
