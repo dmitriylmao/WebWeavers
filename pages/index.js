@@ -1,4 +1,5 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { Header1 } from '@/components/Header1/Header1';
 import Banner from '@/components/Banner';
 import ProductsList from '@/components/ProductCard/ProductsList';
 import Categories from '@/components/Сategories';
@@ -10,6 +11,7 @@ import { LANGUAGE_EN } from '@/core/constants';
 const HomePage = () => {
   return (
     <>
+    <Header1 />
       <Banner />
       <ProductsList />
       <Categories />

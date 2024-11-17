@@ -1,14 +1,14 @@
-import styles from './Header1.module.css';
 import Image from 'next/image';
-import mapSrc from './map_Icon.svg';
-import postSrc from './post_Icon.svg';
-import logoSrc from './logo.svg';
-import catalogIconSrc from './catalog_Icon.svg';
-import searchIconSrc from './search_Icon.svg';
-import personIconSrc from './person.svg';
-import priceListIconSrc from './download_Icon.svg';
-import basketIconSrc from './basket_Icon.svg';
-
+import mapSrc from '@/public/images/Header/map_Icon.svg';
+import postSrc from '@/public/images/Header/post_Icon.svg';
+import logoSrc from '@/public/images/Header/logo.svg';
+import catalogIconSrc from '@/public/images/Header/catalog_Icon.svg';
+import searchIconSrc from '@/public/images/Header/search_Icon.svg';
+import personIconSrc from '@/public/images/Header/person.svg';
+import priceListIconSrc from '@/public/images/Header/download_Icon.svg';
+import basketIconSrc from '@/public/images/Header/basket_Icon.svg';
+import styles from './Header1.module.css';
+ 
 export function Header1() {
     return (
         <header className={styles.header}>
