@@ -12,7 +12,7 @@ import { LANGUAGE_EN } from '@/core/constants';
 const HomePage = () => {
   return (
     <>
-    <Header1 />
+      <Header1 />
       <Banner />
       <ProductsList />
       <Categories />
