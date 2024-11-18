@@ -83,6 +83,9 @@
 }
 
 @media (max-width: 1280px) {
+  .bannerContainer {
+    top: 100px;
+  }
   .mainTitle {
     font-size: 50px;
   }

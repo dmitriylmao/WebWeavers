@@ -5,7 +5,6 @@ import Categories from '@/components/Сategories';
 import PromotionSwiper from '@/components/PromotionSwiper';
 import LogoSwiper from '@/components/LogoSwiper';
 import Map from '@/components/Map';
-import Footer from '@/components/Footer/Footer';
 
 export const getServerSideProps = async ({ locale }) => {
   return {
@@ -24,7 +23,6 @@ const HomePage = () => {
       <PromotionSwiper />
       <LogoSwiper />
       <Map />
-      <Footer />
     </>
   );
 };

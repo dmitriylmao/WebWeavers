@@ -1,11 +1,12 @@
-import { Inter } from 'next/font/google';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { appWithTranslation } from 'next-i18next';
 import { useTranslation } from 'next-i18next';
-import '@/styles/global.css';
+import Layout from '@/layouts/Layout';
+import { Inter } from 'next/font/google';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import '@/styles/global.css';
 
 const inter = Inter({
   weight: ['100', '300', '400', '500', '700', '900'],
@@ -28,7 +29,9 @@ const MyApp = ({ Component, pageProps }) => {
 
   return (
     <div className={inter.className}>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </div>
   );
 };
