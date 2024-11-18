@@ -1,11 +1,13 @@
 import searchIconSrc from '@/public/images/Header/search_Icon.svg';
 import Image from 'next/image';
 import styles from '@/components/Header/SearchInput.module.css';
+import { useTranslation } from 'next-i18next';
 
 export default function SearchInput() {
+  const { t } = useTranslation('common');
   return (
     <div className={styles.container}>
-      <input type="email" placeholder="Поиск..." className={styles.input} />
+      <input type="email" placeholder={t('SearchPlaceholder')} className={styles.input} />
       <button className={styles.button}>
         <span>
           <Image

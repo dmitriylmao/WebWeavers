@@ -9,10 +9,12 @@ import {
   partnerSlide,
 } from '@/components/PromotionSwiper/Constants';
 import styles from '@/components/PromotionSwiper/PromotionSwiper.module.css';
+import { useTranslation } from 'next-i18next';
 
 const sliderData = [promotionSlide, partnerSlide];
 
 export default function PromotionSwiper() {
+  const { t } = useTranslation('common');
   return (
     <section className={styles.container}>
       <Swiper
@@ -33,11 +35,11 @@ export default function PromotionSwiper() {
                 className={styles.slideImage}
               />
               <div>
-                <p className={styles.slideDuration}>{slide.duration}</p>
-                <h2 className={styles.slideTitle}>{slide.title}</h2>
-                <p className={styles.slideDescription}>{slide.description}</p>
+                <p className={styles.slideDuration}>{t(slide.duration)}</p>
+                <h2 className={styles.slideTitle}>{t(slide.title)}</h2>
+                <p className={styles.slideDescription}>{t(slide.description)}</p>
                 <YellowButton
-                  label={slide.buttonText}
+                  label={t(slide.buttonText)}
                   size="lg"
                   href={slide.link}
                 />

@@ -58,6 +58,22 @@
   "SpecialPrices": "10,000+ popular items at special prices",
 
   
+  "PromotionSwiper": {
+    "PromotionSlide": {
+      "Duration": "*PROMOTION VALID UNTIL 09/04/22",
+      "Title": "Promotion Name",
+      "Description": "Terms: like the post, subscribe to the channel, repost on VK wall",
+      "ButtonText": "PARTICIPATE"
+    },
+    "PartnerSlide": {
+      "Duration": "*PROMOTION VALID UNTIL 03/02/24",
+      "Title": "Our Partner",
+      "Description": "Leroy Merlin Leroy Merlin Leroy Leroy Leroy Merlin Leroy Leroy Leroy",
+      "ButtonText": "VISIT BRAND"
+    }
+  },
+
+
   "highlight": "BEST",
   "subtitle": "From leading global brands",
   "products": "PRODUCTS",

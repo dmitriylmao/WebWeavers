@@ -15,9 +15,11 @@ import blueSearch from '@/public/images/Header/blue_search.svg';
 import phoneIcon from '@/public/images/Header/phone_icon.svg';
 import whitePhoneIcon from '@/public/images/Header/white_phone_icon.svg';
 import styles from '@/components/Header/Header.module.css';
+import { useTranslation } from 'next-i18next';
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { t } = useTranslation('common');
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -50,9 +52,9 @@ export function Header() {
               />
               <div className={styles.address}>
                 <span className={styles.mainText}>
-                  г. Кокчетав, ул. Ж. Ташенова 129Б
+                  {t('MainAddress')}
                 </span>
-                <span className={styles.subText}>(Рынок Восточный)</span>
+                <span className={styles.subText}>{t('SubAddress')}</span>
               </div>
             </div>
             <div className={styles.blockMailinfo}>
@@ -65,23 +67,23 @@ export function Header() {
               />
               <div className={styles.mailinfo}>
                 <span className={styles.mainText}>opt.sultan@mail.ru</span>
-                <span className={styles.subText}>На связи в любое время</span>
+                <span className={styles.subText}>{t('AlwaysAvailable')}</span>
               </div>
             </div>
           </div>
 
           <div className={styles.menuBlock}>
             <a href="#" className={`${styles.menuItem}`}>
-              О компании
+              {t('AboutCompany')}
             </a>
             <a href="#" className={styles.menuItem}>
-              Доставка и оплата
+              {t('DeliveryAndPayment')}
             </a>
             <a href="#" className={styles.menuItem}>
-              Возврат
+              {t('Return')}
             </a>
             <a href="#" className={styles.menuItem}>
-              Контакты
+              {t('Contacts')}
             </a>
           </div>
         </div>
@@ -97,7 +99,7 @@ export function Header() {
           <div className={styles.catalogAndSearch}>
             <div className={styles.catalogButton}>
               <YellowButton
-                label="Каталог"
+                label={t('Catalog')}
                 size="md"
                 href="/catalog"
                 icon={catalogIconSrc}
@@ -112,10 +114,10 @@ export function Header() {
             <div className={styles.textBlock}>
               <div className={styles.phoneNumber}>+7 (777) 490-00-91</div>
               <div className={styles.workingHours}>
-                время работы: 9:00-20:00
+                {t('WorkingHours')}: 9:00-20:00
               </div>
               <a href="#" className={styles.orderCall}>
-                Заказать звонок
+                {t('OrderCall')}
               </a>
             </div>
 
@@ -136,7 +138,7 @@ export function Header() {
           <div className={styles.priceListButton}>
             <YellowButton
               icon={priceListIconSrc}
-              label="Прайс-лист"
+              label={t('PriceList')}
               size="md"
               download="./EmailInput.js"
             />
@@ -148,7 +150,7 @@ export function Header() {
             </Link>
             <div className={styles.itemCount}>3</div>
             <div className={styles.price}>
-              <span className={styles.cartLabel}>Корзина</span>
+              <span className={styles.cartLabel}>{t('Cart')}</span>
               <span className={styles.cartTotal}>12 478 ₸</span>
             </div>
           </div>
@@ -187,7 +189,7 @@ export function Header() {
               height={15}
               className={styles.Mobicon}
             />
-            Каталог
+            {t('Catalog')}
           </Link>
 
           <div className={styles.separator}></div>
@@ -200,7 +202,7 @@ export function Header() {
               height={15}
               className={styles.Mobicon}
             />
-            Поиск
+            {t('SearchIconAlt')}
           </Link>
         </div>
 
@@ -219,9 +221,9 @@ export function Header() {
               />
               <div className={styles.address}>
                 <span className={styles.mainText}>
-                  г. Кокчетав, ул. Ж. Ташенова 129Б
+                  {t('MainAddress')}
                 </span>
-                <span className={styles.subText}>(Рынок Восточный)</span>
+                <span className={styles.subText}>{t('SubAddress')}</span>
               </div>
             </div>
             <div className={styles.blockMailinfo}>
@@ -234,7 +236,7 @@ export function Header() {
               />
               <div className={styles.mailinfo}>
                 <span className={styles.mainText}>opt.sultan@mail.ru</span>
-                <span className={styles.subText}>На связи в любое время</span>
+                <span className={styles.subText}>{t('AlwaysAvailable')}</span>
               </div>
             </div>
             <div className={styles.blockPhone}>
@@ -247,9 +249,9 @@ export function Header() {
                   className={styles.icon}
                 />
                 <div className={styles.phone}>
-                  <span className={styles.mainText}>Отдел продаж</span>
+                  <span className={styles.mainText}>{t('SalesDepartment')}</span>
                   <span className={styles.subText}>89508655519</span>
-                  <span className={styles.subText}>время работы 9-10</span>
+                  <span className={styles.subText}>{t('WorkingHours')} 9-10</span>
                 </div>
               </div>
             </div>
@@ -262,24 +264,24 @@ export function Header() {
                   height={15}
                 />
               </span>
-              <span className={styles.text}>Заказать звонок</span>
+              <span className={styles.text}>{t('OrderCall')}</span>
             </Link>
           </div>
 
           <div className={styles.MobileMenuSite}>
-            <h2 className={styles.MobileMenuTitle}> Меню сайта: </h2>
+            <h2 className={styles.MobileMenuTitle}> {t('SiteMenu')}: </h2>
             <div className={styles.MobileMenuSiteList}>
               <a href="#" className={`${styles.menuItem}`}>
-                О компании
+                {t('Сompany')}
               </a>
               <a href="#" className={styles.menuItem}>
-                Доставка и оплата
+                {t('DeliveryAndPayment')}
               </a>
               <a href="#" className={styles.menuItem}>
-                Возврат
+                {t('Return')}
               </a>
               <a href="#" className={styles.menuItem}>
-                Контакты
+                {t('Contacts')}
               </a>
             </div>
           </div>
@@ -287,7 +289,7 @@ export function Header() {
           <div className={styles.MobileMenuButton}>
             <YellowButton
               icon={priceListIconSrc}
-              label="Прайс-лист"
+              label={t('PriceList')}
               size="lg"
               download="./EmailInput.js"
             />
