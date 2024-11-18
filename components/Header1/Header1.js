@@ -273,7 +273,32 @@ export function Header1() {
 
 
           <div className={styles.MobileMenuSite}> 
-            <div className={styles.MobileMenuTitle}> askdhakljshd</div>
+            <h2 className={styles.MobileMenuTitle}> Меню сайта: </h2>
+            <div className={styles.MobileMenuSiteList}>
+                <a href="#" className={`${styles.menuItem}`}>
+                  О компании
+                </a>
+                <a href="#" className={styles.menuItem}>
+                  Доставка и оплата
+                </a>
+                <a href="#" className={styles.menuItem}>
+                  Возврат
+                </a>
+                <a href="#" className={styles.menuItem}>
+                  Контакты
+                </a>
+            </div>
+          </div>
+
+
+          <div className={styles.MobileMenuButton}>
+            <YellowButton
+              icon={priceListIconSrc}
+              label="Прайс-лист"
+              size="lg"
+              download="./EmailInput.js"
+              style={{ width: '100%' }}
+            />
           </div>
         </div>
       </div>
