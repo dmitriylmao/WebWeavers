@@ -17,22 +17,21 @@ import whitePhoneIcon from '@/public/images/Header/white_phone_icon.svg';
 import styles from './Header1.module.css';
 
 export function Header1() {
-  // Используем useState внутри компонента
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen); // Переключаем состояние menuOpen
+    setMenuOpen(!menuOpen);
   };
 
   useEffect(() => {
     if (menuOpen) {
-      document.body.style.overflow = 'hidden'; // Отключает прокрутку страницы
+      document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = ''; // Возвращает прокрутку
+      document.body.style.overflow = '';
     }
 
     return () => {
-      document.body.style.overflow = ''; // Убирает эффект при размонтировании
+      document.body.style.overflow = '';
     };
   }, [menuOpen]);
 
@@ -154,8 +153,6 @@ export function Header1() {
         </div>
       </div>
 
-     
-
       <div className={styles.MobileContainer}>
         <div className={styles.mobileMenu}>
           <div
@@ -167,15 +164,15 @@ export function Header1() {
             <div className={styles.burgerLine}></div>
           </div>
 
-          <div className={styles.MobileLogo}>
+          <Link className={styles.MobileLogo} href="/" passHref>
             <Image src={logoSrc} alt="Лого" width={97} height={41} />
-          </div>
+          </Link>
 
-          <div className={styles.cartContainer}>
-            <Link href="/korZina" className={styles.iconWrapper}>
+          <div className={styles.mobileCartContainer}>
+            <Link href="/korZina" className={styles.mobileIconWrapper}>
               <Image src={basketIconSrc} alt="Корзина" />
             </Link>
-            <div className={styles.itemCount}>3</div>
+            <div className={styles.mobileItemCount}>3</div>
           </div>
         </div>
 
@@ -184,23 +181,21 @@ export function Header1() {
             <Image
               src={blueCatalog}
               alt="Каталог"
-              width={24} 
-              height={24} 
+              width={15}
+              height={15}
               className={styles.Mobicon}
             />
             Каталог
           </Link>
 
-          {/* Перегородка (пунктирная линия) */}
           <div className={styles.separator}></div>
 
-          {/* Кнопка Поиск */}
           <Link href="/search" className={styles.menuButton}>
             <Image
               src={blueSearch}
               alt="Поиск"
-              width={24} 
-              height={24}
+              width={15}
+              height={15}
               className={styles.Mobicon}
             />
             Поиск
@@ -211,7 +206,6 @@ export function Header1() {
           <div className={styles.backdrop} onClick={() => setMenuOpen(false)} />
         )}
         <div className={`${styles.slideMenu} ${menuOpen ? styles.open : ''}`}>
-
           <div className={styles.MobileBlock}>
             <div className={styles.blockAddress}>
               <Image
@@ -270,26 +264,23 @@ export function Header1() {
             </Link>
           </div>
 
-
-
-          <div className={styles.MobileMenuSite}> 
+          <div className={styles.MobileMenuSite}>
             <h2 className={styles.MobileMenuTitle}> Меню сайта: </h2>
             <div className={styles.MobileMenuSiteList}>
-                <a href="#" className={`${styles.menuItem}`}>
-                  О компании
-                </a>
-                <a href="#" className={styles.menuItem}>
-                  Доставка и оплата
-                </a>
-                <a href="#" className={styles.menuItem}>
-                  Возврат
-                </a>
-                <a href="#" className={styles.menuItem}>
-                  Контакты
-                </a>
+              <a href="#" className={`${styles.menuItem}`}>
+                О компании
+              </a>
+              <a href="#" className={styles.menuItem}>
+                Доставка и оплата
+              </a>
+              <a href="#" className={styles.menuItem}>
+                Возврат
+              </a>
+              <a href="#" className={styles.menuItem}>
+                Контакты
+              </a>
             </div>
           </div>
-
 
           <div className={styles.MobileMenuButton}>
             <YellowButton
@@ -297,7 +288,6 @@ export function Header1() {
               label="Прайс-лист"
               size="lg"
               download="./EmailInput.js"
-              style={{ width: '100%' }}
             />
           </div>
         </div>
