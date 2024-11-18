@@ -1,7 +1,8 @@
-import { Inter } from 'next/font/google';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { appWithTranslation } from 'next-i18next';
+import Layout from '@/layouts/Layout';
+import { Inter } from 'next/font/google';
 import '@/styles/global.css';
 
 const inter = Inter({
@@ -15,9 +16,9 @@ const inter = Inter({
 const MyApp = ({ Component, pageProps }) => {
   return (
     <div className={inter.className}>
-      {/* <Layout> */}
-      <Component {...pageProps} />
-      {/*</Layout> */}
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </div>
   );
 };
