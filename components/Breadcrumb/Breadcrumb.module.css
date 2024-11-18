@@ -119,6 +119,7 @@
 @media (max-width: 1280px) {
   .breadcrumb {
     width: 95%;
+    padding-top: 100px;
   }
 }
 
@@ -132,6 +133,7 @@
   .container {
     width: 85%;
     margin: 25px auto 30px;
+    padding-top: 100px;
   }
 }
 
@@ -139,5 +141,6 @@
   .container {
     width: 90%;
     margin: 20px auto 25px;
+    padding-top: 100px;
   }
 }

@@ -1,12 +1,12 @@
 import Link from 'next/link';
-import { useState, useEffect } from 'react'; // Импортируй useState
-import YellowButton from '../UI/YellowButton/YellowButton';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import YellowButton from '@/components/UI/YellowButton/YellowButton';
 import mapSrc from '@/public/images/Header/map_Icon.svg';
 import postSrc from '@/public/images/Header/post_Icon.svg';
 import logoSrc from '@/public/images/Header/logo.svg';
 import catalogIconSrc from '@/public/images/Header/catalog_Icon.svg';
-import SearchInput from '@/components/Header1/SearchInput';
+import SearchInput from '@/components/Header/SearchInput';
 import personIconSrc from '@/public/images/Header/person.svg';
 import priceListIconSrc from '@/public/images/Header/download_Icon.svg';
 import basketIconSrc from '@/public/images/Header/basket_Icon.svg';
@@ -14,9 +14,9 @@ import blueCatalog from '@/public/images/Header/blue_catalog.svg';
 import blueSearch from '@/public/images/Header/blue_search.svg';
 import phoneIcon from '@/public/images/Header/phone_icon.svg';
 import whitePhoneIcon from '@/public/images/Header/white_phone_icon.svg';
-import styles from './Header1.module.css';
+import styles from '@/components/Header/Header.module.css';
 
-export function Header1() {
+export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -85,6 +85,8 @@ export function Header1() {
             </a>
           </div>
         </div>
+
+        <div className={styles.headerLine}></div>
 
         <div className={styles.hat}>
           <Link href="/" passHref>

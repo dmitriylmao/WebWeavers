@@ -1,6 +1,6 @@
 import searchIconSrc from '@/public/images/Header/search_Icon.svg';
 import Image from 'next/image';
-import styles from '@/components/Header1/SearchInput.module.css';
+import styles from '@/components/Header/SearchInput.module.css';
 
 export default function SearchInput() {
   return (
