@@ -71,16 +71,16 @@ export function Header() {
           </div>
 
           <div className={styles.menuBlock}>
-            <a href="#" className={`${styles.menuItem}`}>
+            <a href="/company" className={`${styles.menuItem}`}>
               О компании
             </a>
-            <a href="#" className={styles.menuItem}>
+            <a href="/delivery" className={styles.menuItem}>
               Доставка и оплата
             </a>
-            <a href="#" className={styles.menuItem}>
+            <a href="/refund" className={styles.menuItem}>
               Возврат
             </a>
-            <a href="#" className={styles.menuItem}>
+            <a href="/contacts" className={styles.menuItem}>
               Контакты
             </a>
           </div>
@@ -269,16 +269,16 @@ export function Header() {
           <div className={styles.MobileMenuSite}>
             <h2 className={styles.MobileMenuTitle}> Меню сайта: </h2>
             <div className={styles.MobileMenuSiteList}>
-              <a href="#" className={`${styles.menuItem}`}>
+              <a href="/company" className={`${styles.menuItem}`}>
                 О компании
               </a>
-              <a href="#" className={styles.menuItem}>
+              <a href="/delivery" className={styles.menuItem}>
                 Доставка и оплата
               </a>
-              <a href="#" className={styles.menuItem}>
+              <a href="/refund" className={styles.menuItem}>
                 Возврат
               </a>
-              <a href="#" className={styles.menuItem}>
+              <a href="/contacts" className={styles.menuItem}>
                 Контакты
               </a>
             </div>

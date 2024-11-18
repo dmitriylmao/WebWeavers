@@ -14,11 +14,17 @@ const inter = Inter({
 });
 
 const MyApp = ({ Component, pageProps }) => {
+  const useLayout = Component.useLayout ?? true;
+
   return (
     <div className={inter.className}>
-      <Layout>
+      {useLayout ? (
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      ) : (
         <Component {...pageProps} />
-      </Layout>
+      )}
     </div>
   );
 };

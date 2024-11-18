@@ -1,0 +1,38 @@
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.gif {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.marqueeWrapper {
+  position: absolute;
+  top: 50%;
+  width: 100vw;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.marquee {
+  display: flex;
+  white-space: nowrap;
+}
+
+.marqueeText {
+  font-size: 40px;
+  font-weight: 900;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  display: inline-block;
+  font-variant-numeric: lining-nums;
+}

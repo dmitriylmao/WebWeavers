@@ -51,16 +51,16 @@ const Footer = () => {
           <h4 className={styles.titleMenu}>Меню сайта:</h4>
           <ul className={styles.list}>
             <li className={styles.listItem}>
-              <a href="#company">О компании</a>
+              <a href="/company">О компании</a>
             </li>
             <li className={styles.listItem}>
-              <a href="#delivery">Доставка и оплата</a>
+              <a href="/delivery">Доставка и оплата</a>
             </li>
             <li className={styles.listItem}>
-              <a href="#return">Возврат</a>
+              <a href="/return">Возврат</a>
             </li>
             <li className={styles.listItem}>
-              <a href="#contacts">Контакты</a>
+              <a href="/contacts">Контакты</a>
             </li>
           </ul>
         </div>
@@ -69,19 +69,19 @@ const Footer = () => {
           <h4 className={styles.titleCategories}>Категории:</h4>
           <ul className={styles.list}>
             <li className={styles.listItem}>
-              <a href="#chemistry">Бытовая химия</a>
+              <a href="/chemistry">Бытовая химия</a>
             </li>
             <li className={styles.listItem}>
-              <a href="#cosmetics">Косметика и гигиена</a>
+              <a href="/cosmetics">Косметика и гигиена</a>
             </li>
             <li className={styles.listItem}>
-              <a href="#home">Товары для дома</a>
+              <a href="/home">Товары для дома</a>
             </li>
             <li className={styles.listItem}>
-              <a href="#children">Товары для детей и мам</a>
+              <a href="/children">Товары для детей и мам</a>
             </li>
             <li className={styles.listItem}>
-              <a href="#dishes">Посудa</a>
+              <a href="/dishes">Посудa</a>
             </li>
           </ul>
         </div>
