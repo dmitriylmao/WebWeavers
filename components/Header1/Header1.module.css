@@ -256,11 +256,9 @@
   color: var(--black);
 }
 
-
-
 .MobileContainer {
   display: none;
-  position: relative;
+  position: fixed;
   width: 100%;
   font-family: var(--font-inter);
   background-color: var(--blue);
@@ -315,11 +313,9 @@
   height: 41px;
 }
 
-
-
 .MobileHat {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   height: 40px;
@@ -327,44 +323,64 @@
 }
 
 .menuButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    color: var(--blue);
-    text-decoration: none;
-    padding: 10px;
-  }
-  
-  .Mobicon {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
-  }
-  
-  .separator {
-    border-left: 2px dashed var(--blue);
-    opacity: 0.3;
-    height: 30px;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--blue);
+  text-decoration: none;
+  padding: 10px;
+}
+
+.Mobicon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.separator {
+  border-left: 2px dashed var(--blue);
+  opacity: 0.3;
+  height: 30px;
+}
 
 /* Меню, которое будет вылазить из-под хедера */
 .slideMenu {
-  position: fixed;
-  top: 0px; /* Располагаем меню ниже хедера */
+  position: absolute;
+  top: 100px; /* Располагаем меню ниже хедера */
   left: 0;
   right: 0;
   height: calc(
-    100vh - 61px
+    100vh - 200px
   ); /* Меню будет занимать всю оставшуюся высоту экрана */
   background-color: rgb(0, 255, 195); /* Белый фон для меню */
   display: flex;
   flex-direction: column;
-  justify-content: space-around; /* Равномерное распределение элементов меню */
+  justify-content: start; /* Равномерное распределение элементов меню */
   padding: 20px;
   transform: translateY(-100%); /* Меню скрыто по умолчанию */
   transition: transform 0.3s ease; /* Плавная анимация */
   z-index: -1; /* Чтобы меню было ниже кнопки */
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный */
+  z-index: -4; /* Чтобы фон был выше содержимого, но ниже меню */
+  animation: fadeIn 0.3s ease; /* Плавное появление */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* При открытии меню */
@@ -385,6 +401,91 @@
   transform: translateY(-3px) translateX(0px) rotate(-45deg); /* Нижняя линия поворачивается */
 }
 
+.mobileMenuBlock {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: #fbb03b;
+}
+.MobileBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  background-color: rgb(230, 105, 255);
+}
+
+.salesDepartment {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.phone {
+  display: flex;
+  flex-direction: column;
+}
+
+.blockPhone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.subText2 {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 16px;
+  color: var(--blue);
+}
+
+.callButton {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 15px;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.iconWrapperr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: #ffc859;
+  border-radius: 50%;
+}
+
+.iconWrapperr img {
+  width: 8px !important; /* Ограничиваем ширину */
+  height: 8px !important; /* Ограничиваем высоту */
+  object-fit: contain;
+}
+
+.text {
+  text-decoration: underline;
+}
+
+.callButton:hover .text {
+  color: #555; /* Темнее текст при наведении */
+}
+
+.callButton:hover .iconWrapperr {
+  background-color: #ffb834; /* Затемнение фона иконки при наведении */
+}
+
+
+.MobileMenuSite {
+  background-color: chartreuse;
+}
 @media (max-width: 1280px) {
   .DesktopContainer {
     display: none;

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useState } from 'react'; // Импортируй useState
+import { useState, useEffect } from 'react'; // Импортируй useState
 import YellowButton from '../UI/YellowButton/YellowButton';
 import Image from 'next/image';
 import mapSrc from '@/public/images/Header/map_Icon.svg';
@@ -12,6 +12,8 @@ import priceListIconSrc from '@/public/images/Header/download_Icon.svg';
 import basketIconSrc from '@/public/images/Header/basket_Icon.svg';
 import blueCatalog from '@/public/images/Header/blue_catalog.svg';
 import blueSearch from '@/public/images/Header/blue_search.svg';
+import phoneIcon from '@/public/images/Header/phone_icon.svg';
+import whitePhoneIcon from '@/public/images/Header/white_phone_icon.svg';
 import styles from './Header1.module.css';
 
 export function Header1() {
@@ -21,6 +23,18 @@ export function Header1() {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen); // Переключаем состояние menuOpen
   };
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden'; // Отключает прокрутку страницы
+    } else {
+      document.body.style.overflow = ''; // Возвращает прокрутку
+    }
+
+    return () => {
+      document.body.style.overflow = ''; // Убирает эффект при размонтировании
+    };
+  }, [menuOpen]);
 
   return (
     <header className={styles.header}>
@@ -140,6 +154,8 @@ export function Header1() {
         </div>
       </div>
 
+     
+
       <div className={styles.MobileContainer}>
         <div className={styles.mobileMenu}>
           <div
@@ -164,36 +180,101 @@ export function Header1() {
         </div>
 
         <div className={styles.MobileHat}>
-      {/* Кнопка Каталог */}
-      <Link href="/catalog" className={styles.menuButton}>
-        <Image
-          src={blueCatalog}
-          alt="Каталог"
-          width={24}  // Размер иконки
-          height={24} // Размер иконки
-          className={styles.Mobicon}
-        />
-        Каталог
-      </Link>
+          <Link href="/catalog" className={styles.menuButton}>
+            <Image
+              src={blueCatalog}
+              alt="Каталог"
+              width={24} 
+              height={24} 
+              className={styles.Mobicon}
+            />
+            Каталог
+          </Link>
 
-      {/* Перегородка (пунктирная линия) */}
-      <div className={styles.separator}></div>
+          {/* Перегородка (пунктирная линия) */}
+          <div className={styles.separator}></div>
 
-      {/* Кнопка Поиск */}
-      <Link href="/search" className={styles.menuButton}>
-        <Image
-          src={blueSearch}
-          alt="Поиск"
-          width={24}  // Размер иконки
-          height={24} // Размер иконки
-          className={styles.Mobicon}
-        />
-        Поиск
-      </Link>
-    </div>
+          {/* Кнопка Поиск */}
+          <Link href="/search" className={styles.menuButton}>
+            <Image
+              src={blueSearch}
+              alt="Поиск"
+              width={24} 
+              height={24}
+              className={styles.Mobicon}
+            />
+            Поиск
+          </Link>
+        </div>
 
+        {menuOpen && (
+          <div className={styles.backdrop} onClick={() => setMenuOpen(false)} />
+        )}
         <div className={`${styles.slideMenu} ${menuOpen ? styles.open : ''}`}>
-          {/* Здесь может быть содержимое меню */}
+
+          <div className={styles.MobileBlock}>
+            <div className={styles.blockAddress}>
+              <Image
+                src={mapSrc}
+                alt="Location Icon"
+                width={20}
+                height={20}
+                className={styles.icon}
+              />
+              <div className={styles.address}>
+                <span className={styles.mainText}>
+                  г. Кокчетав, ул. Ж. Ташенова 129Б
+                </span>
+                <span className={styles.subText}>(Рынок Восточный)</span>
+              </div>
+            </div>
+            <div className={styles.blockMailinfo}>
+              <Image
+                src={postSrc}
+                alt="Email Icon"
+                width={20}
+                height={20}
+                className={styles.icon}
+              />
+              <div className={styles.mailinfo}>
+                <span className={styles.mainText}>opt.sultan@mail.ru</span>
+                <span className={styles.subText}>На связи в любое время</span>
+              </div>
+            </div>
+            <div className={styles.blockPhone}>
+              <div className={styles.salesDepartment}>
+                <Image
+                  src={phoneIcon}
+                  alt="Location Icon"
+                  width={20}
+                  height={20}
+                  className={styles.icon}
+                />
+                <div className={styles.phone}>
+                  <span className={styles.mainText}>Отдел продаж</span>
+                  <span className={styles.subText}>89508655519</span>
+                  <span className={styles.subText}>время работы 9-10</span>
+                </div>
+              </div>
+            </div>
+            <Link href="/contact" className={styles.callButton}>
+              <span className={styles.iconWrapperr}>
+                <Image
+                  src={whitePhoneIcon}
+                  alt="Иконка телефона"
+                  width={15}
+                  height={15}
+                />
+              </span>
+              <span className={styles.text}>Заказать звонок</span>
+            </Link>
+          </div>
+
+
+
+          <div className={styles.MobileMenuSite}> 
+            <div className={styles.MobileMenuTitle}> askdhakljshd</div>
+          </div>
         </div>
       </div>
     </header>
