@@ -75,13 +75,13 @@ export function Header() {
               О компании
             </a>
             <a href="#" className={styles.menuItem}>
-              {t('DeliveryAndPayment')}
+              Доставка и оплата
             </a>
             <a href="#" className={styles.menuItem}>
-              {t('Return')}
+              Возврат
             </a>
             <a href="#" className={styles.menuItem}>
-              {t('Contacts')}
+              Контакты
             </a>
           </div>
         </div>
