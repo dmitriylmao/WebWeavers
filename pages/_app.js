@@ -25,8 +25,8 @@ const MyApp = ({ Component, pageProps }) => {
   const [isDark, handleThemeToggle] = useTheme();
   const value = {
     isDark,
-    handleThemeToggle
-  }
+    handleThemeToggle,
+  };
 
   useEffect(() => {
     if (i18n && i18n.changeLanguage && i18n.language !== router.locale) {
@@ -36,7 +36,7 @@ const MyApp = ({ Component, pageProps }) => {
 
   return (
     <ContextTheme.Provider value={value}>
-      <div className={inter.className} id={value.isDark ? "dark" : "light"}>
+      <div className={inter.className} id={value.isDark ? 'dark' : 'light'}>
         {useLayout ? (
           <Layout>
             <Component {...pageProps} />

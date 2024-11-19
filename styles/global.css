@@ -13,16 +13,16 @@
   --green: rgb(31, 215, 93);
 }
 
-[id="dark"] {
+[id='dark'] {
   background-color: rgb(36, 36, 36);
   --yellow_white: rgb(228, 228, 228);
   --yellow_lightPurple-button: rgb(168, 168, 255);
   --yellow-hover: rgb(118, 118, 255);
   --blue: rgb(129, 129, 129);
-  --gray:rgb(66, 66, 66);
+  --gray: rgb(66, 66, 66);
   --white_lightGray-card: rgb(43, 43, 43);
   --white_darkGray-text: rgb(63, 63, 63);
-  --black_gray:rgb(194, 194, 194);
+  --black_gray: rgb(194, 194, 194);
   --green: rgb(0, 255, 191);
 }
 

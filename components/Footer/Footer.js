@@ -6,7 +6,7 @@ import useWindowSize from '@/core/hooks/useWindowSize';
 import YellowButton from '@/components/UI/YellowButton/YellowButton';
 import down_icon from '@/public/images/Footer/download_icon.png';
 import { useTranslation } from 'next-i18next';
-import SwitchThemesButton from '@/components/UI/SwitchThemeButton/SwitchThemesButton'
+import SwitchThemesButton from '@/components/UI/SwitchThemeButton/SwitchThemesButton';
 import { useContext } from 'react';
 import ContextTheme from '@/core/hooks/ContextTheme';
 import styles from './Footer.module.css';
@@ -120,7 +120,11 @@ const Footer = () => {
               height={40}
             />
           </div>
-          <SwitchThemesButton className={styles.Switch} handleChange={() => value.handleThemeToggle(value.isDark)} isChecked={value.isDark}/>
+          <SwitchThemesButton
+            className={styles.Switch}
+            handleChange={() => value.handleThemeToggle(value.isDark)}
+            isChecked={value.isDark}
+          />
         </div>
 
         <div className={styles.contactsContainer}>
