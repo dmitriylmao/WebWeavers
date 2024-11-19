@@ -3,6 +3,15 @@ import { saleProducts } from '@/components/ProductList/ProductCard/Constants';
 import ProductDetails from '@/components/ProductList/ProductCardDetails/ProductDetails';
 import SimilarProducts from '@/components/ProductList/ProductCardDetails/SimilarProducts';
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
+export const getServerSideProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
+};
 
 const ProductPage = () => {
   const router = useRouter();

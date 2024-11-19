@@ -6,10 +6,12 @@ import useWindowSize from '@/core/hooks/useWindowSize';
 import YellowButton from '@/components/UI/YellowButton/YellowButton';
 import down_icon from '@/public/images/Footer/download_icon.png';
 import styles from './Footer.module.css';
+import { useTranslation } from 'next-i18next';
 
 const Footer = () => {
   const { isMobile } = useWindowSize();
-  useWindowSize();
+  const { t } = useTranslation('common');
+
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -28,19 +30,16 @@ const Footer = () => {
               <div className={styles.button}>
                 <YellowButton
                   icon={down_icon}
-                  label="Прайс-лист"
+                  label={t('PriceList')}
                   size="sm"
                   download="./EmailInput.js"
                 />
               </div>
             ) : null}
           </div>
-          <p className={styles.description}>
-            Компания «Султан» — снабжаем розничные магазины товарами `под ключ`
-            в Кокчетаве и Акмолинской области
-          </p>
+          <p className={styles.description}>{t('DescriptionOfTheCompany')}</p>
           <div className={styles.near}>
-            <span className={styles.sales}>Подпишись на скидки и акции</span>
+            <span className={styles.sales}>{t('SubscribeToDiscount')}</span>
             <div className={styles.email}>
               <EmailInput />
             </div>
@@ -48,40 +47,40 @@ const Footer = () => {
         </div>
 
         <div className={styles.menu_column}>
-          <h4 className={styles.titleMenu}>Меню сайта:</h4>
+          <h4 className={styles.titleMenu}>{t('SiteMenu')}:</h4>
           <ul className={styles.list}>
             <li className={styles.listItem}>
-              <a href="/company">О компании</a>
+              <a href="/company">{t('Сompany')}</a>
             </li>
             <li className={styles.listItem}>
-              <a href="/delivery">Доставка и оплата</a>
+              <a href="/delivery">{t('Delivery')}</a>
             </li>
             <li className={styles.listItem}>
-              <a href="/return">Возврат</a>
+              <a href="/return">{t('Return')}</a>
             </li>
             <li className={styles.listItem}>
-              <a href="/contacts">Контакты</a>
+              <a href="/contacts">{t('Contacts')}</a>
             </li>
           </ul>
         </div>
 
         <div className={styles.categories_column}>
-          <h4 className={styles.titleCategories}>Категории:</h4>
+          <h4 className={styles.titleCategories}>{t('Categories')}:</h4>
           <ul className={styles.list}>
             <li className={styles.listItem}>
-              <a href="/chemistry">Бытовая химия</a>
+              <a href="/chemistry">{t('Chemistry')}</a>
             </li>
             <li className={styles.listItem}>
-              <a href="/cosmetics">Косметика и гигиена</a>
+              <a href="/cosmetics">{t('Cosmetics')}</a>
             </li>
             <li className={styles.listItem}>
-              <a href="/home">Товары для дома</a>
+              <a href="/home">{t('Home')}</a>
             </li>
             <li className={styles.listItem}>
-              <a href="/children">Товары для детей и мам</a>
+              <a href="/children">{t('Children')}</a>
             </li>
             <li className={styles.listItem}>
-              <a href="/dishes">Посудa</a>
+              <a href="/dishes">{t('Dishes')}</a>
             </li>
           </ul>
         </div>
@@ -91,10 +90,10 @@ const Footer = () => {
             {isMobile ? null : (
               <>
                 <div>
-                  <h4 className={styles.priceList}>Скачать прайс-лист:</h4>
+                  <h4 className={styles.priceList}>{t('DowloadPrice')}:</h4>
                   <YellowButton
                     icon={down_icon}
-                    label="Прайс-лист"
+                    label={t('PriceList')}
                     size="md"
                     download="./EmailInput.js"
                   />
@@ -102,7 +101,7 @@ const Footer = () => {
               </>
             )}
           </div>
-          <p className={styles.titleMessengers}>Связь в мессенджерах:</p>
+          <p className={styles.titleMessengers}>{t('Communication')}:</p>
           <div className={styles.messengers}>
             <Image
               src="/images/Footer/whatsapp_logo.svg"
@@ -121,14 +120,14 @@ const Footer = () => {
 
         <div className={styles.contactsContainer}>
           <div>
-            <h4 className={styles.title}>Контакты:</h4>
+            <h4 className={styles.title}>{t('Contacts')}:</h4>
             <p className={styles.phoneNumber}>+7 (777) 490-00-91</p>
-            <p className={styles.jobTime}>время работы: 9:00-20:00</p>
-            <p className={styles.orderCall}>Заказать звонок</p>
+            <p className={styles.jobTime}>{t('WorkingHours')}: 9:00-20:00</p>
+            <p className={styles.orderCall}>{t('OrderCall')}</p>
           </div>
           <div>
             <p className={styles.email}>opt.sultan@mail.ru</p>
-            <h4 className={styles.textOnTouch}>На связи в любое время</h4>
+            <h4 className={styles.textOnTouch}>{t('TouchAnyTime')}</h4>
           </div>
           <div className={styles.payments}>
             <Image

@@ -5,7 +5,14 @@ import Categories from '@/components/Сategories';
 import PromotionSwiper from '@/components/PromotionSwiper';
 import LogoSwiper from '@/components/LogoSwiper';
 import Map from '@/components/Map';
-import { LANGUAGE_EN } from '@/core/constants';
+
+export const getServerSideProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
+};
 
 const HomePage = () => {
   return (
@@ -19,11 +26,5 @@ const HomePage = () => {
     </>
   );
 };
-
-export const getStaticProps = async ({ locale }) => ({
-  props: {
-    ...(await serverSideTranslations(locale || LANGUAGE_EN, ['common'])),
-  },
-});
 
 export default HomePage;

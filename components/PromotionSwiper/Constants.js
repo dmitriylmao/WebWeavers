@@ -1,21 +1,21 @@
 export const promotionSlide = {
   imageSrc: '/images/Promotion_swiper/slide1.png',
-  duration: '*АКЦИЯ ДЕЙСТВУЕТ ДО 04/09/22',
-  title: 'Название Акции',
+  duration: 'PromotionSwiper.PromotionSlide.Duration',
+  title: 'PromotionSwiper.PromotionSlide.Title',
   description:
-    'Условия: поставить лайк , подписаться на канал , репост на стену ВК',
-  buttonText: 'ПРИНЯТЬ УЧАСТИЕ',
+    'PromotionSwiper.PromotionSlide.Description',
+  buttonText: 'PromotionSwiper.PromotionSlide.ButtonText',
   link: '/promotion',
   id: '000',
 };
 
 export const partnerSlide = {
   imageSrc: '/images/Promotion_swiper/slide2.png',
-  duration: '*АКЦИЯ ДЕЙСТВУЕТ ДО 02/03/24',
-  title: 'Наш партнер',
+  duration: 'PromotionSwiper.PartnerSlide.Duration',
+  title: 'PromotionSwiper.PartnerSlide.Title',
   description:
-    'Леруа мерлен Леруа мерлен Леруа Леруа Леруа мерлен Леруа Леруа Леруа',
-  buttonText: 'ПЕРЕЙТИ К БРЕНДУ',
+    'PromotionSwiper.PartnerSlide.Description',
+  buttonText: 'PromotionSwiper.PartnerSlide.ButtonText',
   link: '/Lerua',
   id: '001',
 };

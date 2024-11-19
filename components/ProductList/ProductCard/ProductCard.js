@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import telejka from '@/public/images/Products/telejka.svg';
 import YellowButton from '@/components/UI/YellowButton/YellowButton';
+import { useTranslation } from 'next-i18next';
 import styles from '@/components/ProductList/ProductCard/ProductCard.module.css';
 
 const ProductCard = ({
@@ -13,15 +14,17 @@ const ProductCard = ({
   brand,
   producer,
 }) => {
+  const { t } = useTranslation('common');
+
   return (
     <article className={styles.productCard}>
-      <span className={styles.popularLabel}>Популярное</span>
+      <span className={styles.popularLabel}>{t('Popular')}</span>
       <Image src={imgSrc} alt={title} className={styles.productImage} />
       <p className={styles.volume}>
         <span>
           <Image
             src={volumeType}
-            alt={'type'}
+            alt={t('Type')}
             className={styles.volumeType}
             width={16}
             height={16}
@@ -33,20 +36,19 @@ const ProductCard = ({
         <span className={styles.productBrand}>{brand}</span> {title}
       </h2>
       <p className={styles.details}>
-        Штрихкод: <span className={styles.bold}>{id}</span>
+        {t('Barcode')}: <span className={styles.bold}>{id}</span>
       </p>
       <p className={styles.details}>
-        Производитель: <span className={styles.bold}>{producer}</span>
+        {t('Producer')}: <span className={styles.bold}>{producer}</span>
       </p>
       <p className={styles.details}>
-        Бренд: <span className={styles.bold}>{brand}</span>
+        {t('Brand')}: <span className={styles.bold}>{brand}</span>
       </p>
       <div className={styles.priceAndButton}>
         <p className={styles.productPrice}>{price} ₸</p>
-
         <div className={styles.addToCartButton}>
           <YellowButton
-            label="В КОРЗИНУ"
+            label={t('AddToCart')}
             size="sm"
             action="add-to-cart"
             icon={telejka}
