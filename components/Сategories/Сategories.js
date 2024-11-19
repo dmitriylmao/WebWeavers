@@ -9,11 +9,10 @@ export default function Categories() {
   return (
     <section className={styles.container}>
       <h2 className={styles.title}>
-        <span className={styles.highlight}>{t('CATEGORIES')}</span> {t('PRODUCTS')}
+        <span className={styles.highlight}>{t('CATEGORIES')}</span>{' '}
+        {t('PRODUCTS')}
       </h2>
-      <p className={styles.subtitle}>
-        {t('SpecialPrices')}
-      </p>
+      <p className={styles.subtitle}>{t('SpecialPrices')}</p>
       <div className={styles.grid}>
         {categories.map((category, index) => (
           <Category key={category.id} category={category} delay={index * 0.1} />

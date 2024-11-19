@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
-import { saleProducts } from '@/components/ProductList/ProductCard/Constants';
-import ProductDetails from '@/components/ProductList/ProductCardDetails/ProductDetails';
-import SimilarProducts from '@/components/ProductList/ProductCardDetails/SimilarProducts';
+import { saleProducts } from '@/components/Product/ProductCard/Constants';
+import ProductDetails from '@/components/Product/ProductCardDetails/ProductDetails';
+import SimilarProducts from '@/components/Product/ProductList/SimilarProducts';
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 

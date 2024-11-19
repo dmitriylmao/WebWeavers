@@ -1,4 +1,1 @@
-export const bannerAdvantages = [
-  'BestDeals',
-  'Shipping',
-];
+export const bannerAdvantages = ['BestDeals', 'Shipping'];

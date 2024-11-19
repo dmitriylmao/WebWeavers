@@ -98,7 +98,7 @@
 }
 
 .headerLine {
-  width: 100vw;
+  width: calc(100vw - 10px);
   height: 2px;
   background-color: var(--gray);
 }

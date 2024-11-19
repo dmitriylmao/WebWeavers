@@ -7,7 +7,11 @@ export default function SearchInput() {
   const { t } = useTranslation('common');
   return (
     <div className={styles.container}>
-      <input type="email" placeholder={t('SearchPlaceholder')} className={styles.input} />
+      <input
+        type="email"
+        placeholder={t('SearchPlaceholder')}
+        className={styles.input}
+      />
       <button className={styles.button}>
         <span>
           <Image

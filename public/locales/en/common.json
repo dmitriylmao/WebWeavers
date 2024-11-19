@@ -1,10 +1,8 @@
 {
   "WebWeavers": "WebWeavers",
 
-
   "Main": "Home",
   "Back": "Back",
-
 
   "MainTitle": "Household chemicals, cosmetics and household goods",
   "Wholesale": "WHOLESALE",
@@ -12,7 +10,6 @@
   "ToKatalog": "TO THE CATALOG",
   "BestDeals": "Only the best deals",
   "Shipping": "Free shipping in Kokchetav from 10 thousand ₸",
-
 
   "AboutCompany": "About Company",
   "DeliveryAndPayment": "Delivery and Payment",
@@ -33,11 +30,9 @@
   "BasketIconAlt": "Basket",
   "Cart": "Cart",
 
-
   "saleHighlight": "SALE",
-  "Similar":"SIMILAR",
+  "Similar": "SIMILAR",
   "saleProducts": "PRODUCTS",
-
 
   "Popular": "Popular",
   "Type": "Type",
@@ -45,19 +40,17 @@
   "Producer": "Producer",
   "Brand": "Brand",
   "AddToCart": "Add to cart",
-  "InStock":"In stock",
-  "FreeShipping":"When buying from",
-  "FreeShippingLocation":"free shipping in Kokchetav and the region",
+  "InStock": "In stock",
+  "FreeShipping": "When buying from",
+  "FreeShippingLocation": "free shipping in Kokchetav and the region",
   "Category": "Category",
-  "Description":"Description",
-  "ClickMe":"Click Me!",
-
+  "Description": "Description",
+  "ClickMe": "Click Me!",
 
   "CATEGORIES": "CATEGORIES",
   "PRODUCTS": "OF PRODUCTS",
   "SpecialPrices": "10,000+ popular items at special prices",
 
-  
   "PromotionSwiper": {
     "PromotionSlide": {
       "Duration": "*PROMOTION VALID UNTIL 09/04/22",
@@ -73,11 +66,9 @@
     }
   },
 
-
   "highlight": "BEST",
   "subtitle": "From leading global brands",
   "products": "PRODUCTS",
-
 
   "SupplierSultan": "Wholesale supplier \"Sultan\"",
   "Address": "Address",

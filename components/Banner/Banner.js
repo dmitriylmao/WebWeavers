@@ -4,16 +4,18 @@ import YellowButton from '../UI/YellowButton/YellowButton';
 import { useTranslation } from 'next-i18next';
 
 export default function Banner() {
-  const { t } = useTranslation('common'); 
+  const { t } = useTranslation('common');
   return (
     <section className={styles.bannerContainer}>
       <div className={styles.overlay}>
         <div className={styles.content}>
-          <h2 className={styles.mainTitle}>
-            {t('MainTitle')}
-          </h2>
+          <h2 className={styles.mainTitle}>{t('MainTitle')}</h2>
           <h3 className={styles.subTitle}>
-          {t('Wholesale')} <span>{''}{t('Kokchetav')}</span>
+            {t('Wholesale')}{' '}
+            <span>
+              {''}
+              {t('Kokchetav')}
+            </span>
           </h3>
           <div className={styles.catalogButton}>
             <YellowButton label={t('ToKatalog')} size="lg" href="/catalog" />

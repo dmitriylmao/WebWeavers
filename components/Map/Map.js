@@ -18,14 +18,14 @@ export default function Map() {
 
         <div className={styles.contactInfo}>
           <div className={styles.iconText}>
-            <img
-              src="/images/Map/gps.svg"
-              alt="Icon"
-              className={styles.icon}
-            />
+            <img src="/images/Map/gps.svg" alt="Icon" className={styles.icon} />
             <div>
               <h3>{t('Address')}</h3>
-              <p>{t('KokshetauTashenova')}{'\n'}{t('EasternMarket')}</p>
+              <p>
+                {t('KokshetauTashenova')}
+                {'\n'}
+                {t('EasternMarket')}
+              </p>
             </div>
             <div className={styles.sale}>
               <h3>{t('SalesDepartment')}</h3>
@@ -39,16 +39,13 @@ export default function Map() {
         </div>
 
         <div className={styles.iconText}>
-          <img
-            src="/images/Map/file.svg"
-            alt="Icon"
-            className={styles.icon}
-          />
+          <img src="/images/Map/file.svg" alt="Icon" className={styles.icon} />
           <div>
             <h3>{t('TaxpayerData')}</h3>
-            <p>{t('Katran')}
+            <p>
+              {t('Katran')}
               <br />
-            {t('TaxpayerNumber')}: 860113450858
+              {t('TaxpayerNumber')}: 860113450858
             </p>
           </div>
         </div>

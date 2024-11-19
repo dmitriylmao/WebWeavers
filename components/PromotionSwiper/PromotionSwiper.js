@@ -37,7 +37,9 @@ export default function PromotionSwiper() {
               <div>
                 <p className={styles.slideDuration}>{t(slide.duration)}</p>
                 <h2 className={styles.slideTitle}>{t(slide.title)}</h2>
-                <p className={styles.slideDescription}>{t(slide.description)}</p>
+                <p className={styles.slideDescription}>
+                  {t(slide.description)}
+                </p>
                 <YellowButton
                   label={t(slide.buttonText)}
                   size="lg"

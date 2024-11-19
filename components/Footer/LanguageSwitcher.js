@@ -1,31 +1,67 @@
-import React from 'react';
-import Image from 'next/image';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
+import rusFlag from '@/public/images/LanguageSwitcher/rus.svg';
+import ukFlag from '@/public/images/LanguageSwitcher/uk.svg';
 import styles from './LanguageSwitcher.module.css';
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
   const router = useRouter();
+  const [language, setLanguage] = useState(i18n.language);
 
   const toggleLanguage = () => {
-    const newLanguage = i18n.language === 'ru' ? 'en' : 'ru';
+    const scrollPosition = window.scrollY;
 
-    router.push(router.pathname, router.asPath, { locale: newLanguage });
+    const newLanguage = language === 'ru' ? 'en' : 'ru';
+    setLanguage(newLanguage);
+
+    i18n.changeLanguage(newLanguage).then(() => {
+      router
+        .push(router.pathname, router.asPath, { locale: newLanguage })
+        .then(() => {
+          window.scrollTo(0, scrollPosition);
+        });
+    });
+  };
+
+  const isRussian = language === 'ru';
+  const currentFlag = isRussian ? rusFlag : ukFlag;
+
+  const gradients = {
+    russian:
+      'linear-gradient(15deg, rgba(255, 0, 0, 0.3) , rgba(38, 128, 212, 0.3),rgba(255, 255, 255, 0.3))',
+    english:
+      'linear-gradient(-15deg, rgba(38, 128, 212, 0.3), rgba(255, 255, 255, 0.3), rgba(255, 0, 0, 0.3))',
   };
 
   return (
-    <button className={styles.languageButton} onClick={toggleLanguage}>
-      <Image
-        src="/images/Footer/change_language.svg"
-        alt="Change language"
-        width={60}
-        height={40}
+    <motion.button
+      className={styles.languageButton}
+      onClick={toggleLanguage}
+      whileTap={{ scale: 0.9 }}
+    >
+      <motion.div
+        className={styles.gradientContainer}
+        style={{
+          background: isRussian ? gradients.russian : gradients.english,
+        }}
+        initial={{ background: gradients.russian }}
+        animate={{
+          background: isRussian ? gradients.russian : gradients.english,
+        }}
+        transition={{ duration: 0.4 }}
       />
-      <span className={styles.languageText}>
-        {i18n.language === 'ru' ? 'Русский' : 'English'}
-      </span>
-    </button>
+
+      <motion.div
+        className={styles.circle}
+        animate={{ x: isRussian ? 5 : 50 }}
+        transition={{ type: 'spring', stiffness: 200, damping: 15 }}
+      >
+        <img src={currentFlag.src} alt="Flag" />
+      </motion.div>
+    </motion.button>
   );
 };
 

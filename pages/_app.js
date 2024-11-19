@@ -17,7 +17,6 @@ const inter = Inter({
 });
 
 const MyApp = ({ Component, pageProps }) => {
-  
   const useLayout = Component.useLayout ?? true;
   const { i18n } = useTranslation();
   const router = useRouter();

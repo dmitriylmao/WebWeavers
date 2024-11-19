@@ -13,7 +13,8 @@ export default function LogoSwiper() {
   return (
     <section className={styles.container}>
       <h2 className={styles.title}>
-        <span className={styles.highlight}>{t('highlight')}</span>{' '}{t('products')}
+        <span className={styles.highlight}>{t('highlight')}</span>{' '}
+        {t('products')}
       </h2>
       <p className={styles.subtitle}>{t('subtitle')}</p>
 

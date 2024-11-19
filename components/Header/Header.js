@@ -51,9 +51,7 @@ export function Header() {
                 className={styles.icon}
               />
               <div className={styles.address}>
-                <span className={styles.mainText}>
-                  {t('MainAddress')}
-                </span>
+                <span className={styles.mainText}>{t('MainAddress')}</span>
                 <span className={styles.subText}>{t('SubAddress')}</span>
               </div>
             </div>
@@ -220,9 +218,7 @@ export function Header() {
                 className={styles.icon}
               />
               <div className={styles.address}>
-                <span className={styles.mainText}>
-                  {t('MainAddress')}
-                </span>
+                <span className={styles.mainText}>{t('MainAddress')}</span>
                 <span className={styles.subText}>{t('SubAddress')}</span>
               </div>
             </div>
@@ -249,9 +245,13 @@ export function Header() {
                   className={styles.icon}
                 />
                 <div className={styles.phone}>
-                  <span className={styles.mainText}>{t('SalesDepartment')}</span>
+                  <span className={styles.mainText}>
+                    {t('SalesDepartment')}
+                  </span>
                   <span className={styles.subText}>89508655519</span>
-                  <span className={styles.subText}>{t('WorkingHours')} 9-10</span>
+                  <span className={styles.subText}>
+                    {t('WorkingHours')} 9-10
+                  </span>
                 </div>
               </div>
             </div>

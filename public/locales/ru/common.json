@@ -4,7 +4,6 @@
   "Main": "Главная",
   "Back": "Назад",
 
-
   "MainTitle": "Бытовая химия, косметика и хозтовары",
   "Wholesale": "ОПТОМ",
   "Kokchetav": "ПО КОКЧЕТАВУ И ОБЛАСТИ",
@@ -31,11 +30,9 @@
   "BasketIconAlt": "Корзина",
   "Cart": "Корзина",
 
-
   "saleHighlight": "АКЦИОННЫЕ",
-  "Similar":"ПОХОЖИЕ",
+  "Similar": "ПОХОЖИЕ",
   "saleProducts": "ТОВАРЫ",
-
 
   "Popular": "Популярное",
   "Type": "Тип",
@@ -43,18 +40,16 @@
   "Producer": "Производитель",
   "Brand": "Бренд",
   "AddToCart": "В корзину",
-  "InStock":"В наличии",
-  "FreeShipping":"При покупке от",
-  "FreeShippingLocation":"бесплатная доставка по Кокчетаву и области",
+  "InStock": "В наличии",
+  "FreeShipping": "При покупке от",
+  "FreeShippingLocation": "бесплатная доставка по Кокчетаву и области",
   "Category": "Категория",
-  "Description":"Описание",
-  "ClickMe":"Нажми на меня!",
-
+  "Description": "Описание",
+  "ClickMe": "Нажми на меня!",
 
   "CATEGORIES": "КАТЕГОРИИ",
   "PRODUCTS": "ТОВАРОВ",
   "SpecialPrices": "10 000+ ходовых позиций по специальным ценам",
-
 
   "PromotionSwiper": {
     "PromotionSlide": {
@@ -74,7 +69,6 @@
   "highlight": "ЛУЧШИЕ",
   "subtitle": "От ведущих мировых брендов",
   "products": "ТОВАРЫ",
-
 
   "SupplierSultan": "Оптовый поставщик «Султан»",
   "Address": "Адрес",
