@@ -3,6 +3,7 @@ import { categories } from '@/components/Сategories/Constants';
 import styles from '@/components/Сategories/Categories.module.css';
 
 export default function Categories() {
+
   return (
     <section className={styles.container}>
       <h2 className={styles.title}>

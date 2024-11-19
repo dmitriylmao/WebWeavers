@@ -1,13 +1,11 @@
 import { bannerAdvantages } from '@/components/Banner/constants.js';
 import styles from '@/components/Banner/Banner.module.css';
 import YellowButton from '../UI/YellowButton/YellowButton';
-import ContextTheme from '@/core/hooks/ContextTheme';
-import { useContext } from 'react';
 
 export default function Banner() {
-  const value = useContext(ContextTheme);
+  
   return (
-    <section className={styles.bannerContainer} id={value.isDark ? "dark" : "light"}>
+    <section className={styles.bannerContainer}>
       <div className={styles.overlay}>
         <div className={styles.content}>
           <h2 className={styles.mainTitle}>

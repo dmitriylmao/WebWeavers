@@ -1,6 +1,7 @@
 import styles from '@/components/Map/Map.module.css';
 
 export default function Map() {
+
   return (
     <section className={styles.container}>
       <img

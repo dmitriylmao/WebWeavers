@@ -1,7 +1,6 @@
 .toggle_container {
-    position: absolute;
-    top: 2em;
-    right: 2em;
+    position: relative;
+    top: 4.6em;
     text-align: center;
   }
   
@@ -50,4 +49,10 @@
   .Mode { 
     display: flex;
     justify-content: start;
+  }
+
+  @media (max-width: 768px) {
+    .toggle_container {
+      top: 0em;
+    }  
   }
