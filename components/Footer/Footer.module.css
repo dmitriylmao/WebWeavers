@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
   font-family: var(--font-inter);
-  background-color: var(--blue);
+  background-color: var(--blue-footer);
 }
 
 .logo {
@@ -18,7 +18,7 @@
   margin: 0 auto;
   column-gap: 20px;
   row-gap: 50px;
-  color: var(--white);
+  color: var(--white_lightGray-footerText);
 }
 
 .company {

@@ -13,7 +13,7 @@
   align-items: center;
   font-size: 1.5em;
   cursor: pointer;
-  color: var(--white);
+  color: var(--green);
 }
 
 .toggle + label::before {
@@ -21,7 +21,7 @@
   height: 1em;
   width: 2em;
   border-radius: 1em;
-  background-color: var(--white);
+  background-color: var(--white-header);
   margin-right: 0.5em;
   transition: background-color 250ms ease-in-out;
 }
@@ -31,18 +31,18 @@
   height: 0.8em;
   width: 0.8em;
   border-radius: 1em;
-  background-color: var(--black);
+  background-color: var(--yellow_lightPurple-button);
   position: absolute;
   left: 0.2em;
   transition: transform 250ms ease-in-out;
 }
 
 .toggle:checked + label::before {
-  background-color: var(--black);
+  background-color: var(--yellow_lightPurple-button);
 }
 
 .toggle:checked + label::after {
-  background-color: var(--white);
+  background-color: var(--green);
   transform: translateX(100%);
 }
 

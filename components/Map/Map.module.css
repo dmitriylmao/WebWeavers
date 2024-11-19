@@ -22,7 +22,7 @@
   width: 735px;
   height: 424px;
   padding: 48px;
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--map-bg);
   border-radius: 8px;
   backdrop-filter: blur(12px);
 }
@@ -70,7 +70,7 @@
   font-size: 14px;
   line-height: 1;
   margin-bottom: 8px;
-  color: var(--black);
+  color: var(--black_gray);
 }
 
 .iconText p {

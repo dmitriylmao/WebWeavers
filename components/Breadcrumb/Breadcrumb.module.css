@@ -82,12 +82,12 @@
   align-items: center;
   border-radius: 50%;
   color: var(--blue);
-  background-color: rgba(255, 198, 80, 0.3);
+  background-color: var(--quantityBtn);
   transition: background-color 0.2s ease-in-out;
 }
 
 .backSymbol:hover {
-  background-color: rgba(255, 198, 80, 1);
+  background-color: var(--yellow-hover);
 }
 
 .backText {

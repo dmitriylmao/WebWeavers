@@ -5,25 +5,39 @@
   --yellow_lightPurple-button: rgb(255, 200, 94);
   --yellow-hover: rgb(255, 171, 2);
   --blue: rgb(63, 78, 101);
+  --blue-footer: rgb(63, 78, 101);
   --gray: rgb(237, 237, 237);
   --white_lightGray-card: #fff;
   --white-only: #fff;
+  --white_lightGray-footerText: #fff;
+  --white-header: #fff;
   --white_darkGray-text: #fff;
   --black_gray: rgb(0, 0, 0);
   --green: rgb(31, 215, 93);
+  --background-categories: rgba(188, 165, 120, 0.1);
+  --bg: #fff;
+  --map-bg: rgba(255, 255, 255, 0.3);
+  --quantityBtn: rgba(255, 198, 80, 0.3);
 }
 
 [id='dark'] {
-  background-color: rgb(36, 36, 36);
+  background-color: rgb(27, 27, 27);
   --yellow_white: rgb(228, 228, 228);
   --yellow_lightPurple-button: rgb(168, 168, 255);
   --yellow-hover: rgb(118, 118, 255);
-  --blue: rgb(129, 129, 129);
+  --blue: rgb(155, 155, 155);
+  --blue-footer: rgb(39, 39, 39);
   --gray: rgb(66, 66, 66);
   --white_lightGray-card: rgb(43, 43, 43);
+  --white_lightGray-footerText: rgb(200, 200, 200);
+  --white-header: rgb(39, 39, 39);
   --white_darkGray-text: rgb(63, 63, 63);
   --black_gray: rgb(194, 194, 194);
   --green: rgb(0, 255, 191);
+  --background-categories: rgba(43, 43, 43, 0.3);
+  --bg: rgb(27, 27, 27);
+  --map-bg: rgba(7, 7, 7, 0.767);
+  --quantityBtn: rgba(158, 167, 252, 0.3);
 }
 
 * {

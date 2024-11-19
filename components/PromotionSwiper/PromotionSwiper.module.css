@@ -46,14 +46,14 @@
   font-size: 14px;
   font-weight: 300;
   letter-spacing: 4px;
-  color: var(--white);
+  color: var(--white-only);
   margin: 80px 0 20px;
 }
 
 .slideTitle {
   font-size: 70px;
   font-weight: 700;
-  color: var(--white);
+  color: var(--white-only);
   margin-bottom: 50px;
   z-index: 1;
 }
@@ -63,18 +63,18 @@
   font-weight: 300;
   line-height: 30px;
   max-width: 60%;
-  color: var(--white);
+  color: var(--white-only);
   margin-bottom: 50px;
   z-index: 1;
 }
 
 .container :global(.swiper-button-next),
 .container :global(.swiper-button-prev) {
-  background-color: white;
+  background-color: var(--bg);
   border-radius: 50%;
   width: 67px;
   height: 67px;
-  color: var(--yellow);
+  color: var(--yellow_lightPurple-button);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -103,12 +103,12 @@
 .container :global(.swiper-button-prev::after) {
   font-size: 16px;
   font-weight: 900;
-  color: var(--yellow);
+  color: var(--yellow_lightPurple-button);
 }
 
 .container :global(.swiper-button-next:hover::after),
 .container :global(.swiper-button-prev:hover::after) {
-  color: white;
+  color: var(--white-only);
 }
 
 .container :global(.swiper-pagination) {
@@ -118,7 +118,7 @@
 }
 
 .container :global(.swiper-pagination-bullet) {
-  background-color: gray;
+  background-color: var(--gray);
   width: 16px;
   height: 7px;
   border-radius: 4px;
@@ -127,7 +127,7 @@
 }
 
 .container :global(.swiper-pagination-bullet-active) {
-  background-color: var(--white);
+  background-color: var(--white-only);
   width: 26px;
   height: 7px;
   border-radius: 6px;
@@ -204,7 +204,7 @@
   .container :global(.swiper-button-prev::after) {
     font-size: 12px;
     font-weight: 900;
-    color: var(--yellow);
+    color: var(--yellow_lightPurple-button);
   }
 
   .container :global(.swiper-button-next),
@@ -213,7 +213,7 @@
   }
 
   .container :global(.swiper-pagination-bullet-active) {
-    background-color: var(--yellow);
+    background-color: var(--yellow_lightPurple-button);
   }
 
   .container :global(.swiper) {
