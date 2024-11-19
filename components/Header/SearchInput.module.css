@@ -29,7 +29,7 @@
   border: none;
   border-radius: 50%;
   color: var(--white);
-  background-color: var(--yellow);
+  background-color: var(--yellow_lightPurple-button);
   transition: background-color 0.3s ease-in-out;
 }
 

@@ -11,6 +11,7 @@
   justify-content: space-between;
   height: 100%;
   object-fit: cover;
+  background-color: var(--white_lightGray-card);
 }
 
 .productCard:hover {
@@ -22,7 +23,7 @@
   top: 10px;
   left: 10px;
   background-color: var(--green);
-  color: white;
+  color: var(--white_darkGray-text);
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 12px;
@@ -53,7 +54,7 @@
 .productTitle {
   font-size: 16px;
   font-weight: 500;
-  color: var(--black);
+  color: var(--black_gray);
   line-height: 21px;
   margin-bottom: 15px;
 }
@@ -74,7 +75,7 @@
 .bold {
   font-weight: 500;
   line-height: 21px;
-  color: var(--black);
+  color: var(--black_gray);
 }
 
 .priceAndButton {
@@ -87,7 +88,7 @@
 .productPrice {
   font-size: 16px;
   line-height: 20.8px;
-  color: var(--black);
+  color: var(--black_gray);
   font-weight: 800;
 }
 

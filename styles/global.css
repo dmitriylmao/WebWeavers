@@ -1,23 +1,29 @@
 @import './reset.css';
 
 :root {
-  --yellow: rgb(255, 200, 94);
+  --yellow_white: rgb(255, 200, 94);
+  --yellow_lightPurple-button: rgb(255, 200, 94);
   --yellow-hover: rgb(255, 171, 2);
   --blue: rgb(63, 78, 101);
   --gray: rgb(237, 237, 237);
-  --white: #fff;
-  --black: rgb(17, 17, 17);
+  --white_lightGray-card: #fff;
+  --white-only: #fff;
+  --white_darkGray-text: #fff;
+  --black_gray: rgb(0, 0, 0);
   --green: rgb(31, 215, 93);
 }
 
 [id="dark"] {
-  background-color: rgb(16, 16, 16);
-  --yellow: rgb(38, 0, 104);
-  --yellow-hover:rgb(81, 0, 232);
-  --blue: rgb(84, 84, 120);
-  --gray:rgb(77, 77, 77);
-  --white:rgb(39, 39, 39);
-  --black:rgb(105, 35, 255);
+  background-color: rgb(36, 36, 36);
+  --yellow_white: rgb(228, 228, 228);
+  --yellow_lightPurple-button: rgb(168, 168, 255);
+  --yellow-hover: rgb(118, 118, 255);
+  --blue: rgb(129, 129, 129);
+  --gray:rgb(66, 66, 66);
+  --white_lightGray-card: rgb(43, 43, 43);
+  --white_darkGray-text: rgb(63, 63, 63);
+  --black_gray:rgb(194, 194, 194);
+  --green: rgb(0, 255, 191);
 }
 
 * {
