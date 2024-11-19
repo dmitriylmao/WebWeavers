@@ -10,6 +10,16 @@
   --green: rgb(31, 215, 93);
 }
 
+[id="dark"] {
+  background-color: rgb(16, 16, 16);
+  --yellow: rgb(38, 0, 104);
+  --yellow-hover:rgb(81, 0, 232);
+  --blue: rgb(84, 84, 120);
+  --gray:rgb(77, 77, 77);
+  --white:rgb(39, 39, 39);
+  --black:rgb(105, 35, 255);
+}
+
 * {
   margin: 0;
   padding: 0;
