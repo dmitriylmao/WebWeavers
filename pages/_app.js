@@ -6,6 +6,8 @@ import Layout from '@/layouts/Layout';
 import { Inter } from 'next/font/google';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import ContextTheme from '@/core/hooks/ContextTheme';
+import useTheme from '@/core/hooks/SetTheme';
 import '@/styles/global.css';
 
 const inter = Inter({
@@ -20,6 +22,11 @@ const MyApp = ({ Component, pageProps }) => {
   const useLayout = Component.useLayout ?? true;
   const { i18n } = useTranslation();
   const router = useRouter();
+  const [isDark, handleThemeToggle] = useTheme();
+  const value = {
+    isDark,
+    handleThemeToggle,
+  };
 
   useEffect(() => {
     if (i18n && i18n.changeLanguage && i18n.language !== router.locale) {
@@ -28,15 +35,17 @@ const MyApp = ({ Component, pageProps }) => {
   }, [i18n, router.locale]);
 
   return (
-    <div className={inter.className}>
-      {useLayout ? (
-        <Layout>
+    <ContextTheme.Provider value={value}>
+      <div className={inter.className} id={value.isDark ? 'dark' : 'light'}>
+        {useLayout ? (
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        ) : (
           <Component {...pageProps} />
-        </Layout>
-      ) : (
-        <Component {...pageProps} />
-      )}
-    </div>
+        )}
+      </div>
+    </ContextTheme.Provider>
   );
 };
 
