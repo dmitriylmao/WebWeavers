@@ -20,10 +20,9 @@ export default function Banner() {
           <div className={styles.catalogButton}>
             <YellowButton label={t('ToKatalog')} size="lg" href="/catalog" />
           </div>
-          
           <div className={styles.features}>
             {bannerAdvantages.map((advantage) => (
-              <p key={advantage} className={styles.feature} >
+              <p key={advantage} className={styles.feature}>
                 <span className={styles.icon}>+</span>
                 {t(advantage)}
               </p>

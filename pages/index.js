@@ -15,14 +15,15 @@ export const getServerSideProps = async ({ locale }) => {
 };
 
 const HomePage = () => {
-  return ( 
+  return (
     <>
       <Banner />
-        <Categories />
-        <PromotionSwiper />
-        <LogoSwiper />
-        <Map />
-    </>  
+      <ProductsList />
+      <Categories />
+      <PromotionSwiper />
+      <LogoSwiper />
+      <Map />
+    </>
   );
 };
 
