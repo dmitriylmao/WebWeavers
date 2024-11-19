@@ -13,7 +13,7 @@ const Footer = () => {
   const { t } = useTranslation('common');
 
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer}> 
       <div className={styles.container}>
         <div className={styles.company}>
           <div className={styles.logoContainer}>
@@ -116,6 +116,8 @@ const Footer = () => {
               height={40}
             />
           </div>
+          <SwitchThemesButton className={styles.Switch} handleChange={() => value.handleThemeToggle(value.isDark)} isChecked={value.isDark}/>
+
         </div>
 
         <div className={styles.contactsContainer}>
@@ -147,6 +149,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    
   );
 };
 
