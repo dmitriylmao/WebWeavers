@@ -1,11 +1,15 @@
 import styles from '@/pages/404.module.css';
 
 const Custom404 = () => {
+  const videos = ['/videos/gosling1_mobile.mp4', '/videos/gosling2_mobile.mp4'];
+
+  const randomVideo = videos[Math.floor(Math.random() * videos.length)];
+
   return (
     <div className={styles.container}>
       <video
         className={styles.video}
-        src="/videos/gosling.mp4"
+        src={randomVideo}
         autoPlay
         loop
         playsInline
