@@ -39,7 +39,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 77px;
+  height: 78px;
   width: 120px;
   padding: 10px;
   box-sizing: border-box;
@@ -49,7 +49,7 @@
 }
 
 .logoImage {
-  max-height: 77px;
+  max-height: 76px;
   max-width: 100%;
   object-fit: contain;
   transition: transform 0.3s ease-in;

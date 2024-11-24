@@ -35,7 +35,6 @@ export const logoData = [
     name: 'Brand 6',
     number: '006',
   },
-  //{ src: '/images/Logo_swiper/logo7.png', alt: 'Logo 7', name: 'Brand 7', number: '007' }//
   {
     src: '/images/Logo_swiper/logo8.png',
     alt: 'Logo 8',

@@ -1,10 +1,11 @@
-import searchIconSrc from '@/public/images/Header/search_Icon.svg';
 import Image from 'next/image';
-import styles from '@/components/Header/SearchInput.module.css';
 import { useTranslation } from 'next-i18next';
+import searchIconSrc from '@/public/images/Header/search_Icon.svg';
+import styles from '@/components/Header/SearchInput.module.css';
 
 export default function SearchInput() {
   const { t } = useTranslation('common');
+
   return (
     <div className={styles.container}>
       <input
@@ -13,15 +14,13 @@ export default function SearchInput() {
         className={styles.input}
       />
       <button className={styles.button}>
-        <span>
-          <Image
-            src={searchIconSrc}
-            alt="Location Icon"
-            width={20}
-            height={20}
-            className={styles.icon}
-          />
-        </span>
+        <Image
+          src={searchIconSrc}
+          alt="Location Icon"
+          width={20}
+          height={20}
+          className={styles.icon}
+        />
       </button>
     </div>
   );

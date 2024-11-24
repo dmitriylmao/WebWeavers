@@ -4,6 +4,7 @@ import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import rusFlag from '@/public/images/LanguageSwitcher/rus.svg';
 import ukFlag from '@/public/images/LanguageSwitcher/uk.svg';
+import { LANGUAGE_EN, LANGUAGE_RU } from '@/core/constants';
 import styles from './LanguageSwitcher.module.css';
 
 const LanguageSwitcher = () => {
@@ -14,7 +15,7 @@ const LanguageSwitcher = () => {
   const toggleLanguage = () => {
     const scrollPosition = window.scrollY;
 
-    const newLanguage = language === 'ru' ? 'en' : 'ru';
+    const newLanguage = language === LANGUAGE_RU ? LANGUAGE_EN : LANGUAGE_RU;
     setLanguage(newLanguage);
 
     i18n.changeLanguage(newLanguage).then(() => {
@@ -26,7 +27,7 @@ const LanguageSwitcher = () => {
     });
   };
 
-  const isRussian = language === 'ru';
+  const isRussian = language === LANGUAGE_RU;
   const currentFlag = isRussian ? rusFlag : ukFlag;
 
   const gradients = {

@@ -1,3 +1,4 @@
+import { useTranslation } from 'next-i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -6,10 +7,10 @@ import { Pagination, Navigation } from 'swiper/modules';
 import Link from 'next/link';
 import { logoData } from '@/components/LogoSwiper/Constants';
 import styles from '@/components/LogoSwiper/LogoSwiper.module.css';
-import { useTranslation } from 'next-i18next';
 
 export default function LogoSwiper() {
   const { t } = useTranslation('common');
+
   return (
     <section className={styles.container}>
       <h2 className={styles.title}>

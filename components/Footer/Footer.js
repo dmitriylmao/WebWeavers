@@ -1,13 +1,13 @@
+import { useContext } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
 import LanguageSwitcher from '@/components/Footer/LanguageSwitcher';
 import EmailInput from '@/components/Footer/EmailInput';
 import useWindowSize from '@/core/hooks/useWindowSize';
 import YellowButton from '@/components/UI/YellowButton/YellowButton';
 import down_icon from '@/public/images/Footer/download_icon.png';
-import { useTranslation } from 'next-i18next';
 import SwitchThemesButton from '@/components/UI/SwitchThemeButton/SwitchThemesButton';
-import { useContext } from 'react';
 import ContextTheme from '@/core/hooks/ContextTheme';
 import { menuItems, categories } from '@/components/Footer/Constants';
 import styles from '@/components/Footer/Footer.module.css';
@@ -37,7 +37,7 @@ const Footer = () => {
                   icon={down_icon}
                   label={t('PriceList')}
                   size="sm"
-                  download="./EmailInput.js"
+                  download="/images/Logo_swiper/logo13.png"
                 />
               </div>
             ) : null}
@@ -62,7 +62,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className={styles.categories_column}>
+        <div className={styles.categoriesColumn}>
           <h4 className={styles.titleCategories}>{t('Categories')}:</h4>
           <ul className={styles.list}>
             {categories.map((category) => (
@@ -73,20 +73,18 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className={styles.download_column}>
+        <div className={styles.downloadColumn}>
           <div>
             {isMobile ? null : (
-              <>
-                <div>
-                  <h4 className={styles.priceList}>{t('DowloadPrice')}:</h4>
-                  <YellowButton
-                    icon={down_icon}
-                    label={t('PriceList')}
-                    size="md"
-                    download="./EmailInput.js"
-                  />
-                </div>
-              </>
+              <div>
+                <h4 className={styles.priceList}>{t('DowloadPrice')}:</h4>
+                <YellowButton
+                  icon={down_icon}
+                  label={t('PriceList')}
+                  size="md"
+                  download="/images/Logo_swiper/logo13.png"
+                />
+              </div>
             )}
           </div>
           <p className={styles.titleMessengers}>{t('Communication')}:</p>

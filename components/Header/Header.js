@@ -1,6 +1,8 @@
-import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
+import { menuItems } from '@/components/Header/Constants';
 import YellowButton from '@/components/UI/YellowButton/YellowButton';
 import mapSrc from '@/public/images/Header/map_Icon.svg';
 import postSrc from '@/public/images/Header/post_Icon.svg';
@@ -15,7 +17,6 @@ import blueSearch from '@/public/images/Header/blue_search.svg';
 import phoneIcon from '@/public/images/Header/phone_icon.svg';
 import whitePhoneIcon from '@/public/images/Header/white_phone_icon.svg';
 import styles from '@/components/Header/Header.module.css';
-import { useTranslation } from 'next-i18next';
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -64,29 +65,22 @@ export function Header() {
                 className={styles.icon}
               />
               <div className={styles.mailinfo}>
-                <span className={styles.mainText}>opt.sultan@mail.ru</span>
+                <a href="mailto:opt.sultan@mail.ru" className={styles.mainText}>
+                  opt.sultan@mail.ru
+                </a>
                 <span className={styles.subText}>{t('AlwaysAvailable')}</span>
               </div>
             </div>
           </div>
 
           <div className={styles.menuBlock}>
-            <a href="/company" className={`${styles.menuItem}`}>
-              {t('AboutCompany')}
-            </a>
-            <a href="/delivery" className={styles.menuItem}>
-              {t('DeliveryAndPayment')}
-            </a>
-            <a href="/refund" className={styles.menuItem}>
-              {t('Return')}
-            </a>
-            <a href="/contacts" className={styles.menuItem}>
-              {t('Contacts')}
-            </a>
+            {menuItems.map((item) => (
+              <a href={item.path} className={styles.menuItem} key={item.path}>
+                {t(item.label)}
+              </a>
+            ))}
           </div>
         </div>
-
-        <div className={styles.headerLine}></div>
 
         <div className={styles.hat}>
           <Link href="/" passHref>
@@ -138,7 +132,7 @@ export function Header() {
               icon={priceListIconSrc}
               label={t('PriceList')}
               size="md"
-              download="./EmailInput.js"
+              download="/images/Logo_swiper/logo13.png"
             />
           </div>
 
@@ -146,7 +140,7 @@ export function Header() {
             <Link href="/korZina" className={styles.iconWrapper}>
               <Image src={basketIconSrc} alt="Корзина" />
             </Link>
-            <div className={styles.itemCount}>3</div>
+            <span className={styles.itemCount}>3</span>
             <div className={styles.price}>
               <span className={styles.cartLabel}>{t('Cart')}</span>
               <span className={styles.cartTotal}>12 478 ₸</span>
@@ -174,7 +168,7 @@ export function Header() {
             <Link href="/korZina" className={styles.mobileIconWrapper}>
               <Image src={basketIconSrc} alt="Корзина" />
             </Link>
-            <div className={styles.mobileItemCount}>3</div>
+            <span className={styles.mobileItemCount}>3</span>
           </div>
         </div>
 
@@ -231,7 +225,9 @@ export function Header() {
                 className={styles.icon}
               />
               <div className={styles.mailinfo}>
-                <span className={styles.mainText}>opt.sultan@mail.ru</span>
+                <a href="mailto:opt.sultan@mail.ru" className={styles.mainText}>
+                  opt.sultan@mail.ru
+                </a>
                 <span className={styles.subText}>{t('AlwaysAvailable')}</span>
               </div>
             </div>
@@ -271,18 +267,11 @@ export function Header() {
           <div className={styles.MobileMenuSite}>
             <h2 className={styles.MobileMenuTitle}> {t('SiteMenu')}: </h2>
             <div className={styles.MobileMenuSiteList}>
-              <a href="/company" className={`${styles.menuItem}`}>
-                {t('Сompany')}
-              </a>
-              <a href="/delivery" className={styles.menuItem}>
-                {t('DeliveryAndPayment')}
-              </a>
-              <a href="/refund" className={styles.menuItem}>
-                {t('Return')}
-              </a>
-              <a href="/contacts" className={styles.menuItem}>
-                {t('Contacts')}
-              </a>
+              {menuItems.map((item) => (
+                <a href={item.path} className={styles.menuItem} key={item.path}>
+                  {t(item.label)}
+                </a>
+              ))}
             </div>
           </div>
 
@@ -291,7 +280,7 @@ export function Header() {
               icon={priceListIconSrc}
               label={t('PriceList')}
               size="lg"
-              download="./EmailInput.js"
+              download="/images/Logo_swiper/logo13.png"
             />
           </div>
         </div>
