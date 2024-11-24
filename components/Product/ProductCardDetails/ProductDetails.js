@@ -10,14 +10,15 @@ import { useTranslation } from 'next-i18next';
 
 const ProductDetails = ({ product }) => {
   const { t } = useTranslation('common');
+
   const [quantity, setQuantity] = useState(1);
   const [isDescriptionOpen, setDescriptionOpen] = useState(false);
+  const [position, setPosition] = useState({ top: '0%', left: '50%' });
 
   const incrementQuantity = () => setQuantity(quantity + 1);
   const decrementQuantity = () => setQuantity(Math.max(1, quantity - 1));
   const toggleDescription = () => setDescriptionOpen(!isDescriptionOpen);
 
-  const [position, setPosition] = useState({ top: '0%', left: '50%' });
   const moveText = () => {
     const randomTop = Math.floor(Math.random() * 80) + '%';
     const randomLeft = Math.floor(Math.random() * 80) + '%';
@@ -27,6 +28,7 @@ const ProductDetails = ({ product }) => {
   const openGitHub = () => {
     window.open('https://github.com/dmitriylmao/WebWeavers', '_blank');
   };
+
   return (
     <div className={style.container}>
       <div className={style.productDetails}>
@@ -113,7 +115,7 @@ const ProductDetails = ({ product }) => {
               <a
                 href="/images/pavel.png"
                 download
-                style={{ textDecoration: 'none', color: 'inherit' }}
+                className={style.downloadLink}
               >
                 {t('PriceList')}{' '}
                 <Image

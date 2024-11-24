@@ -1,5 +1,5 @@
-import styles from '@/components/Map/Map.module.css';
 import { useTranslation } from 'next-i18next';
+import styles from '@/components/Map/Map.module.css';
 
 export default function Map() {
   const { t } = useTranslation('common');

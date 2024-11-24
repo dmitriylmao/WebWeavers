@@ -178,6 +178,11 @@
   opacity: 0.8;
 }
 
+.downloadLink {
+  text-decoration: none;
+  color: inherit;
+}
+
 .characteristicsList {
   font-size: 14px;
   font-weight: 300;

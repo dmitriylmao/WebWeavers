@@ -10,6 +10,7 @@ import styles from '@/components/Product/ProductList/ProductsList.module.css';
 const ProductsList = () => {
   const { isMobile, isTablet } = useWindowSize();
   const { t } = useTranslation('common');
+
   return (
     <section className={styles.container}>
       <h2 className={styles.title}>

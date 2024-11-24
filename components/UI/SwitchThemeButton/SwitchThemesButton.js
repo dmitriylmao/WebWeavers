@@ -1,9 +1,8 @@
-import React from 'react';
 import styles from '@/components/UI/SwitchThemeButton/SwitchThemesButton.module.css';
 
 const SwitchThemesButton = ({ handleChange, isChecked }) => {
   return (
-    <div className={styles.toggle_container}>
+    <div className={styles.toggleContainer}>
       <input
         type="checkbox"
         id="check"

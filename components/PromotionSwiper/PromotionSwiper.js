@@ -3,18 +3,19 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
-import YellowButton from '../UI/YellowButton/YellowButton';
+import { useTranslation } from 'next-i18next';
+import YellowButton from '@/components/UI/YellowButton/YellowButton';
 import {
   promotionSlide,
   partnerSlide,
 } from '@/components/PromotionSwiper/Constants';
 import styles from '@/components/PromotionSwiper/PromotionSwiper.module.css';
-import { useTranslation } from 'next-i18next';
 
 const sliderData = [promotionSlide, partnerSlide];
 
 export default function PromotionSwiper() {
   const { t } = useTranslation('common');
+
   return (
     <section className={styles.container}>
       <Swiper

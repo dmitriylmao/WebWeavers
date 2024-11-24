@@ -1,4 +1,4 @@
-.toggle_container {
+.toggleContainer {
   position: relative;
   top: 4.6em;
   text-align: center;
@@ -52,7 +52,7 @@
 }
 
 @media (max-width: 768px) {
-  .toggle_container {
+  .toggleContainer {
     top: 0em;
   }
 }
