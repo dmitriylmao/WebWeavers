@@ -86,7 +86,7 @@
 }
 
 .listItem a {
-  color: var(--white);
+  color: var(--white_lightGray-footerText);
   text-decoration: none;
 }
 

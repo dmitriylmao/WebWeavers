@@ -29,6 +29,11 @@
   font-size: 18px;
   color: var(--white-only);
   background-color: var(--yellow_lightPurple-button);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--yellow-hover);
 }
 
 @media (max-width: 480px) {

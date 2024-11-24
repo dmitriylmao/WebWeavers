@@ -9,7 +9,8 @@ import { useTranslation } from 'next-i18next';
 import SwitchThemesButton from '@/components/UI/SwitchThemeButton/SwitchThemesButton';
 import { useContext } from 'react';
 import ContextTheme from '@/core/hooks/ContextTheme';
-import styles from './Footer.module.css';
+import { menuItems, categories } from '@/components/Footer/Constants';
+import styles from '@/components/Footer/Footer.module.css';
 
 const Footer = () => {
   const { isMobile } = useWindowSize();
@@ -53,39 +54,22 @@ const Footer = () => {
         <div className={styles.menu_column}>
           <h4 className={styles.titleMenu}>{t('SiteMenu')}:</h4>
           <ul className={styles.list}>
-            <li className={styles.listItem}>
-              <a href="/company">{t('Сompany')}</a>
-            </li>
-            <li className={styles.listItem}>
-              <a href="/delivery">{t('Delivery')}</a>
-            </li>
-            <li className={styles.listItem}>
-              <a href="/return">{t('Return')}</a>
-            </li>
-            <li className={styles.listItem}>
-              <a href="/contacts">{t('Contacts')}</a>
-            </li>
+            {menuItems.map((item) => (
+              <li key={item.href} className={styles.listItem}>
+                <a href={item.href}>{t(item.label)}</a>
+              </li>
+            ))}
           </ul>
         </div>
 
         <div className={styles.categories_column}>
           <h4 className={styles.titleCategories}>{t('Categories')}:</h4>
           <ul className={styles.list}>
-            <li className={styles.listItem}>
-              <a href="/chemistry">{t('Chemistry')}</a>
-            </li>
-            <li className={styles.listItem}>
-              <a href="/cosmetics">{t('Cosmetics')}</a>
-            </li>
-            <li className={styles.listItem}>
-              <a href="/home">{t('Home')}</a>
-            </li>
-            <li className={styles.listItem}>
-              <a href="/children">{t('Children')}</a>
-            </li>
-            <li className={styles.listItem}>
-              <a href="/dishes">{t('Dishes')}</a>
-            </li>
+            {categories.map((category) => (
+              <li key={category.href} className={styles.listItem}>
+                <a href={category.href}>{t(category.label)}</a>
+              </li>
+            ))}
           </ul>
         </div>
 

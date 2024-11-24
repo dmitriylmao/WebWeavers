@@ -1,4 +1,6 @@
 import { useTranslation } from 'next-i18next';
+import Image from 'next/image';
+import icon from '@/public/images/EmailInput/arrow.svg';
 import styles from './EmailInput.module.css';
 
 export default function EmailInput() {
@@ -12,7 +14,7 @@ export default function EmailInput() {
         className={styles.input}
       />
       <button className={styles.button}>
-        <span>&#9654;</span>
+        <Image src={icon} alt="arrow icon" width={16} height={16} />
       </button>
     </div>
   );
