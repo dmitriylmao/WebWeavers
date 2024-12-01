@@ -5,7 +5,7 @@ import { useTranslation } from 'next-i18next';
 import LanguageSwitcher from '@/components/Footer/LanguageSwitcher';
 import EmailInput from '@/components/Footer/EmailInput';
 import useWindowSize from '@/core/hooks/useWindowSize';
-import YellowButton from '@/components/UI/YellowButton/YellowButton';
+import CustomButton from '@/components/UI/CustomButton/CustomButton';
 import down_icon from '@/public/images/Footer/download_icon.png';
 import SwitchThemesButton from '@/components/UI/SwitchThemeButton/SwitchThemesButton';
 import ContextTheme from '@/core/hooks/ContextTheme';
@@ -33,7 +33,7 @@ const Footer = () => {
             </Link>
             {isMobile ? (
               <div className={styles.button}>
-                <YellowButton
+                <CustomButton
                   icon={down_icon}
                   label={t('PriceList')}
                   size="sm"
@@ -78,7 +78,7 @@ const Footer = () => {
             {isMobile ? null : (
               <div>
                 <h4 className={styles.priceList}>{t('DowloadPrice')}:</h4>
-                <YellowButton
+                <CustomButton
                   icon={down_icon}
                   label={t('PriceList')}
                   size="md"

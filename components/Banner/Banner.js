@@ -1,6 +1,6 @@
 import { useTranslation } from 'next-i18next';
 import { bannerAdvantages } from '@/components/Banner/constants.js';
-import YellowButton from '../UI/YellowButton/YellowButton';
+import CustomButton from '../UI/CustomButton/CustomButton';
 import styles from '@/components/Banner/Banner.module.css';
 
 export default function Banner() {
@@ -16,7 +16,7 @@ export default function Banner() {
             <span>{t('Kokchetav')}</span>
           </h2>
           <div className={styles.catalogButton}>
-            <YellowButton label={t('ToKatalog')} size="lg" href="/catalog" />
+            <CustomButton label={t('ToKatalog')} size="lg" href="/catalog" />
           </div>
           <div className={styles.features}>
             {bannerAdvantages.map((advantage) => (

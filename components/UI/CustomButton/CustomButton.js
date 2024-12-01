@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import styles from '@/components/UI/YellowButton/YellowButton.module.scss';
+import styles from '@/components/UI/CustomButton/CustomButton.module.scss';
 
-const YellowButton = ({
+const CustomButton = ({
   label,
   icon = null,
   size = 'md',
@@ -28,12 +28,12 @@ const YellowButton = ({
     return (
       <Link
         href={href}
-        className={`${styles.yellowButton} ${styles[`yellowButton--${size}`]}`}
+        className={`${styles.сustomButton} ${styles[`сustomButton--${size}`]}`}
         onClick={handleClick}
       >
-        <span className={styles.yellowButton__label}>{label}</span>
+        <span className={styles.сustomButton__label}>{label}</span>
         {icon && (
-          <span className={styles.yellowButton__icon}>
+          <span className={styles.сustomButton__icon}>
             <img src={icon.src} alt={label} />
           </span>
         )}
@@ -46,12 +46,12 @@ const YellowButton = ({
       <a
         href={download}
         download
-        className={`${styles.yellowButton} ${styles[`yellowButton--${size}`]}`}
+        className={`${styles.сustomButton} ${styles[`сustomButton--${size}`]}`}
         onClick={handleClick}
       >
-        <span className={styles.yellowButton__label}>{label}</span>
+        <span className={styles.сustomButton__label}>{label}</span>
         {icon && (
-          <span className={styles.yellowButton__icon}>
+          <span className={styles.сustomButton__icon}>
             <img src={icon.src} alt={label} />
           </span>
         )}
@@ -61,13 +61,13 @@ const YellowButton = ({
 
   return (
     <button
-      className={`${styles.yellowButton} ${styles[`yellowButton--${size}`]}`}
+      className={`${styles.сustomButton} ${styles[`сustomButton--${size}`]}`}
       onClick={handleClick}
       disabled={disabled}
     >
-      <span className={styles.yellowButton__label}>{label}</span>
+      <span className={styles.сustomButton__label}>{label}</span>
       {icon && (
-        <span className={styles.yellowButton__icon}>
+        <span className={styles.сustomButton__icon}>
           <img src={icon.src} alt={label} />
         </span>
       )}
@@ -75,4 +75,4 @@ const YellowButton = ({
   );
 };
 
-export default YellowButton;
+export default CustomButton;

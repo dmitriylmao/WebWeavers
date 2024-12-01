@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 import { menuItems } from '@/components/Header/Constants';
-import YellowButton from '@/components/UI/YellowButton/YellowButton';
+import CustomButton from '@/components/UI/CustomButton/CustomButton';
 import mapSrc from '@/public/images/Header/map_Icon.svg';
 import postSrc from '@/public/images/Header/post_Icon.svg';
 import logoSrc from '@/public/images/Header/logo.svg';
@@ -90,7 +90,7 @@ export function Header() {
           </Link>
           <div className={styles.catalogAndSearch}>
             <div className={styles.catalogButton}>
-              <YellowButton
+              <CustomButton
                 label={t('Catalog')}
                 size="md"
                 href="/catalog"
@@ -128,7 +128,7 @@ export function Header() {
           </div>
 
           <div className={styles.priceListButton}>
-            <YellowButton
+            <CustomButton
               icon={priceListIconSrc}
               label={t('PriceList')}
               size="md"
@@ -276,7 +276,7 @@ export function Header() {
           </div>
 
           <div className={styles.MobileMenuButton}>
-            <YellowButton
+            <CustomButton
               icon={priceListIconSrc}
               label={t('PriceList')}
               size="lg"
