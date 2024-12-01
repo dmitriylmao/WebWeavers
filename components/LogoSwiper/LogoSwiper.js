@@ -60,7 +60,7 @@ export default function LogoSwiper() {
               <div className={styles.card}>
                 <img
                   src={logo.src}
-                  alt={logo.alt}
+                  alt={t(`LogoAltTexts.${logo.alt}`)}
                   className={styles.logoImage}
                 />
               </div>

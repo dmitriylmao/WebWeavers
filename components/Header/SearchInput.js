@@ -16,7 +16,7 @@ export default function SearchInput() {
       <button className={styles.button}>
         <Image
           src={searchIconSrc}
-          alt="Location Icon"
+          alt={t('AltLocationIcon')}
           width={20}
           height={20}
           className={styles.icon}

@@ -4,6 +4,7 @@ import ProductDetails from '@/components/Product/ProductCardDetails/ProductDetai
 import SimilarProducts from '@/components/Product/ProductList/SimilarProducts';
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
 export const getServerSideProps = async ({ locale }) => {
   return {
@@ -14,11 +15,12 @@ export const getServerSideProps = async ({ locale }) => {
 };
 
 const ProductPage = () => {
+  const { t } = useTranslation('common');
   const router = useRouter();
   const { id } = router.query;
 
   if (!id) {
-    return <p>Загрузка...</p>;
+    return <p>{t('Loading')}...</p>;
   }
 
   const selectedProduct = saleProducts.find(
@@ -26,7 +28,7 @@ const ProductPage = () => {
   );
 
   if (!selectedProduct) {
-    return <p>Товар не найден</p>;
+    return <p>{t('NotFound')}</p>;
   }
 
   return (

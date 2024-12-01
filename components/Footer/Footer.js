@@ -25,7 +25,7 @@ const Footer = () => {
             <Link href="/">
               <Image
                 src="/images/Footer/sultan_logo.svg"
-                alt="Логотип"
+                alt={t('AltLogo')}
                 width={150}
                 height={50}
                 className={styles.logo}
@@ -91,13 +91,13 @@ const Footer = () => {
           <div className={styles.messengers}>
             <Image
               src="/images/Footer/whatsapp_logo.svg"
-              alt="WhatsApp"
+              alt={t('AltWhatsUp')}
               width={40}
               height={40}
             />
             <Image
               src="/images/Footer/telegram_logo.svg"
-              alt="Telegram"
+              alt={t('AltTelegram')}
               width={40}
               height={40}
             />
@@ -123,13 +123,13 @@ const Footer = () => {
           <div className={styles.payments}>
             <Image
               src="/images/Footer/visa_logo.svg"
-              alt="Visa"
+              alt={t('AltVisa')}
               width={50}
               height={40}
             />
             <Image
               src="/images/Footer/mastercard_logo.svg"
-              alt="MasterCard"
+              alt={t('AltMasterCard')}
               width={50}
               height={40}
             />

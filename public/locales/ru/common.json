@@ -29,6 +29,13 @@
   "PriceListIconAlt": "Иконка прайс-листа",
   "BasketIconAlt": "Корзина",
   "Cart": "Корзина",
+  "AltLocationIcon": "ИконкаПозиции",
+  "AltEmailIcon": "ИконкаЭлектроннойПочты",
+  "AltWorker": "Работяга",
+  "AltCart": "Корзина",
+  "AltCatalog": "Катáлог",
+  "AltSearch": "Поиск",
+  "AltTelephoneIcon": "ИконкаТелефона",
 
   "saleHighlight": "АКЦИОННЫЕ",
   "Similar": "ПОХОЖИЕ",
@@ -69,7 +76,23 @@
   "highlight": "ЛУЧШИЕ",
   "subtitle": "От ведущих мировых брендов",
   "products": "ТОВАРЫ",
-
+  "LogoAltTexts": {
+    "Logo1": "Логотип 1",
+    "Logo2": "Логотип 2",
+    "Logo3": "Логотип 3",
+    "Logo4": "Логотип 4",
+    "Logo5": "Логотип 5",
+    "Logo6": "Логотип 6",
+    "Logo7": "Логотип 7",
+    "Logo8": "Логотип 8",
+    "Logo9": "Логотип 9",
+    "Logo10": "Логотип 10",
+    "Logo11": "Логотип 11",
+    "Logo12": "Логотип 12",
+    "Logo13": "Логотип 13"
+  },
+  
+  
   "SupplierSultan": "Оптовый поставщик «Султан»",
   "Address": "Адрес",
   "KokshetauTashenova": "г. Кокшетау, ул. Ж. Ташенова 129Б",
@@ -78,6 +101,8 @@
   "TaxpayerData": "Данные налогоплательщика",
   "Katran": "ИП Катран Д.С.",
   "TaxpayerNumber": "ИНН",
+  "AltMapBackground": "ФоноваяКарта",
+  "AltIcon": "Иконка",
 
   "DescriptionOfTheCompany": "Компания «Султан» — снабжаем розничные магазины товарами \"под ключ\" в Кокчетаве и Акмолинской области",
   "SubscribeToDiscount": "Подпишись на скидки и акции",
@@ -98,5 +123,16 @@
   "WorkingHours": "Время работы",
   "OrderCall": "Заказать звонок",
   "TouchAnyTime": "На связи в любое время",
-  "EnterYourEmail": "Введите ваш E-mail"
+  "EnterYourEmail": "Введите ваш E-mail",
+  "AltArrowIcon": "ИконкаСтрелки",
+  "AltLogo": "Логотип",
+  "AltWhatsUp": "КакДела",
+  "AltTelegram": "Телега",
+  "AltVisa": "Виза",
+  "AltMasterCard": "МастерКард",
+  "AltFlag": "Флаг",
+
+
+  "Loading":"Загрузка",
+  "NotFound": "Товар не найден"
 }

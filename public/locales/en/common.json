@@ -29,6 +29,13 @@
   "PriceListIconAlt": "Price List Icon",
   "BasketIconAlt": "Basket",
   "Cart": "Cart",
+  "AltLocationIcon": "LocationIcon",
+  "AltEmailIcon": "EmailIcon",
+  "AltWorker": "Worker",
+  "AltCart": "Cart",
+  "AltCatalog": "Catalog",
+  "AltSearch": "Search",
+  "AltTelephoneIcon": "TelephoneIcon",
 
   "saleHighlight": "SALE",
   "Similar": "SIMILAR",
@@ -69,6 +76,21 @@
   "highlight": "BEST",
   "subtitle": "From leading global brands",
   "products": "PRODUCTS",
+  "LogoAltTexts": {
+    "Logo1": "Logo 1",
+    "Logo2": "Logo 2",
+    "Logo3": "Logo 3",
+    "Logo4": "Logo 4",
+    "Logo5": "Logo 5",
+    "Logo6": "Logo 6",
+    "Logo7": "Logo 7",
+    "Logo8": "Logo 8",
+    "Logo9": "Logo 9",
+    "Logo10": "Logo 10",
+    "Logo11": "Logo 11",
+    "Logo12": "Logo 12",
+    "Logo13": "Logo 13"
+  },
 
   "SupplierSultan": "Wholesale supplier \"Sultan\"",
   "Address": "Address",
@@ -78,6 +100,8 @@
   "TaxpayerData": "Taxpayer's data",
   "Katran": "IE Katran D.S.",
   "TaxpayerNumber": "TIN",
+  "AltMapBackground": "MapBackground",
+  "AltIcon": "Icon",
 
   "DescriptionOfTheCompany": "Sultan company — we supply retail stores with turnkey goods in Kokchetav and Akmola region",
   "SubscribeToDiscount": "Subscribe to discounts and promotions",
@@ -98,5 +122,16 @@
   "WorkingHours": "Working hours",
   "OrderCall": "Order a call",
   "TouchAnyTime": "Be in touch at any time",
-  "EnterYourEmail": "Enter your E-mail"
+  "EnterYourEmail": "Enter your E-mail",
+  "AltArrowIcon": "ArrowIcon",
+  "AltLogo": "Logo",
+  "AltWhatsUp": "WhatsUp",
+  "AltTelegram": "elegram",
+  "AltVisa": "Visa",
+  "AltMasterCard": "MasterCard",
+  "AltFlag": "Flag",
+
+
+  "Loading":"Loading",
+  "NotFound": "The product was not found"
 }

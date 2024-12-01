@@ -14,7 +14,7 @@ export default function EmailInput() {
         className={styles.input}
       />
       <button className={styles.button}>
-        <Image src={icon} alt="arrow icon" width={16} height={16} />
+        <Image src={icon} alt={t('AltArrowIcon')} width={16} height={16} />
       </button>
     </div>
   );
