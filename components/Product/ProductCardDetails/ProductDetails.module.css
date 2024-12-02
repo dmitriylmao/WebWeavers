@@ -47,7 +47,7 @@
   font-size: 30px;
   font-weight: 500;
   line-height: 45px;
-  color: var(--black_gray);
+  color: var(--black-gray);
 }
 
 .productBrand {
@@ -97,7 +97,7 @@
   font-size: 30px;
   font-weight: 800;
   line-height: 39px;
-  color: var(--black_gray);
+  color: var(--black-gray);
 }
 
 .quantityContainer {
@@ -117,8 +117,8 @@
   border-radius: 40px;
   border: 0px;
   font-size: 12px;
-  background-color: var(--quantityBtn);
-  color: var(--black_gray);
+  background-color: var(--quantitybtn);
+  color: var(--black-gray);
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
@@ -195,7 +195,7 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 24px;
-  color: var(--black_gray);
+  color: var(--black-gray);
 }
 
 .description {
@@ -210,7 +210,7 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
-  color: var(--black_gray);
+  color: var(--black-gray);
   cursor: pointer;
   transition: color 0.2s ease-in-out;
   width: 120px;
@@ -250,7 +250,7 @@
 .webWeavers {
   position: relative;
   font-size: 16px;
-  color: var(--black_gray);
+  color: var(--black-gray);
   cursor: pointer;
   width: 132px;
   transition:

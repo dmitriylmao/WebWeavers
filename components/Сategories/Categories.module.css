@@ -11,11 +11,11 @@
 .title {
   font-size: 36px;
   font-weight: 500;
-  color: var(--black_gray);
+  color: var(--black-gray);
 }
 
 .highlight {
-  color: var(--yellow_white);
+  color: var(--yellow-white);
   font-weight: 800;
 }
 
@@ -58,7 +58,7 @@
   margin-top: 20px;
   font-size: 16px;
   font-weight: 500;
-  color: var(--black_gray);
+  color: var(--black-gray);
 }
 
 .imageWrapper:hover {

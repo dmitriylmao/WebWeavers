@@ -18,7 +18,7 @@
   margin: 0 auto;
   column-gap: 20px;
   row-gap: 50px;
-  color: var(--white_lightGray-footerText);
+  color: var(--white-lightgray-footertext);
 }
 
 .company {
@@ -86,7 +86,7 @@
 }
 
 .listItem a {
-  color: var(--white_lightGray-footerText);
+  color: var(--white-lightgray-footertext);
   text-decoration: none;
 }
 

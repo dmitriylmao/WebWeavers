@@ -67,7 +67,7 @@
   line-height: 18px;
   font-weight: 600;
   text-decoration: none;
-  color: var(--black_gray);
+  color: var(--black-gray);
 }
 
 .subText {
@@ -164,7 +164,7 @@
   font-size: 14px;
   font-weight: 600;
   line-height: 21px;
-  color: var(--black_gray);
+  color: var(--black-gray);
 }
 
 .workingHours {
@@ -231,7 +231,7 @@
 }
 
 .itemCount {
-  background-color: var(--yellow_lightPurple-button);
+  background-color: var(--yellow-lightpurple-button);
   border: 2px solid var(--white-header);
   color: var(--white-only);
   font-size: 14px;
@@ -264,7 +264,7 @@
   font-size: 14px;
   font-weight: 600;
   line-height: 21px;
-  color: var(--black_gray);
+  color: var(--black-gray);
 }
 
 .MobileContainer {
@@ -291,7 +291,7 @@
 .burgerButton {
   width: 32px;
   height: 32px;
-  background-color: var(--yellow_lightPurple-button);
+  background-color: var(--yellow-lightpurple-button);
   border-radius: 50%;
   display: flex;
   flex-direction: column;
@@ -431,7 +431,7 @@
 }
 
 .mobileItemCount {
-  background-color: var(--yellow_lightPurple-button);
+  background-color: var(--yellow-lightpurple-button);
   border: 2px solid var(--white-header);
   color: var(--white-only);
   font-size: 10px;
@@ -509,7 +509,7 @@
   justify-content: center;
   width: 30px;
   height: 30px;
-  background-color: var(--yellow_lightPurple-button);
+  background-color: var(--yellow-lightpurple-button);
   border-radius: 50%;
 }
 
