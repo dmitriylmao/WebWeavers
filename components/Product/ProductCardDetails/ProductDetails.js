@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import Image from 'next/image';
 import logo from '@/public/images/Products/telejka.svg';
-import YellowButton from '@/components/UI/YellowButton/YellowButton';
+import CustomButton from '@/components/UI/CustomButton/CustomButton';
 import shareLogo from '@/public/images/ProductDetails/share.svg';
 import downloadLogo from '@/public/images/ProductDetails/download.svg';
 import style from '@/components/Product/ProductCardDetails/ProductDetails.module.css';
@@ -90,7 +90,7 @@ const ProductDetails = ({ product }) => {
                 +
               </button>
             </div>
-            <YellowButton
+            <CustomButton
               label={t('AddToCart')}
               size="md"
               action="add-to-cart"
