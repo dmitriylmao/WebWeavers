@@ -6,26 +6,26 @@ import product3Img from '@/public/images/Products/3.png';
 import product4Img from '@/public/images/Products/4.png';
 
 export const productCategories = {
-  DISHWASHING: 'Для мытья посуды',
-  LAUNDRY: 'Стиральные средства',
-  CLEANING: 'Уборка',
-  TEST: 'Тест!!!',
+  DISHWASHING: 'DISHWASHING',
+  LAUNDRY: 'LAUNDRY',
+  CLEANING: 'CLEANING',
+  TEST: 'TEST',
 };
 
 export const saleProducts = [
   {
     id: 101,
-    title: 'ср-во для мытья посуды Апельсин+мята',
-    producer: 'Нэфис',
-    brand: 'AOS',
+    title: 'title',
+    producer: '101',
+    brand: '101',
     price: '48,76',
     imgSrc: product1Img,
-    volume: '450 мл',
+    volume: '101',
     volumeType: typeB,
     category: [productCategories.TEST],
     article: 1001001,
     description:
-      'Эффективное средство для мытья посуды с ароматом апельсина и мяты. Легко справляется с жиром, оставляя приятный цитрусовый аромат и не оставляя следов.',
+      '101',
   },
   {
     id: 102,

@@ -57,8 +57,8 @@ const ProductDetails = ({ product }) => {
         <div className={style.infoSection}>
           <p className={style.inStock}>{t('InStock')}</p>
           <h1 className={style.productTitle}>
-            <span className={style.productBrand}>{product.brand}</span>{' '}
-            {product.title}
+            <span className={style.productBrand}>{t(`Product.${product.id}.brand`)}</span>{' '}
+            {t(`Product.${product.id}.title`)}
           </h1>
           <p className={style.productVolume}>
             <span>
@@ -70,7 +70,7 @@ const ProductDetails = ({ product }) => {
                 height={16}
               />
             </span>
-            {product.volume}
+            {t(`Product.${product.id}.volume`)}
           </p>
 
           <div className={style.priceContainer}>
@@ -131,11 +131,11 @@ const ProductDetails = ({ product }) => {
           <div className={style.characteristicsList}>
             <p>
               {t('Producer')}:
-              <span className={style.characteristics}> {product.producer}</span>
+              <span className={style.characteristics}> {t(`Product.${product.id}.producer`)}</span>
             </p>
             <p>
               {t('Brand')}:
-              <span className={style.characteristics}> {product.brand}</span>
+              <span className={style.characteristics}>{t(`Product.${product.id}.brand`)}</span>
             </p>
             <p>
               {t('Barcode')}:
@@ -144,7 +144,7 @@ const ProductDetails = ({ product }) => {
             <p>
               {t('Category')}:{' '}
               <span className={style.characteristics}>
-                {product.category.join(', ')}
+                {product.category.map((cat) => t(`${cat}`)).join(', ')}
               </span>
             </p>
           </div>
@@ -169,7 +169,7 @@ const ProductDetails = ({ product }) => {
               }}
               transition={{ duration: 0.3 }}
             >
-              {product.description}
+              {t(`Product.${product.id}.description`)}
             </motion.p>
           </div>
           <div className={style.divider}></div>
