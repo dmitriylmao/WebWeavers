@@ -9,12 +9,12 @@
 .title {
   font-size: 36px;
   font-weight: 500;
-  color: var(--black_gray);
+  color: var(--black-gray);
   margin-bottom: 16px;
 }
 
 .highlight {
-  color: var(--yellow_white);
+  color: var(--yellow-white);
   font-weight: 800;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .swiper-pagination-bullet {
-  background-color: var(--yellow_lightPurple-button);
+  background-color: var(--yellow-lightpurple-button);
 }
 
 .container :global(.swiper-pagination) {
@@ -79,7 +79,7 @@
 }
 
 .container :global(.swiper-pagination-bullet-active) {
-  background-color: var(--yellow_lightPurple-button);
+  background-color: var(--yellow-lightpurple-button);
   width: 26px;
   height: 7px;
   border-radius: 6px;

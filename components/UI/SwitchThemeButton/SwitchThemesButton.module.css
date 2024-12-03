@@ -31,14 +31,14 @@
   height: 0.8em;
   width: 0.8em;
   border-radius: 1em;
-  background-color: var(--yellow_lightPurple-button);
+  background-color: var(--yellow-lightpurple-button);
   position: absolute;
   left: 0.2em;
   transition: transform 250ms ease-in-out;
 }
 
 .toggle:checked + label::before {
-  background-color: var(--yellow_lightPurple-button);
+  background-color: var(--yellow-lightpurple-button);
 }
 
 .toggle:checked + label::after {

@@ -82,7 +82,7 @@
   align-items: center;
   border-radius: 50%;
   color: var(--blue);
-  background-color: var(--quantityBtn);
+  background-color: var(--quantitybtn);
   transition: background-color 0.2s ease-in-out;
 }
 
