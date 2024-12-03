@@ -150,7 +150,7 @@ const ProductDetails = ({ product }) => {
               </span>
             </p>
           </div>
-          <Description text={product.description} />
+          <Description title="Описание" text={product.description} />
           <div className={style.divider}></div>
           <div className={style.webWeaversGame}>
             <div
