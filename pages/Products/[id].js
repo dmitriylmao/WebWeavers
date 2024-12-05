@@ -22,19 +22,28 @@ const ProductPage = () => {
   }
 
   const selectedProduct = saleProducts.find(
-    (product) => product.id === parseInt(id),
+      (product) => product.id === parseInt(id),
   );
 
   if (!selectedProduct) {
     return <p>Товар не найден</p>;
   }
 
+  const breadcrumbItems = [
+    { name: 'Главная', path: '/' },
+    { name: 'Каталог', path: '/catalog' },
+    {
+      name: `${selectedProduct.brand} ${selectedProduct.title}`,
+      path: `/product/${selectedProduct.id}`,
+    },
+  ];
+
   return (
-    <div>
-      <Breadcrumb product={selectedProduct} />
-      <ProductDetails product={selectedProduct} />
-      <SimilarProducts selectedProduct={selectedProduct} />
-    </div>
+      <div>
+        <Breadcrumb breadcrumbItems={breadcrumbItems} />
+        <ProductDetails product={selectedProduct} />
+        <SimilarProducts selectedProduct={selectedProduct} />
+      </div>
   );
 };
 

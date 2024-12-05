@@ -6,7 +6,9 @@ import CustomButton from '@/components/UI/CustomButton/CustomButton';
 import shareLogo from '@/public/images/ProductDetails/share.svg';
 import downloadLogo from '@/public/images/ProductDetails/download.svg';
 import style from '@/components/Product/ProductCardDetails/ProductDetails.module.css';
+import Description from '@/components/Product/Description/Description';
 import { useTranslation } from 'next-i18next';
+
 
 const ProductDetails = ({ product }) => {
   const { t } = useTranslation('common');
@@ -148,30 +150,7 @@ const ProductDetails = ({ product }) => {
               </span>
             </p>
           </div>
-
-          <div className={style.description}>
-            <h2 onClick={toggleDescription} className={style.descriptionTitle}>
-              {t('Description')}
-              <motion.span
-                initial={{ rotate: 0 }}
-                animate={{ rotate: isDescriptionOpen ? 240 : 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                {isDescriptionOpen ? '▴' : '▾'}
-              </motion.span>
-            </h2>
-            <motion.p
-              className={style.descriptionText}
-              initial={{ opacity: 0, maxHeight: 0 }}
-              animate={{
-                opacity: isDescriptionOpen ? 1 : 0,
-                maxHeight: isDescriptionOpen ? 200 : 0,
-              }}
-              transition={{ duration: 0.3 }}
-            >
-              {product.description}
-            </motion.p>
-          </div>
+          <Description title="Описание" text={product.description} />
           <div className={style.divider}></div>
           <div className={style.webWeaversGame}>
             <div
