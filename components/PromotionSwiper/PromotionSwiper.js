@@ -4,7 +4,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
 import { useTranslation } from 'next-i18next';
-import YellowButton from '@/components/UI/YellowButton/YellowButton';
+import CustomButton from '@/components/UI/CustomButton/CustomButton';
 import {
   promotionSlide,
   partnerSlide,
@@ -41,7 +41,7 @@ export default function PromotionSwiper() {
                 <p className={styles.slideDescription}>
                   {t(slide.description)}
                 </p>
-                <YellowButton
+                <CustomButton
                   label={t(slide.buttonText)}
                   size="lg"
                   href={slide.link}

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import telejka from '@/public/images/Products/telejka.svg';
-import YellowButton from '@/components/UI/YellowButton/YellowButton';
+import CustomButton from '@/components/UI/CustomButton/CustomButton';
 import { useTranslation } from 'next-i18next';
 import styles from '@/components/Product/ProductCard/ProductCard.module.css';
 
@@ -47,7 +47,7 @@ const ProductCard = ({
       <div className={styles.priceAndButton}>
         <p className={styles.productPrice}>{price} ₸</p>
         <div className={styles.addToCartButton}>
-          <YellowButton
+          <CustomButton
             label={t('AddToCart')}
             size="sm"
             action="add-to-cart"

@@ -31,9 +31,18 @@ const ProductPage = () => {
     return <p>{t('NotFound')}</p>;
   }
 
+  const breadcrumbItems = [
+    { name: 'Главная', path: '/' },
+    { name: 'Каталог', path: '/catalog' },
+    {
+      name: `${selectedProduct.brand} ${selectedProduct.title}`,
+      path: `/product/${selectedProduct.id}`,
+    },
+  ];
+
   return (
     <div>
-      <Breadcrumb product={selectedProduct} />
+      <Breadcrumb breadcrumbItems={breadcrumbItems} />
       <ProductDetails product={selectedProduct} />
       <SimilarProducts selectedProduct={selectedProduct} />
     </div>

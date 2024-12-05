@@ -3,25 +3,20 @@ import useWindowSize from '@/core/hooks/useWindowSize';
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 
-const Breadcrumb = ({ product }) => {
+const Breadcrumb = ({ breadcrumbItems = [] }) => {
   const { isTablet, isMobile } = useWindowSize();
   const { t } = useTranslation('common');
 
-  const breadcrumbItems = [
-    { name: t('Main'), path: '/' },
-    { name: t('Catalog'), path: '/catalog' },
-    {
-      name: `${product.brand} ${product.title}`,
-      path: `/product/${product.id}`,
-    },
-  ];
-
   if (isMobile || isTablet) {
+    const previousPath =
+      breadcrumbItems.length > 1
+        ? breadcrumbItems[breadcrumbItems.length - 2]?.path
+        : '/';
     return (
       <div className={styles.container}>
         <div className={styles.backButton}>
           <Link
-            href="/"
+            href={previousPath}
             style={{ textDecoration: 'none' }}
             className={styles.backLink}
           >
@@ -33,6 +28,7 @@ const Breadcrumb = ({ product }) => {
     );
   }
 
+  if (breadcrumbItems.length === 0) return null;
   return (
     <nav aria-label="breadcrumb">
       <ul className={styles.breadcrumb}>
