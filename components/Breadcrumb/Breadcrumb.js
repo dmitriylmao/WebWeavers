@@ -1,7 +1,7 @@
-import styles from '@/components/Breadcrumb/Breadcrumb.module.css';
-import useWindowSize from '@/core/hooks/useWindowSize';
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
+import useWindowSize from '@/core/hooks/useWindowSize';
+import styles from '@/components/Breadcrumb/Breadcrumb.module.scss';
 
 const Breadcrumb = ({ breadcrumbItems = [] }) => {
   const { isTablet, isMobile } = useWindowSize();
@@ -35,7 +35,9 @@ const Breadcrumb = ({ breadcrumbItems = [] }) => {
         {breadcrumbItems.map((item, index) => (
           <li key={index} className={styles.breadcrumbItem}>
             {index < breadcrumbItems.length - 1 ? (
-              <Link href={item.path}>{item.name}</Link>
+              <Link href={item.path} className={styles.breadcrumbLink}>
+                {item.name}
+              </Link>
             ) : (
               item.name
             )}

@@ -154,7 +154,10 @@ const ProductDetails = ({ product }) => {
               </span>
             </p>
           </div>
-          <Description title={t('Description')} text={product.description} />
+          <Description
+            title={t('Description')}
+            text={t(`Product.${product.id}.description`)}
+          />
           <div className={style.divider}></div>
           <div className={style.webWeaversGame}>
             <div

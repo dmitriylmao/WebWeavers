@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState, useRef, useEffect } from 'react';
-import style from '@/components/Description/Description.module.css';
+import style from '@/components/Description/Description.module.scss';
 
 const Description = ({ title, text }) => {
   const [isOpen, setIsOpen] = useState(false);
