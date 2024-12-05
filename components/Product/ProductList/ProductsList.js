@@ -12,7 +12,6 @@ const ProductsList = () => {
   const { t } = useTranslation('common');
 
   return (
-    
     <section className={styles.container}>
       <h2 className={styles.title}>
         <span className={styles.highlight}>{t('saleHighlight')}</span>{' '}
@@ -74,7 +73,6 @@ const ProductsList = () => {
       )}
     </section>
   );
- 
 };
 
 export default ProductsList;

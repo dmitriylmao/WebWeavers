@@ -57,7 +57,9 @@ const ProductDetails = ({ product }) => {
         <div className={style.infoSection}>
           <p className={style.inStock}>{t('InStock')}</p>
           <h1 className={style.productTitle}>
-            <span className={style.productBrand}>{t(`Product.${product.id}.brand`)}</span>{' '}
+            <span className={style.productBrand}>
+              {t(`Product.${product.id}.brand`)}
+            </span>{' '}
             {t(`Product.${product.id}.title`)}
           </h1>
           <p className={style.productVolume}>
@@ -131,11 +133,16 @@ const ProductDetails = ({ product }) => {
           <div className={style.characteristicsList}>
             <p>
               {t('Producer')}:
-              <span className={style.characteristics}> {t(`Product.${product.id}.producer`)}</span>
+              <span className={style.characteristics}>
+                {' '}
+                {t(`Product.${product.id}.producer`)}
+              </span>
             </p>
             <p>
               {t('Brand')}:
-              <span className={style.characteristics}>{t(`Product.${product.id}.brand`)}</span>
+              <span className={style.characteristics}>
+                {t(`Product.${product.id}.brand`)}
+              </span>
             </p>
             <p>
               {t('Barcode')}:

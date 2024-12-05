@@ -24,8 +24,7 @@ export const saleProducts = [
     volumeType: typeB,
     category: [productCategories.TEST],
     article: 1001001,
-    description:
-      '101',
+    description: '101',
   },
   {
     id: 102,
