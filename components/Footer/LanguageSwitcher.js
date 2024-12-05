@@ -11,6 +11,7 @@ const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
   const router = useRouter();
   const [language, setLanguage] = useState(i18n.language);
+  const { t } = useTranslation('common');
 
   const toggleLanguage = () => {
     const scrollPosition = window.scrollY;
@@ -60,7 +61,7 @@ const LanguageSwitcher = () => {
         animate={{ x: isRussian ? 5 : 50 }}
         transition={{ type: 'spring', stiffness: 200, damping: 15 }}
       >
-        <img src={currentFlag.src} alt="Flag" />
+        <img src={currentFlag.src} alt={t('AltFlag')} />
       </motion.div>
     </motion.button>
   );

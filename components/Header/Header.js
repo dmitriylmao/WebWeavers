@@ -46,7 +46,7 @@ export function Header() {
             <div className={styles.blockAddress}>
               <Image
                 src={mapSrc}
-                alt="Location Icon"
+                alt={t('AltLocationIcon')}
                 width={20}
                 height={20}
                 className={styles.icon}
@@ -59,7 +59,7 @@ export function Header() {
             <div className={styles.blockMailinfo}>
               <Image
                 src={postSrc}
-                alt="Email Icon"
+                alt={t('AltEmailIcon')}
                 width={20}
                 height={20}
                 className={styles.icon}
@@ -85,7 +85,7 @@ export function Header() {
         <div className={styles.hat}>
           <Link href="/" passHref>
             <div className={styles.logo}>
-              <Image src={logoSrc} alt="Лого" width={156} height={66} />
+              <Image src={logoSrc} alt={t('AltLogo')} width={156} height={66} />
             </div>
           </Link>
           <div className={styles.catalogAndSearch}>
@@ -117,7 +117,7 @@ export function Header() {
               <div className={styles.ellipseGray}>
                 <Image
                   src={personIconSrc}
-                  alt="Работник"
+                  alt={t('AltWorker')}
                   width={70}
                   height={92}
                   className={styles.personIcon}
@@ -138,7 +138,7 @@ export function Header() {
 
           <div className={styles.cartContainer}>
             <Link href="/korZina" className={styles.iconWrapper}>
-              <Image src={basketIconSrc} alt="Корзина" />
+              <Image src={basketIconSrc} alt={t('AltCart')} />
             </Link>
             <span className={styles.itemCount}>3</span>
             <div className={styles.price}>
@@ -161,12 +161,12 @@ export function Header() {
           </div>
 
           <Link className={styles.MobileLogo} href="/" passHref>
-            <Image src={logoSrc} alt="Лого" width={97} height={41} />
+            <Image src={logoSrc} alt={t('AltLogo')} width={97} height={41} />
           </Link>
 
           <div className={styles.mobileCartContainer}>
             <Link href="/korZina" className={styles.mobileIconWrapper}>
-              <Image src={basketIconSrc} alt="Корзина" />
+              <Image src={basketIconSrc} alt={t('AltCart')} />
             </Link>
             <span className={styles.mobileItemCount}>3</span>
           </div>
@@ -176,7 +176,7 @@ export function Header() {
           <Link href="/catalog" className={styles.menuButton}>
             <Image
               src={blueCatalog}
-              alt="Каталог"
+              alt={t('AltCatalog')}
               width={15}
               height={15}
               className={styles.Mobicon}
@@ -189,7 +189,7 @@ export function Header() {
           <Link href="/search" className={styles.menuButton}>
             <Image
               src={blueSearch}
-              alt="Поиск"
+              alt={t('AltSearch')}
               width={15}
               height={15}
               className={styles.Mobicon}
@@ -206,7 +206,7 @@ export function Header() {
             <div className={styles.blockAddress}>
               <Image
                 src={mapSrc}
-                alt="Location Icon"
+                alt={t('AltLocationIcon')}
                 width={20}
                 height={20}
                 className={styles.icon}
@@ -219,7 +219,7 @@ export function Header() {
             <div className={styles.blockMailinfo}>
               <Image
                 src={postSrc}
-                alt="Email Icon"
+                alt={t('AltEmailIcon')}
                 width={20}
                 height={20}
                 className={styles.icon}
@@ -235,7 +235,7 @@ export function Header() {
               <div className={styles.salesDepartment}>
                 <Image
                   src={phoneIcon}
-                  alt="Location Icon"
+                  alt={t('AltLocationIcon')}
                   width={20}
                   height={20}
                   className={styles.icon}
@@ -255,7 +255,7 @@ export function Header() {
               <span className={styles.iconWrapperr}>
                 <Image
                   src={whitePhoneIcon}
-                  alt="Иконка телефона"
+                  alt={t('AltTelephoneIcon')}
                   width={15}
                   height={15}
                 />

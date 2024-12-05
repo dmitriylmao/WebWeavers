@@ -8,7 +8,7 @@ export default function Map() {
     <section className={styles.container}>
       <img
         src="/images/Map/Map.png"
-        alt="Map Background"
+        alt={t('AltMapBackground')}
         className={styles.mapImage}
       />
 
@@ -18,7 +18,11 @@ export default function Map() {
 
         <div className={styles.contactInfo}>
           <div className={styles.iconText}>
-            <img src="/images/Map/gps.svg" alt="Icon" className={styles.icon} />
+            <img
+              src="/images/Map/gps.svg"
+              alt={t('AltIcon')}
+              className={styles.icon}
+            />
             <div>
               <h3>{t('Address')}</h3>
               <p>
@@ -39,7 +43,11 @@ export default function Map() {
         </div>
 
         <div className={styles.iconText}>
-          <img src="/images/Map/file.svg" alt="Icon" className={styles.icon} />
+          <img
+            src="/images/Map/file.svg"
+            alt={t('AltIcon')}
+            className={styles.icon}
+          />
           <div>
             <h3>{t('TaxpayerData')}</h3>
             <p>

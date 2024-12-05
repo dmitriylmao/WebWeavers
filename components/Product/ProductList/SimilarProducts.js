@@ -67,11 +67,11 @@ const SimilarProducts = ({ selectedProduct }) => {
             >
               <ProductCard
                 id={product.id}
-                volume={product.volume}
+                volume={t(`Product.${product.id}.volume`)}
                 volumeType={product.volumeType}
-                title={product.title}
-                producer={product.producer}
-                brand={product.brand}
+                title={t(`Product.${product.id}.title`)}
+                producer={t(`Product.${product.id}.producer`)}
+                brand={t(`Product.${product.id}.brand`)}
                 price={product.price}
                 imgSrc={product.imgSrc}
               />
