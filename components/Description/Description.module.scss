@@ -1,0 +1,33 @@
+.description {
+  margin-top: 20px;
+
+  &Title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+    color: var(--black-gray);
+    transition: color 0.2s ease-in-out;
+  }
+  &Title:hover {
+    color: var(--yellow-hover);
+  }
+
+  &Container {
+    overflow: hidden;
+    transition:
+      max-height 0.6s ease-in-out,
+      opacity 0.6s ease-in-out;
+  }
+
+  &Text {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 18px;
+    color: var(--blue);
+  }
+}

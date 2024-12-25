@@ -1,0 +1,568 @@
+.header {
+  position: relative;
+  width: 100%;
+  font-family: var(--font-inter);
+  background-color: var(--white-header);
+  border-bottom: 2px solid var(--gray);
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 62%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--gray);
+  z-index: 1;
+}
+
+.DesktopContainer {
+  max-width: 1366px;
+  margin: 0 auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 61px;
+  background-color: var(--white-header);
+}
+
+.address,
+.mailinfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.blockAddress,
+.blockMailinfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.block {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-size: 14px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.mainText {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--black-gray);
+}
+
+.subText {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 16px;
+  color: var(--blue);
+}
+
+.menuBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.menuItem {
+  position: relative;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--blue);
+}
+
+.menuItem::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--blue);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.menuItem:hover::after {
+  transform: scaleX(1);
+}
+
+.headerLine {
+  width: calc(100vw - 10px);
+  height: 2px;
+  background-color: var(--gray);
+}
+
+.hat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 108px;
+  padding: 24px 0;
+}
+
+.logo {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.03);
+}
+
+.logo img {
+  width: 156px;
+  height: 66px;
+}
+
+.catalogAndSearch {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.contactBlock {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-right: 50px;
+  width: auto;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+}
+
+.phoneNumber {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  color: var(--black-gray);
+}
+
+.workingHours {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+  color: var(--blue);
+}
+
+.orderCall {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--blue);
+}
+
+.photoWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.ellipseGray {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.statusIndicator {
+  position: absolute;
+  bottom: 10px;
+  left: 56px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--green);
+  border-radius: 50%;
+  border: 2px solid var(--white-header);
+  z-index: 1;
+}
+
+.priceListButton {
+  margin-left: 20px;
+}
+
+.cartContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+
+.iconWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconWrapper img {
+  width: 46px;
+  height: 46px;
+}
+
+.itemCount {
+  background-color: var(--yellow-lightpurple-button);
+  border: 2px solid var(--white-header);
+  color: var(--white-only);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  min-width: 22px;
+  min-height: 22px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -40px;
+  margin-top: -20px;
+  z-index: 1;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+}
+
+.cartLabel {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+  color: var(--blue);
+}
+
+.cartTotal {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  color: var(--black-gray);
+}
+
+.MobileContainer {
+  display: none;
+  position: fixed;
+  width: 100%;
+  font-family: var(--font-inter);
+  background-color: var(--white-header);
+  z-index: 3;
+}
+
+.mobileMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  width: 100%;
+  height: 61px;
+  background-color: var(--white-header);
+  border-bottom: 1px solid var(--gray);
+  z-index: 2;
+}
+
+.burgerButton {
+  width: 32px;
+  height: 32px;
+  background-color: var(--yellow-lightpurple-button);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.burgerLine {
+  width: 8px;
+  height: 1px;
+  background-color: var(--white-only);
+  margin: 1px 0;
+  transition: all 0.3s ease;
+}
+
+.MobileLogo {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.MobileLogo:hover {
+  transform: scale(1.03);
+}
+
+.MobileLogo img {
+  width: 97px;
+  height: 41px;
+}
+
+.MobileHat {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background-color: var(--white-header);
+  border-bottom: 1px solid var(--gray);
+}
+
+.menuButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14px;
+  width: 48%;
+  text-decoration: none;
+  color: var(--blue);
+}
+
+.Mobicon {
+  width: 15px;
+  height: 15px;
+  margin-right: 6px;
+}
+
+.separator {
+  height: 30px;
+  border-left: 1px dashed var(--blue);
+  opacity: 0.2;
+}
+
+.slideMenu {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  height: auto;
+  background-color: var(--white-header);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 20px;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -4;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slideMenu.open {
+  transform: translateY(0);
+}
+
+.burgerButton.open .burgerLine:nth-child(1) {
+  transform: translateY(3px) translateX(0px) rotate(45deg);
+}
+
+.burgerButton.open .burgerLine:nth-child(2) {
+  opacity: 0;
+}
+
+.burgerButton.open .burgerLine:nth-child(3) {
+  transform: translateY(-3px) translateX(0px) rotate(-45deg);
+}
+
+.mobileCartContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+
+.mobileIconWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobileIconWrapper img {
+  width: 25px;
+  height: 25px;
+}
+
+.mobileItemCount {
+  background-color: var(--yellow-lightpurple-button);
+  border: 2px solid var(--white-header);
+  color: var(--white-only);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 12px;
+  min-width: 17px;
+  min-height: 17px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -36px;
+  margin-top: -16px;
+  z-index: 1;
+}
+
+.mobileMenuBlock {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.MobileBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.salesDepartment {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.phone {
+  display: flex;
+  flex-direction: column;
+}
+
+.blockPhone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.subText2 {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 16px;
+  color: var(--blue);
+}
+
+.callButton {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--blue);
+  padding-bottom: 25px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 15px;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.iconWrapperr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: var(--yellow-lightpurple-button);
+  border-radius: 50%;
+}
+
+.iconWrapperr img {
+  width: 8px !important;
+  height: 8px !important;
+  object-fit: contain;
+}
+
+.text {
+  text-decoration: underline;
+}
+
+.callButton:hover .iconWrapperr {
+  background-color: var(--yellow-hover);
+}
+
+.MobileMenuSite {
+  border-top: 1px dashed var(--gray);
+}
+
+.MobileMenuTitle {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  color: var(--blue);
+  padding: 25px 0;
+}
+
+.MobileMenuSiteList {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 20px;
+}
+
+.MobileMenuButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 22px 0 8px;
+}
+
+@media (max-width: 1280px) {
+  .DesktopContainer {
+    display: none;
+  }
+
+  .MobileContainer {
+    display: block;
+    width: 100%;
+    font-family: var(--font-inter);
+  }
+}

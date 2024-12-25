@@ -1,6 +1,5 @@
 # WebWeavers
 
-
 # Стек:
 
 - **React**
@@ -9,16 +8,16 @@
 - **i18next**
 - **ESLint**
 - **Prettier**
-
+- **Framer Motion**
 
 # Установка и запуск
-    
-- ***git clone*** *url*
-- ***cd*** *клонированный репозиторий*
-- ***npm install***
-- ***npm run dev***
-- *http://localhost:3000*
+
+- **_git clone_** _url_
+- **_cd_** _клонированный репозиторий_
+- **_npm install_**
+- **_npm run dev_**
+- _http://localhost:3000_
 
 # Использование **Prettier**
 
-***npm run format***
+**_npm run format_**

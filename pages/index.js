@@ -1,19 +1,30 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Translate from '../components/Translate';
+import Banner from '@/components/Banner';
+import ProductsList from '@/components/Product/ProductList/ProductsList';
+import Categories from '@/components/Сategories';
+import PromotionSwiper from '@/components/PromotionSwiper';
+import LogoSwiper from '@/components/LogoSwiper';
+import Map from '@/components/Map';
+
+export const getServerSideProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
+};
 
 const HomePage = () => {
   return (
     <>
-      {/*<Translate /> */}
-      {/* Сюда лепите ваши компоненты , формата <Component/> ,а лучше ничего не лепите , потом на ветке dev вставим , но для проверки вам в любом кайфе придется лепить , так что лепите*/}
+      <Banner />
+      <ProductsList />
+      <Categories />
+      <PromotionSwiper />
+      <LogoSwiper />
+      <Map />
     </>
   );
 };
-
-export const getStaticProps = async ({ locale }) => ({
-  props: {
-    ...(await serverSideTranslations(locale || 'en', ['common'])),
-  },
-});
 
 export default HomePage;

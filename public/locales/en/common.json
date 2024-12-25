@@ -1,3 +1,198 @@
 {
-  "WebWeavers": "WebWeavers"
+  "WebWeavers": "WebWeavers",
+
+  "Main": "Home",
+  "Back": "Back",
+
+  "MainTitle": "Household chemicals, cosmetics and household goods",
+  "Wholesale": "WHOLESALE ",
+  "Kokchetav": "ACROSS KOKCHETAV AND THE REGION",
+  "ToKatalog": "TO THE CATALOG",
+  "BestDeals": "Only the best deals",
+  "Shipping": "Free shipping in Kokchetav from 10 thousand ₸",
+
+  "AboutCompany": "About Company",
+  "DeliveryAndPayment": "Delivery and Payment",
+  "MapIconAlt": "Map Icon",
+  "MainAddress": "Kokshetau, Zhanibek Tashenov St. 129B",
+  "SubAddress": "(Eastern Market)",
+  "PostIconAlt": "Mail Icon",
+  "Email": "opt.sultan@mail.ru",
+  "AlwaysAvailable": "Available anytime",
+  "LogoAlt": "Sultan",
+  "Catalog": "Catalog",
+  "CatalogIconAlt": "Catalog Icon",
+  "SearchPlaceholder": "Search…",
+  "SearchIconAlt": "Search",
+  "PhoneNumber": "+7 (777) 490-00-91",
+  "PersonIconAlt": "Employee",
+  "PriceListIconAlt": "Price List Icon",
+  "BasketIconAlt": "Basket",
+  "Cart": "Cart",
+  "AltLocationIcon": "LocationIcon",
+  "AltEmailIcon": "EmailIcon",
+  "AltWorker": "Worker",
+  "AltCart": "Cart",
+  "AltCatalog": "Catalog",
+  "AltSearch": "Search",
+  "AltTelephoneIcon": "TelephoneIcon",
+
+  "saleHighlight": "SALE",
+  "Similar": "SIMILAR",
+  "saleProducts": "PRODUCTS",
+
+  "Popular": "Popular",
+  "Type": "Type",
+  "Barcode": "Barcode",
+  "Producer": "Producer",
+  "Brand": "Brand",
+  "AddToCart": "Add to cart",
+  "InStock": "In stock",
+  "FreeShipping": "When buying from",
+  "FreeShippingLocation": "free shipping in Kokchetav and the region",
+  "Category": "Category",
+  "Description": "Description",
+  "ClickMe": "Click Me!",
+  "Product": {
+    "101": {
+      "volume": "450 ml",
+      "title": "dishwashers Orange+mint",
+      "producer": "Nefis",
+      "brand": "AOS",
+      "description": "An effective dishwashing detergent with the aroma of orange and mint. It easily copes with fat, leaving a pleasant citrus aroma and leaving no traces."
+    },
+    "102": {
+      "volume": "450 ml",
+      "title": "Srystal dishwashing detergent",
+      "producer": "Nefis",
+      "brand": "AOS",
+      "description": "Dish detergent with a deep cleansing formula. It provides perfect cleanliness and shine without damaging the skin of the hands."
+    },
+    "103": {
+      "volume": "15X28. 8 g",
+      "title": "Automatic SMS Gel liquid in soluble capsules Liquid Capsules Mountain spring",
+      "producer": "Nefis",
+      "brand": "AOS",
+      "description": "Liquid laundry capsules with the aroma of a mountain spring. Effectively remove stains, preserve the brightness of color and freshness of linen."
+    },
+    "104": {
+      "volume": "450 ml",
+      "title": "Powder washing Machine 100 spots COMPACT",
+      "producer": "Nefis",
+      "brand": "AOS",
+      "description": "Washing powder for automatic washing, effectively removing up to 100 types of stains. Suitable for colored and white fabrics."
+    },
+    "105": {
+      "volume": "450 ml",
+      "title": "dishwashers Orange+mint",
+      "producer": "Nefis",
+      "brand": "AOSSSS",
+      "description": "An effective dishwashing detergent with the aroma of orange and mint. It easily copes with fat, leaving a pleasant citrus aroma and leaving no traces."
+    },
+    "106": {
+      "volume": "450 ml",
+      "title": "Srystal dishwashing detergent",
+      "producer": "Nefis",
+      "brand": "AOS",
+      "description": "Dish detergent with a deep cleansing formula. It provides perfect cleanliness and shine without damaging the skin of the hands."
+    },
+    "107": {
+      "volume": "15X28. 8 g",
+      "title": "Automatic SMS Gel liquid in soluble capsules Liquid Capsules Mountain spring",
+      "producer": "Nefis",
+      "brand": "AOS",
+      "description": "Liquid laundry capsules with the aroma of a mountain spring. Effectively remove stains, preserve the brightness of color and freshness of linen."
+    },
+    "108": {
+      "volume": "450 ml",
+      "title": "Powder washing Machine 100 spots COMPACT",
+      "producer": "Nefis",
+      "brand": "AOS",
+      "description": "Washing powder for automatic washing, effectively removing up to 100 types of stains. Suitable for colored and white fabrics."
+    }
+  },
+  "DISHWASHING": "For washing dishes",
+  "LAUNDRY": "Washing products",
+  "CLEANING": "Cleaning",
+  "TEST": "Test!!!",
+
+  "CATEGORIES": "CATEGORIES",
+  "PRODUCTS": "OF PRODUCTS",
+  "SpecialPrices": "10,000+ popular items at special prices",
+
+  "PromotionSwiper": {
+    "PromotionSlide": {
+      "Duration": "*PROMOTION VALID UNTIL 09/04/22",
+      "Title": "Promotion Name",
+      "Description": "Terms: like the post, subscribe to the channel, repost on VK wall",
+      "ButtonText": "PARTICIPATE"
+    },
+    "PartnerSlide": {
+      "Duration": "*PROMOTION VALID UNTIL 03/02/24",
+      "Title": "Our Partner",
+      "Description": "Leroy Merlin Leroy Merlin Leroy Leroy Leroy Merlin Leroy Leroy Leroy",
+      "ButtonText": "VISIT BRAND"
+    }
+  },
+
+  "highlight": "BEST",
+  "subtitle": "From leading global brands",
+  "products": "PRODUCTS",
+  "LogoAltTexts": {
+    "Logo1": "Logo 1",
+    "Logo2": "Logo 2",
+    "Logo3": "Logo 3",
+    "Logo4": "Logo 4",
+    "Logo5": "Logo 5",
+    "Logo6": "Logo 6",
+    "Logo7": "Logo 7",
+    "Logo8": "Logo 8",
+    "Logo9": "Logo 9",
+    "Logo10": "Logo 10",
+    "Logo11": "Logo 11",
+    "Logo12": "Logo 12",
+    "Logo13": "Logo 13"
+  },
+
+  "SupplierSultan": "Wholesale supplier \"Sultan\"",
+  "Address": "Address",
+  "KokshetauTashenova": "Kokshetau, 129B Zh. Tashenov street",
+  "EasternMarket": "(The Eastern market)",
+  "SalesDepartment": "Sales Department",
+  "TaxpayerData": "Taxpayer's data",
+  "Katran": "IE Katran D.S.",
+  "TaxpayerNumber": "TIN",
+  "AltMapBackground": "MapBackground",
+  "AltIcon": "Icon",
+
+  "DescriptionOfTheCompany": "Sultan company — we supply retail stores with turnkey goods in Kokchetav and Akmola region",
+  "SubscribeToDiscount": "Subscribe to discounts and promotions",
+  "SiteMenu": "Site Menu",
+  "Сompany": "About company",
+  "Delivery": "Delivery",
+  "Return": "Return",
+  "Contacts": "Contacts",
+  "Categories": "Categories",
+  "Chemistry": "Household chemicals",
+  "Cosmetics": "Cosmetics and hygiene",
+  "Home": "Household Goods",
+  "Children": "Products for children and mothers",
+  "Dishes": "Tableware",
+  "DowloadPrice": "Download the price list",
+  "PriceList": "Price list",
+  "Communication": "Communication in messengers",
+  "WorkingHours": "Working hours",
+  "OrderCall": "Order a call",
+  "TouchAnyTime": "Be in touch at any time",
+  "EnterYourEmail": "Enter your E-mail",
+  "AltArrowIcon": "ArrowIcon",
+  "AltLogo": "Logo",
+  "AltWhatsUp": "WhatsUp",
+  "AltTelegram": "elegram",
+  "AltVisa": "Visa",
+  "AltMasterCard": "MasterCard",
+  "AltFlag": "Flag",
+
+  "Loading": "Loading",
+  "NotFound": "The product was not found"
 }
